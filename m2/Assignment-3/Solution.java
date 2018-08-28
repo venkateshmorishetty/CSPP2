@@ -10,7 +10,7 @@ public final class Solution {
         // cons
     }
 
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -25,7 +25,7 @@ public final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /*
+    /**
     Need to write the power function and print the output.
     @param      base      The base
     @param      exponent  The exponent
