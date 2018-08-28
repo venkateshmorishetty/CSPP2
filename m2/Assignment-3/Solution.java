@@ -32,6 +32,9 @@ public final class Solution {
     @return     { description_of_the_return_value }
     */
     static long power(final int base, final int exponent) {
+        /**
+         * power function
+         */
         if (exponent > 0) {
             return base * power(base, exponent - 1);
         }
