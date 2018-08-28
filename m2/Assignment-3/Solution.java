@@ -1,10 +1,24 @@
 import java.util.Scanner;
+/**
+ * @author venkatesh
+ */
 public final class Solution {
-    /*
-    Do not modify this main function.
-    @param      args  The arguments
+    /**
+     * @constructor
     */
+    private Solution() {
+        // cons
+    }
+
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
+        /**
+         * Mmain function
+         */
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
