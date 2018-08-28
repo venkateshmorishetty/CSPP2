@@ -32,7 +32,7 @@ public final class Solution {
     @param      c     { c value }
     */
     static void roots(final int a, final int b, final int c) {
-        /**.
+        /**
          * { rootsQuadraticEquation }
          */
         double root1;
