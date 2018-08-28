@@ -1,9 +1,20 @@
 import java.util.Scanner;
-public final class Solution 
-{
-    /*
-    * @author  venkatesh
+/**
+ * { roots for a qudratic equation }
+ */
+public final class Solution {
+    /**
+     * @constructor
     */
+    private Solution() {
+        // cons
+    }
+
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**
          * main function
