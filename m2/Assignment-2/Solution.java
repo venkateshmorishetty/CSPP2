@@ -25,7 +25,7 @@ public final class Solution {
         int c = scan.nextInt();
         roots(a, b, c);
     }
-    /*
+    /**
     Need to write the rootsOfQuadraticEquation function.
     @param      a     { a value }
     @param      b     { b value }
