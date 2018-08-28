@@ -1,11 +1,10 @@
 import java.util.Scanner;
-public class Solution {
+public final class Solution {
     /*
     Do not modify this main function.
-    
     @param      args  The arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -18,8 +17,8 @@ public class Solution {
     @param      exponent  The exponent
     @return     { description_of_the_return_value }
     */
-    static long power(int base, int exponent) {
-        if (exponent > 0) { 
+    static long power(final int base, final int exponent) {
+        if (exponent > 0) {
             return base * power(base, exponent - 1);
         }
         return 1;
