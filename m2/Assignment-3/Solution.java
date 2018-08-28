@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
+
 public class Solution {
 	/*
 	Do not modify this main function.
+	
 	*/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
