@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/**
+/**.
  * { roots for a qudratic equation }
  */
 public final class Solution {
@@ -10,7 +10,7 @@ public final class Solution {
         // cons
     }
 
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -32,7 +32,7 @@ public final class Solution {
     @param      c     { c value }
     */
     static void roots(final int a, final int b, final int c) {
-        /**
+        /**.
          * { rootsQuadraticEquation }
          */
         double root1;
