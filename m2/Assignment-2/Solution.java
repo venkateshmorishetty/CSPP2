@@ -1,9 +1,7 @@
 import java.util.Scanner;
-// import java.lang.Math;
-final class Solution {
+public final class Solution {
 	/*
-	Do not modify this main function.
-	@param      args  The arguments
+	* @author  venkatesh
 	*/
 	public static void main(final String[] args) {
 		/**
