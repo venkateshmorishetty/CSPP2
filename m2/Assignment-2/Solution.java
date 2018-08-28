@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public final class Solution {
+public final class Solution 
+{
     /*
     * @author  venkatesh
     */
