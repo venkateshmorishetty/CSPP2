@@ -6,8 +6,6 @@ import java.util.Scanner;
 final class Solution {
 /**.
  * Fill the main function to print the number of 7's between 1 to n
- *
- * @param      args  The arguments
  */
     private Solution() {
         //construcor
