@@ -27,11 +27,6 @@ final class Solution {
     */
     public static void gcd(final int a, final int b) {
         int gcd = 1;
-        // if (b < a) {
-        //     int temp1 = a;
-        //     a = b;
-        //     b = temp1;
-        // }
         for (int i = 1; i <= b; i++) {
             if (b % i == 0 && a % i == 0) {
                 if (gcd < i) {
