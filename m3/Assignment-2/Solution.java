@@ -1,7 +1,7 @@
 
-import java.util.*;
+import java.util.Scanner;
 /**
- @COUNTING NUMBER OF 7'S
+ @author = 'venkatesh'
 */
 final class Solution {
 /*
@@ -9,6 +9,14 @@ final class Solution {
  *
  * @param      args  The arguments
  */
+    private Solution(){
+        //construcor
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
