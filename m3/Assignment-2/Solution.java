@@ -1,8 +1,8 @@
 
 import java.util.*;
-/*
-    Do not modify this main function.
-    */
+/**
+ @COUNTING NUMBER OF 7'S
+*/
 final class Solution {
 /*
  * Fill the main function to print the number of 7's between 1 to n
