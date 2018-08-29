@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+import java.util.*;
 /*
     Do not modify this main function.
     */
@@ -24,7 +24,7 @@ final class Solution {
                 count += 1;
                 }
             temp1 = Math.round(temp1 / dec);
-            }   
+            }
         }
         System.out.println(count);
     }
