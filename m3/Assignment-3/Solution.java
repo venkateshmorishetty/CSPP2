@@ -6,10 +6,10 @@ final class Solution {
 /**.
  * gcd of two numbers.
  */
-    private Solution(){
+    private Solution() {
         //pass
     }
-    /**
+    /**.
      * { main method }
      *
      * @param      args  The arguments
@@ -25,13 +25,13 @@ final class Solution {
     @param      a     {first value }
     @param      b     {second value}
     */
-    public static void gcd(int a, int b) {
+    public static void gcd(final int a, final int b) {
         int gcd = 1;
-        if (b < a) {
-            int temp1 = a;
-            a = b;
-            b = temp1;
-        }
+        // if (b < a) {
+        //     int temp1 = a;
+        //     a = b;
+        //     b = temp1;
+        // }
         for (int i = 1; i <= b; i++) {
             if (b % i == 0 && a % i == 0) {
                 if (gcd < i) {
