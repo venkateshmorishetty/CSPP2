@@ -10,7 +10,7 @@ final class Solution {
         //pass
     }
     public static void main(final String[] args) {
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1,n2);
@@ -27,15 +27,13 @@ final class Solution {
             a = b;
             b = temp1;
         }
-        for(int i = 1; i <= b; i++) {
-            if(b % i == 0 && a % i == 0) {
-                if(gcd < i) {
+        for (int i = 1; i <= b; i++) {
+            if (b % i == 0 && a % i == 0) {
+                if (gcd < i) {
                     gcd = i;
                 }
             }
         }
     System.out.println(gcd);
-    
-    
     }
 }
