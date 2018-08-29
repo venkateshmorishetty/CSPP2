@@ -9,11 +9,16 @@ final class Solution {
     private Solution(){
         //pass
     }
+    /**
+     * { main method }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        gcd(n1,n2);
+        gcd(n1, n2);
     }
     /**.
     Need to write the gcd function and print the output.
@@ -22,7 +27,7 @@ final class Solution {
     */
     public static void gcd(int a, int b) {
         int gcd = 1;
-        if(b < a){
+        if (b < a) {
             int temp1 = a;
             a = b;
             b = temp1;
