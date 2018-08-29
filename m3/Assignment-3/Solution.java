@@ -23,7 +23,7 @@ public class Solution {
             a = b;
             b = temp1;
         }
-        for(int i = a;i<=b;i++){
+        for(int i = 1;i<=b;i++){
             if(b%i == 0 && a%i == 0){
                 if(gcd<i){
                     gcd = i;
