@@ -11,17 +11,16 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         int div = 10;
-        if(n>10){
-        	for(int i = 0;i <= n;i++){
-        		int temp1= i;
-        		while(temp1>0){
-        			if (temp1%div == 7){
-        			count += 1;
-        			}
-        			temp1 = Math.round(temp1/10);
-        		}	
-       		}
-		}
+        for(int i = 0;i <= n;i++){
+        	int temp1= i;
+        	while(temp1>0){
+        		if (temp1%div == 7){
+        		count += 1;
+        		}
+        	temp1 = Math.round(temp1/10);
+        	}	
+       	}
+
        System.out.println(count);
     }
 }
