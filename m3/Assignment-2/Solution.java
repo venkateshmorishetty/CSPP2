@@ -1,8 +1,8 @@
 
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 final class Solution {
 /*
  * Fill the main function to print the number of 7's between 1 to n
@@ -11,21 +11,21 @@ final class Solution {
  */
     public static void main(final String[] args) {
 
-		Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
         final int div = 10;
         final int res = 7;
         final int dec = 10;
-        for(int i = 0; i <= n; i++) {
-        	int temp1 = i;
-        	while(temp1 > 0){
-        		if (temp1 % div == res) {
-        		count += 1;
-        		}
-        	temp1 = Math.round(temp1 / dec);
-        	}	
-       	}
-       	System.out.println(count);
+        for (int i = 0; i <= n; i++) {
+            int temp1 = i;
+            while (temp1 > 0) {
+                if (temp1 % div == res) {
+                count += 1;
+                }
+            temp1 = Math.round(temp1 / dec);
+            }   
+        }
+        System.out.println(count);
     }
 }
