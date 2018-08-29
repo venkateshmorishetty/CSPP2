@@ -10,10 +10,11 @@ final class Solution {
  * @param      args  The arguments
  */
     public static void main(final String[] args) {
+
 		Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0;
-        int div = 10;
+        final int div = 10;
         final int res = 7;
         final int dec = 10;
         for(int i = 0; i <= n; i++) {
