@@ -7,7 +7,7 @@ final class Solution {
 /**.
 	Fill this main function to print maximum of given array
 	*/
-	private Solution(){
+	private Solution() {
 		//constructor
 	}
 	/**.
@@ -19,12 +19,12 @@ final class Solution {
 		int n= sc.nextInt();
 		int[] a;
 		a=new int[n];
-		for(int i = 0;i<n;i++){
+		for(int i = 0; i<n; i++) {
 			a[i] = sc.nextInt();
 		}
 		max = a[0];
-		for(int i = 1;i<n;i++){
-			if(max<a[i]){
+		for(int i = 1; i < n; i++) {
+			if(max < a[i]) {
 				max = a[i];
 			}
 		}
