@@ -8,6 +8,9 @@ final class Solution {
      *
      * @param      args  The arguments
      */
+    private Solution() {
+        //constructor
+    }
     public static void main(final String[] args) {
         int[][] a, b, c;
         int rows, cols, rows1, cols1;
