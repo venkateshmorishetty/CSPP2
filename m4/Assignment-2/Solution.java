@@ -30,16 +30,16 @@ public class Solution {
 			}
 			for (int i = 0; i < rows1; i++) {
 				for (int j = 0; j < cols1; j++) {
-					if (j != cols - 1){
+					if (j != cols - 1) {
 						System.out.print(c[i][j] + " ");
 					}
-					else{
+					else {
 						System.out.print(c[i][j]);
 					}
-				}System.out.println();
+				} System.out.println();
 			} 	
 		}
-		else{
+		else {
 			System.out.println("not possible");
 		}
 	}
