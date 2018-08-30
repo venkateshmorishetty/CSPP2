@@ -15,11 +15,11 @@ final class Solution {
 	 */
 	public static void main(final String[] args) {
 		int max;
-		Scanner sc=new Scanner(System.in);
-		int n= sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		int[] a;
-		a=new int[n];
-		for(int i = 0; i<n; i++) {
+		a = new int[n];
+		for(int i = 0; i < n; i++) {
 			a[i] = sc.nextInt();
 		}
 		max = a[0];
