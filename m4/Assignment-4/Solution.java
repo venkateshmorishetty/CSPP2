@@ -3,16 +3,14 @@ import java.util.Scanner;
  * revrse of given string
  */
 public final class Solution {
-/**.
- * Do not modify the main function
+/**
+ * . Do not modify the main function
  */
-    private Solution() {
-        /**.
-        constructor
+    private Solution() { }
+    /**.
+        reverse global variable
         */
-    }
-
-    static String reverse = "";
+    private static String reverse = "";
     /**.
      * @param      args  The arguments
      */
