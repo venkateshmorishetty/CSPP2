@@ -3,7 +3,7 @@ import java.util.Scanner;
  * addition of two matrices
  */
 public final class Solution {
-    /**
+    /**.
      * Fill the main function to print resultant of addition of matrices
      *
      * @param      args  The arguments
@@ -39,8 +39,7 @@ public final class Solution {
                 for (int j = 0; j < cols1; j++) {
                     if (j != cols - 1) {
                         System.out.print(c[i][j] + " ");
-                    }
-                    else {
+                    }else {
                         System.out.print(c[i][j]);
                     }
                 } System.out.println();
