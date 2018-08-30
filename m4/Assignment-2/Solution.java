@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**.
  * addition of two matrices
  */
-public final class Solution {
+final class Solution {
     /**.
      * Fill the main function to print resultant of addition of matrices
      *
