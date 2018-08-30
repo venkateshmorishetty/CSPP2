@@ -32,7 +32,8 @@ public class Solution {
 				for(int j = 0;j<cols1;j++){
 					if(j != cols-1)
 						System.out.print(c[i][j]+" ");
-					System.out.print(c[i][j]);
+					else
+						System.out.print(c[i][j]);
 			}System.out.println();
 		} 	
 		}
