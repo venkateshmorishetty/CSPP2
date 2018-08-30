@@ -5,12 +5,14 @@ import java.util.Scanner;
 final class Solution {
     /**.
      * Fill the main function to print resultant of addition of matrices
-     *
-     * @param      args  The arguments
      */
     private Solution() {
         //constructor
     }
+    /**.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         int[][] a, b, c;
         int rows, cols, rows1, cols1;
