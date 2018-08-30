@@ -11,7 +11,8 @@ public final class Solution {
         constructor
         */
     }
-    private static String reverse = "";
+
+    static String reverse = "";
     /**.
      * @param      args  The arguments
      */
