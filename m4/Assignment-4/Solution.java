@@ -1,20 +1,26 @@
-
-// Given an String, Write a java method that returns the decimal value for the given binary string.
-
-
 import java.util.Scanner;
-public final class Solution
-{/*
-	Do not modify the main function 
-	*/
+/**.
+ * revrse of given string
+ */
+public final class Solution {
+/**
+ * . Do not modify the main function
+ */
 	static String reverse = "";
+	private Solution(){ }
+	/**.
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner sc=new Scanner(System.in);
 		String s=sc.nextLine();
 		reverse = reverseString(s);	
 		System.out.println(reverse);
-		
 	}
+	/**.
+	 * @param      string  user input
+	 * @return     { revrse of given string }
+	 */
 	public static String reverseString(final String string) {
 		char[] arr = string.toCharArray();
 		int length = arr.length;
