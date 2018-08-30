@@ -3,10 +3,10 @@ import java.util.Scanner;
  * revrse of given string
  */
 public final class Solution {
-/**
- * . Do not modify the main function
+/**.
+ * Do not modify the main function
  */
-	static String reverse = "";
+	private static String reverse = "";
 	private Solution() { }
 	/**.
 	 * @param      args  The arguments
