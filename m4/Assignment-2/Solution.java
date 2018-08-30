@@ -34,7 +34,7 @@ public class Solution {
 		}
 		for(int i = 0;i<rows1;i++){
 			for(int j = 0;j<cols1;j++){
-				System.out.print(c[i][j]);
+				System.out.print(c[i][j]+' ');
 			}System.out.println( );
 		} 
 	}
