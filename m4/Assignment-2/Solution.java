@@ -8,29 +8,29 @@ public class Solution {
 		rows = sc.nextInt();
 		cols = sc.nextInt();
 		a = new int[rows][cols];
-		for(int i = 0; i<rows; i++) {
-			for(int j = 0; j<cols; j++) {
+		for (int i = 0; i<rows; i++) {
+			for (int j = 0; j<cols; j++) {
 				a[i][j] = sc.nextInt();
 			}
 		}
 		rows1 = sc.nextInt();
 		cols1 = sc.nextInt();
 		b = new int[rows1][cols1];
-		for(int i = 0; i < rows1; i++) {
-			for(int j = 0;j < cols1; j++) {
+		for (int i = 0; i < rows1; i++) {
+			for (int j = 0;j < cols1; j++) {
 				b[i][j] = sc.nextInt();
 			}
 		}
 		c = new int[rows][cols];
-		if(rows == rows1 && cols == cols1) {
-			for(int i = 0; i < rows1; i++) {
-				for(int j = 0; j < cols1; j++) {
+		if (rows == rows1 && cols == cols1) {
+			for (int i = 0; i < rows1; i++) {
+				for (int j = 0; j < cols1; j++) {
 					c[i][j] = a[i][j] + b[i][j];
 				}
 			}
-			for(int i = 0; i < rows1; i++) {
-				for(int j = 0; j < cols1; j++) {
-					if(j != cols - 1)
+			for (int i = 0; i < rows1; i++) {
+				for (int j = 0; j < cols1; j++) {
+					if (j != cols - 1)
 						System.out.print(c[i][j] + " ");
 					else
 						System.out.print(c[i][j]);
