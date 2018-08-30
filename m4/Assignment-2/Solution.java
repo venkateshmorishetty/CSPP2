@@ -1,6 +1,13 @@
 import java.util.Scanner;
+/**.
+ * addition of two matrices
+ */
 final class Solution {
-    /* Fill the main function to print resultant of addition of matrices*/
+    /**
+     * Fill the main function to print resultant of addition of matrices
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         int[][] a, b, c;
         int rows, cols, rows1, cols1;
