@@ -1,8 +1,9 @@
+import java.util.Scanner;
 /**.
  *binary to decimal conversion.
 */
-import java.util.Scanner;
-public final class Solution {/**.
+public final class Solution {
+/**.
 	Do not modify this main function.
 	*/
 	private Solution() {
