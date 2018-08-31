@@ -8,16 +8,21 @@ public final class Solution {/**.
 	private Solution() {
 		//constructor.
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = Integer.parseInt(sc.nextLine());
 		for (int i = 1; i <= n; i++) {
 			String s = sc.nextLine();
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			String res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 	}
-	/**
+	/**.
 	 * { function_description }
 	 *
 	 * @param      str     { binary value in str format }
