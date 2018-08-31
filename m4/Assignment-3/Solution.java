@@ -11,7 +11,7 @@ public final class Solution {/**.
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = Integer.parseInt(sc.nextLine());
-		for(int i = 1; i <= n; i++) {
+		for (int i = 1; i <= n; i++) {
 			String s = sc.nextLine();
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
@@ -29,10 +29,10 @@ public final class Solution {/**.
 		int res = 0;
 		int power = 0;
 		int div = 5*2;
-		while(number != 0) {
+		while (number != 0) {
 			Long rem = number % div;
 			res += rem * Math.pow(2, power);
-			number = number / 10;
+			number = number / div;
 			power += 1;
 		}
 		return res + "";
