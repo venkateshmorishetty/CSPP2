@@ -1,13 +1,15 @@
-
-// Given an String, Write a java method that returns the decimal value for the given binary string.
-
-
+/**.
+ *binary to decimal conversion.
+*/
 import java.util.Scanner;
-public class Solution
-{/*
+public final class Solution
+{/**.
 	Do not modify this main function.
 	*/
-	public static void main(String[] args) {
+	private Solution(){
+		//constructor.
+	}
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = Integer.parseInt(sc.nextLine());
 		for(int i = 1; i <= n; i++) {
@@ -16,13 +18,20 @@ public class Solution
 			System.out.println(res);
 		}
 	}
-	public static String binaryToDecimal(String s){
-		Long number = Long.parseLong(s);
+	/**
+	 * { function_description }
+	 *
+	 * @param      str     { binary value in str format }
+	 *
+	 * @return   res  { returns decimal value of binary. }
+	 */
+	public static String binaryToDecimal(final String str) {
+		Long number = Long.parseLong(str);
 		int res = 0;
 		int power = 0;
 		while(number != 0) {
 			Long rem = number % 10;
-			res += rem * Math.pow(2,power);
+			res += rem * Math.pow(2, power);
 			number = number / 10;
 			power += 1;
 		}
