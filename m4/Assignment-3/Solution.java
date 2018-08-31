@@ -28,7 +28,7 @@ public final class Solution {/**.
 		Long number = Long.parseLong(str);
 		int res = 0;
 		int power = 0;
-		int div = 5*2;
+		final int div = 10;
 		while (number != 0) {
 			Long rem = number % div;
 			res += rem * Math.pow(2, power);
