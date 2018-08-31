@@ -2,11 +2,10 @@
  *binary to decimal conversion.
 */
 import java.util.Scanner;
-public final class Solution
-{/**.
+public final class Solution {/**.
 	Do not modify this main function.
 	*/
-	private Solution(){
+	private Solution() {
 		//constructor.
 	}
 	public static void main(final String[] args) {
@@ -29,7 +28,7 @@ public final class Solution
 		Long number = Long.parseLong(str);
 		int res = 0;
 		int power = 0;
-		int div = 10;
+		int div = 5*2;
 		while(number != 0) {
 			Long rem = number % div;
 			res += rem * Math.pow(2, power);
