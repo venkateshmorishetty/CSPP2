@@ -24,13 +24,13 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	int[] multiples = new int[]{0,100,200,300,400,500,600,700,800,900,1000};
-    int temp=0;
-    for(int i = 0;i<rows;i++){
-        for(int j =0;j<columns;j++){
-            for(int k =0;k<multiples.length;k++){
-                temp = Math.round(a[i][j]-multiples[k]);
-                if(temp<50){
+	int[] multiples = new int[] {0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+    int temp = 0;
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < columns; j++) {
+            for(int k = 0; k < multiples.length; k++) {
+                temp = Math.round(a[i][j] - multiples[k]);
+                if(temp < 50){
                     a[i][j] = multiples[k];
                     break;
                 }
