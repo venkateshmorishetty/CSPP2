@@ -27,18 +27,18 @@ final class Solution {
     final int multiple = 100;
 	int[] multiples = new int[size];
     for (int i = 0; i < size; i++) {
-        multiples[i] = i*multiple;
+        multiples[i] = i * multiple;
     }
     int temp = 0;
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < columns; j++) {
-            for(int k = 0; k < multiples.length; k++) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            for (int k = 0; k < multiples.length; k++) {
                 temp = Math.round(a[i][j] - multiples[k]);
-                if(temp < 50){
+                if (temp < 50) {
                     a[i][j] = multiples[k];
                     break;
                 }
-                else if(temp == 50){
+                else if (temp == 50) {
                     a[i][j] = multiples[k+1];
                     break;
                 }
