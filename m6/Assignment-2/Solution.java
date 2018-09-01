@@ -26,7 +26,7 @@ final class Solution {
     final int size = 11;
     final int multiple = 100;
     final int mid = 50;
-	int[] multiples = new int[size];
+    int[] multiples = new int[size];
     for (int i = 0; i < size; i++) {
         multiples[i] = i * multiple;
     }
@@ -38,8 +38,7 @@ final class Solution {
                 if (temp < mid) {
                     a[i][j] = multiples[k];
                     break;
-                }
-                else if (temp == mid) {
+                } else if (temp == mid) {
                     a[i][j] = multiples[k + 1];
                     break;
                 }
@@ -47,7 +46,7 @@ final class Solution {
         }
 
     }
-	return a;
+    return a;
     }
     /**
      * Main function.
