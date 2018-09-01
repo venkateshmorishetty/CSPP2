@@ -23,7 +23,7 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-    int size = 11;
+    final int size = 11;
 	int[] multiples = new int[size];
     for (int i = 0; i < size; i++) {
         multiples[i] = i*100;
