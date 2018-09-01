@@ -24,7 +24,10 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	int[] multiples = new int[] {0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+	int[] multiples = new int[10];
+    for(int i = 0; i <= 10; i++){
+        multiples[i] = i*100;
+    }
     int temp = 0;
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
