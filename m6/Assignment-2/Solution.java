@@ -25,6 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
     final int size = 11;
     final int multiple = 100;
+    final int mid = 50;
 	int[] multiples = new int[size];
     for (int i = 0; i < size; i++) {
         multiples[i] = i * multiple;
@@ -34,12 +35,12 @@ final class Solution {
         for (int j = 0; j < columns; j++) {
             for (int k = 0; k < multiples.length; k++) {
                 temp = Math.round(a[i][j] - multiples[k]);
-                if (temp < 50) {
+                if (temp < mid) {
                     a[i][j] = multiples[k];
                     break;
                 }
-                else if (temp == 50) {
-                    a[i][j] = multiples[k+1];
+                else if (temp == mid) {
+                    a[i][j] = multiples[k + 1];
                     break;
                 }
             }
