@@ -2,16 +2,15 @@ import java.util.*;
 class InputValidator
 {
 	/*Write the atrributes and methods for InputValidator*/
-	String i;
-	public InputValidator(String s){
-		this.i = s;
+	String input;
+	public InputValidator(String str) {
+		this.input = str;
 	}
-	public boolean validateData(){
-		int len = i.length();
-		if(len >= 6){
+	public boolean validateData() {
+		int len = input.length();
+		if(len >= 6) {
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}
