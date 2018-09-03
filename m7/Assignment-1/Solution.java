@@ -10,7 +10,7 @@ class InputValidator {
     /**.
      * @param      str   The string
      */
-    public InputValidator(final String str) {
+    protected InputValidator(final String str) {
         this.input = str;
     }
 
