@@ -1,6 +1,8 @@
 import java.util.Scanner;
+/**.
+ * returns true if input is grater than 6 else false.
+ */
 class InputValidator {
-    /*Write the atrributes and methods for InputValidator*/
     String input;
     public InputValidator(String str) {
         this.input = str;
@@ -16,7 +18,16 @@ class InputValidator {
     }
 
 }
+/**.
+ * Class for solution.
+ */
 public class Solution {
+    private Solution(){
+        //pass
+    }
+    /**.
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
