@@ -29,7 +29,7 @@ class InputValidator {
 /**
  * . Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**.
      * main class
      */
