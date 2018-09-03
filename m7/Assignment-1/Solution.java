@@ -7,7 +7,7 @@ class InputValidator {
     public InputValidator(final String str) {
         this.input = str;
     }
-    public boolean validateData() {
+    boolean validateData() {
         int len = input.length();
         final int length = 6;
         if (len >= length) {
