@@ -3,6 +3,9 @@ import java.util.Scanner;
  * returns true if input is grater than 6 else false.
  */
 class InputValidator {
+    /**
+     * { class variable }
+     */
     String input;
     /**.
      * @param      str   The string
