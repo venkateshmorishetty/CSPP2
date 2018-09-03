@@ -18,11 +18,14 @@ class InputValidator {
     }
 
 }
-/**.
- * Class for solution.
+/**
+ * . Class for solution.
  */
 public class Solution {
-    private Solution(){
+    /**.
+     * main class
+     */
+    private Solution() {
         //pass
     }
     /**.
