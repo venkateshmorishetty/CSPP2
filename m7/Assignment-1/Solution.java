@@ -6,7 +6,7 @@ class InputValidator {
     /**.
      * { class variable }
      */
-    String input;
+    private String input;
     /**.
      * @param      str   The string
      */
