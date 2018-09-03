@@ -1,10 +1,10 @@
 import java.util.Scanner;
-/**.
- * returns true if input is grater than 6 else false.
+/**
+ * . returns true if input is grater than 6 else false.
  */
 class InputValidator {
     String input;
-    public InputValidator(String str) {
+    public InputValidator(final String str) {
         this.input = str;
     }
     public boolean validateData() {
