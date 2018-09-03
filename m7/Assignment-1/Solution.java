@@ -23,14 +23,13 @@ class InputValidator {
         final int length = 6;
         if (len >= length) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
 }
 /**
- * . Class for solution.
+ * Class for solution.
  */
 public final class Solution {
     /**.
