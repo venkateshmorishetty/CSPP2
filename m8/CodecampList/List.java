@@ -268,13 +268,14 @@ public class List {
     //     }
     //     return count;
     // }
-    // public void add(int index, int item){
-    //     int temp=array[index];
-    //     array[index] = item;
-    //     for(int j=index+1;j<size;j++){
-    //         array[index] = temp;
-    //     }
-    // }
+    public void add(int index, int item){
+
+        for(int j=index+1;j<size+1;j++){
+            array[index] = array[index-1];
+        }
+        array[index] = item;
+        size += 1;
+    }
 
     /**
      * { function_description }.
