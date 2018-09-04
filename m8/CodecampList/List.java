@@ -118,7 +118,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -146,7 +146,7 @@ public class List {
                 array[i] = array[i + 1];
             }
         array[size] = 0;
-        size = size - 1;    
+        size = size - 1; 
 
         } else {
             System.out.println("Invalid Position Exception");
@@ -162,7 +162,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
 
@@ -216,7 +216,7 @@ public class List {
             return s;
         }
         return "print the list";
-    } 
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -255,7 +255,7 @@ public class List {
                 if (item == array[i]) {
                     return i;
                 }
-            }  
+            }
         }
         return -1;
     }
