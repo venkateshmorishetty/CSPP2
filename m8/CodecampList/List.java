@@ -362,8 +362,7 @@ public class List {
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 case "addAll":
-                int s = tokens.length-1;
-                int temp[] = new int[s];
+                int temp[] = new int[tokens.length-1];
                 int temp1 = 0, length = tokens.length;
                 for (int j = 1; j < length; j++) {
                     temp[temp1] = Integer.parseInt(tokens[j]);
