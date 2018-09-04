@@ -130,8 +130,8 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        if(index-1<size){
-            for(int i=index-1;i<size-1;i++){
+        if(index<size){
+            for(int i=index;i<size-1;i++){
                 array[i]=array[i+1];
             }
         array[size]=0;
