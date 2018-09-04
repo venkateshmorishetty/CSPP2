@@ -259,24 +259,36 @@ public class List {
         }
         return -1;
     }
-    // public int count(int item){
-    //     int count = 0;
-    //     for(int j = 0;j<size;j++){
-    //         if(item == array[j]){
-    //             count += 1;
-    //         }
-    //     }
-    //     return count;
-    // }
-    public void add(int index, int item){
 
-        for(int j=index+1;j<size+1;j++){
-            array[index] = array[index-1];
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(int item){
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if (item == array[j]) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(int index, int item) {
+        for (int j = index + 1; j < size + 1; j++) {
+            array[index] = array[index - 1];
         }
         array[index] = item;
         size += 1;
     }
-
     /**
      * { function_description }.
      *
