@@ -292,16 +292,22 @@ public class List {
     /**
      * { function_description }.
      *
-     * @param      args  The arguments
+     * @param      items  The arguments
      */
-    public void addAll(int[] items){
+    public void addAll(int[] items) {
         int length = items.length + size;
         int temp = 0;
-        for(int i = size; i < length; i++) {
+        for (int i = size; i < length; i++) {
             array[i] = items[temp];
             temp += 1;
         }
     }
+
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
