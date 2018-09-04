@@ -103,9 +103,6 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method.
-        if (size==0){
-            return -1;
-        }
         return size;
     }
 
@@ -156,7 +153,7 @@ public class List {
     public int get(int index) {
         // Replace the code below to write the code for get
         int size = size();
-        if(size>index){
+        if(index<=size){
             return array[index];
         }
         return -1;
