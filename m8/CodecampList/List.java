@@ -261,13 +261,13 @@ public class List {
     }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item){
+    public int count(final int item){
         int count = 0;
         for (int j = 0; j < size; j++) {
             if (item == array[j]) {
@@ -277,12 +277,12 @@ public class List {
         return count;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         for (int j = index + 1; j < size + 1; j++) {
             array[index] = array[index - 1];
         }
