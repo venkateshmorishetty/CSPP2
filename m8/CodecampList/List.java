@@ -74,7 +74,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         array = new int[10];
-        this.size = 0;
+        size = 0;
         
     }
     
@@ -185,7 +185,7 @@ public class List {
             System.out.print("[");
             for(int i = 0;i<size-1;i++){
                s+=array[i]+",";
-            }s+=array[size]+"]";
+            }s+=array[size-1]+"]";
             return s;
         }
         return "print the list";
