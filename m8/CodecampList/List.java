@@ -1,5 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -87,7 +90,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
@@ -103,7 +106,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -133,7 +136,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      */
@@ -164,7 +167,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      *
@@ -197,7 +200,7 @@ public class List {
      *
      */
 
-    /**
+    /**.
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
@@ -222,7 +225,7 @@ public class List {
      */
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -242,7 +245,7 @@ public class List {
      * this list, or -1 if this list does not contain the element.
      *
         @param      item  The item
-     @return     { description_of_the_return_value }
+     @return     { description_of_the_return_value }.
      */
     public int indexOf(final int item) {
         // Replace the code below
@@ -274,7 +277,7 @@ public class List {
     // }
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
