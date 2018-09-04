@@ -152,8 +152,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        int size = size();
-        if(index<=size){
+        if(index<size){
             return array[index];
         }
         return -1;
@@ -181,12 +180,13 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        int[] print = new int[size];
+        String s="";
         if(size>0){
-            for(int i = 0;i<size;i++){
-               print[i] = array[i];
-            }
-            return Arrays.toString(print);
+            System.out.print("[");
+            for(int i = 0;i<size-1;i++){
+               s+=array[i]+",";
+            }s+=array[size]+"]";
+            return s;
         }
         return "print the list";
     } 
