@@ -1,10 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 public class List {
-	//Implement all the methods mentioned to build a ListADT
-
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -12,7 +10,6 @@ public class List {
      * So, assume we are only going to have ints in the list
      * We need to create an array of ints to store the items
      * added to the list.
-     *
      * Create a variable of the type int[]
      * Use the private access specifier
      * Why private access specifier and why not public?
@@ -26,11 +23,9 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -50,11 +45,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -62,22 +55,18 @@ public class List {
     private int[] array;
     private int size;
     public List() {
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
         array = new int[10];
         size = 0;
-        
-    }
-    
+        }
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -93,7 +82,6 @@ public class List {
         array[size] = item;
         size = size+1;
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -105,7 +93,6 @@ public class List {
         // replace the code below to implement the size method.
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -140,7 +127,6 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -159,7 +145,6 @@ public class List {
         }
         return -1;
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -192,7 +177,6 @@ public class List {
         }
         return "print the list";
     } 
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -208,7 +192,6 @@ public class List {
         }
         return false;
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
@@ -243,7 +226,7 @@ public class List {
     //     }
     // }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -286,5 +269,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
