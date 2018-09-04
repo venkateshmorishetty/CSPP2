@@ -114,14 +114,14 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        if(index<size){
-            for(int i=index;i<size-1;i++){
-                array[i]=array[i+1];
+        if (index < size) {
+            for (int i = index; i < size - 1; i++) {
+                array[i] = array[i + 1];
             }
-        array[size]=0;
-        size = size-1;    
+        array[size] = 0;
+        size = size - 1;    
 
-        }else{
+        } else {
             System.out.println("Invalid Position Exception");
         }
         // write the logic for remove here.
@@ -140,7 +140,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if(index<size){
+        if (index < size) {
             return array[index];
         }
         return -1;
@@ -167,12 +167,12 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        String s="";
-        if(size>0){
+        String s = "";
+        if (size > 0) {
             System.out.print("[");
-            for(int i = 0;i<size-1;i++){
-               s+=array[i]+",";
-            }s+=array[size-1]+"]";
+            for (int i = 0; i < size - 1; i++) {
+               s += array[i] + ",";
+            } s += array[size - 1] + "]";
             return s;
         }
         return "print the list";
@@ -185,8 +185,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for (int i = 0;i<size;i++){
-            if(array[i] == item){
+        for (int i = 0;i<size;i++) {
+            if (array[i] == item) {
                 return true;
             }
         }
@@ -200,9 +200,9 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         int result;
-        if(size>0){
-            for(int i = 0;i<size;i++){
-                if(item == array[i]){
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                if (item == array[i]) {
                     return i;
                 }
             }  
@@ -226,7 +226,7 @@ public class List {
     //     }
     // }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
