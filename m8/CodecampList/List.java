@@ -146,7 +146,7 @@ public class List {
                 array[i] = array[i + 1];
             }
         array[size] = 0;
-        size = size - 1; 
+        size = size - 1;
 
         } else {
             System.out.println("Invalid Position Exception");
