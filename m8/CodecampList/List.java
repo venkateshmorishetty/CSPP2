@@ -173,7 +173,7 @@ public class List {
         }
         return "print the list";
     } 
-    /**
+    /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
@@ -188,10 +188,12 @@ public class List {
         }
         return false;
     }
-    /**
-     * Returns the index of the first occurrence 
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
+    /*
+     * Returns the index of the first occurrence of the specified element in
+     * this list, or -1 if this list does not contain the element.
+     *
+        @param      item  The item
+     @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
         // Replace the code below
@@ -262,6 +264,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
