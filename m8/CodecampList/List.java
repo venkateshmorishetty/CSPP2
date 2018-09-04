@@ -294,7 +294,7 @@ public class List {
      *
      * @param      items  The arguments
      */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         int length = items.length + size;
         int temp = 0;
         for (int i = size; i < length; i++) {
