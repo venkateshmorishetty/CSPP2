@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -43,8 +42,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
-     */
+    */
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -64,7 +62,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        array = new int[10];
+        final int num = 10;
+        array = new int[num];
         size = 0;
         }
     /*
@@ -80,7 +79,7 @@ public class List {
      */
     public void add(int item) {
         array[size] = item;
-        size = size+1;
+        size = size + 1;
     }
     /*
      * The size method returns the value of the size.
