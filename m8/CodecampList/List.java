@@ -173,7 +173,7 @@ public class List {
         }
         return "print the list";
     } 
-    /*
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
@@ -181,14 +181,14 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0;i<size;i++) {
+        for (int i = 0; i < size; i++) {
             if (array[i] == item) {
                 return true;
             }
         }
         return false;
     }
-    /*
+    /**
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
