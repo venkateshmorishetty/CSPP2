@@ -283,7 +283,7 @@ public class List {
      * @param      item   The item
      */
     public void add(final int index, final int item) {
-        int l = 20;
+        final int l = 20;
         int[] array1 = new int[l];
         array1 = array.clone();
         for (int j = index + 1; j < size + 1; j++) {
@@ -329,7 +329,8 @@ public class List {
                 if (tokens.length <= 2) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(tokens[1]),
+                        Integer.parseInt(tokens[2]));
                 }
                 break;
                 case "size":
@@ -364,7 +365,7 @@ public class List {
                 int s = tokens.length;
                 int temp[] = new int[s - 1];
                 int temp1 = 0, length = tokens.length;
-                for (int j = 1; j < length; j++){
+                for (int j = 1; j < length; j++) {
                     temp[temp1] = Integer.parseInt(tokens[j]);
                     temp1 += 1;
                 }
