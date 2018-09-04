@@ -226,6 +226,22 @@ public class List {
         }
         return -1;
     }
+    // public int count(int item){
+    //     int count = 0;
+    //     for(int j = 0;j<size;j++){
+    //         if(item == array[j]){
+    //             count += 1;
+    //         }
+    //     }
+    //     return count;
+    // }
+    // public void add(int index, int item){
+    //     int temp=array[index];
+    //     array[index] = item;
+    //     for(int j=index+1;j<size;j++){
+    //         array[index] = temp;
+    //     }
+    // }
 
 	public static void main(String[] args) {
         // create an object of the list to invoke methods on it
