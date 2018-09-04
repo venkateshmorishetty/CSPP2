@@ -134,6 +134,8 @@ public class List {
         array[size]=0;
         size = size-1;    
 
+        }else{
+            System.out.println("Invalid Position Exception");
         }
         // write the logic for remove here.
         // Think about what to do to the size variable.
