@@ -50,8 +50,17 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * { var}.
+    */
     private int[] array;
+    /**
+     * { var_description }.
+     */
     private int size;
+    /**
+     * Constructs the object.
+     */
     public List() {
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -76,6 +85,12 @@ public class List {
      * to the list.
      * The method returns void (nothing)
      */
+
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         array[size] = item;
         size = size + 1;
@@ -85,6 +100,12 @@ public class List {
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
      * The method returns an int. Empty list should return 0.
+     */
+
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method.
@@ -110,6 +131,12 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         if (index < size) {
             for (int i = index; i < size - 1; i++) {
@@ -134,6 +161,14 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -161,6 +196,12 @@ public class List {
      * not all the elements of the array.
      *
      */
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String s = "";
@@ -179,6 +220,14 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -188,7 +237,7 @@ public class List {
         }
         return false;
     }
-    /*
+    /**
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      *
@@ -224,6 +273,11 @@ public class List {
     //     }
     // }
 
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -260,7 +314,9 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                if (l.get(Integer.parseInt(tokens[1])) != -1) {
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
