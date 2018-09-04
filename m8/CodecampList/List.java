@@ -74,7 +74,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        final int num = 10;
+        final int num = 20;
         array = new int[num];
         size = 0;
         }
@@ -283,8 +283,10 @@ public class List {
      * @param      item   The item
      */
     public void add(final int index, final int item) {
+        int[] array1 = new int[20];
+        array1 = array.clone();
         for (int j = index + 1; j < size + 1; j++) {
-            array[index] = array[index - 1];
+            array[j] = array1[j-1];
         }
         array[index] = item;
         size += 1;
@@ -301,8 +303,8 @@ public class List {
             array[i] = items[temp];
             temp += 1;
         }
+        size = length;
     }
-
     /**
      * { function_description }.
      *
@@ -323,7 +325,11 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                l.add(Integer.parseInt(tokens[1]));
+                if(tokens.length <= 2){
+                    l.add(Integer.parseInt(tokens[1]));    
+                } else {
+                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                }
                 break;
                 case "size":
                 // invoke size method and print the list size
@@ -350,6 +356,17 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
+                case "addAll":
+                int temp[] = new int[tokens.length - 1];
+                int temp1 = 0, length = tokens.length;
+                for(int j = 1; j < length; j++){
+                    temp[temp1] = Integer.parseInt(tokens[j]);
+                    temp1 += 1;
+                }
+                l.addAll(temp);
                 break;
                 default:
                 break;
