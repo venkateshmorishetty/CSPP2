@@ -33,8 +33,8 @@ public class Fibonacci
         int temp2 = 0;
         list.add(temp);
         list.add(temp1);
-        for(int i = 2;i<n;i++){
-            temp2 = list.get(i-1)+list.get(i-2);
+        for (int i = 2; i < n; i++) {
+            temp2 = list.get(i - 1) + list.get(i - 2);
             list.add(temp2);
         }
         return list;
