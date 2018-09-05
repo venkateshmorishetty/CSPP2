@@ -25,6 +25,16 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    private Fibonacci(){
+        //pass
+    }
+    /**
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
