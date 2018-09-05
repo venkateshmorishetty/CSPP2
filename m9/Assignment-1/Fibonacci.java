@@ -39,8 +39,7 @@ public class Fibonacci
         }
         return list;
     }
-
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
