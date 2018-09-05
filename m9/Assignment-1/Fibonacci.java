@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 /*
  * In the previous module you have created List ADT.
