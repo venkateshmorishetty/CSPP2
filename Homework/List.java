@@ -161,10 +161,7 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
-    public int[] resize(){
-        list = Arrays.copyOf(list,size*2);
-        return list;
-    }
+    
     public int size() {
         return size;
     }
@@ -189,6 +186,10 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    public int[] resize(){
+        list = Arrays.copyOf(list,size*2);
+        return list;
+    }
 
     public void remove(int index) {
         // write the logic for remove here.
@@ -315,7 +316,6 @@ public class List {
         System.out.println(items.length);
         System.out.println(items.length+size);
         if(items.length+size>list.length){
-            System.out.println("iam in");
             list = resize();
         }
         int length = items.length + size;
