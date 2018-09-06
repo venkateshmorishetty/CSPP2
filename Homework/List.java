@@ -315,7 +315,8 @@ public class List {
         System.out.println(list.length);
         System.out.println(items.length);
         System.out.println(items.length+size);
-        if(items.length+size>list.length){
+        int temp1 = items.length+size;
+        if(temp1 > list.length){
             list = resize();
         }
         int length = items.length + size;
