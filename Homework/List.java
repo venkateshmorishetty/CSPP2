@@ -313,7 +313,7 @@ public class List {
         
         System.out.println("length"+list.length);
         System.out.println(items.length);
-        System.out.println("total"+items.length+size);
+        System.out.println("total"+(int)items.length+(int)size);
         if(items.length+size>list.length){
             list = resize();
         }
