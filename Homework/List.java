@@ -312,11 +312,16 @@ public class List {
     public void addAll(final int[] items) {
         int length = items.length + size;
         int temp = 0;
+        if(length>list.length){
+            list = resize();
+        }
+        else {
         for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp += 1;
         }
         size = length;
+    }
     }
 
 	public static void main(String[] args) {
