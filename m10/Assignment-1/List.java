@@ -28,6 +28,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /** {integer list}. */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -51,7 +52,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     /**.
-    *{int} 
+    *{int}
     */
     private int size;
     /*
@@ -266,8 +267,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -294,7 +296,7 @@ public class List {
      * @param      item   The item
      */
     public void add(final int index, final int item) {
-    if(index < 0) {
+    if (index < 0) {
         System.out.println("Negative Index Exception");
     } else {
     for (int j = size; j > index; j--) {
