@@ -4,8 +4,7 @@ public class Solution {
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
-        // code to read the test cases input file
+        StringListInterface l = (StringListInterface)sl;
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
         while (stdin.hasNext()) {
@@ -19,7 +18,7 @@ public class Solution {
                     l.add(tokens[1]);
                 break;
                 case "addAll":
-                if(tokens.length == 2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 l.addAll(t1);
                 }
