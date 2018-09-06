@@ -13,7 +13,7 @@ class Student {
 	}
 
 	@Override
-	public boolean equals(Object other) { //This method is to check if two students names are equal or not
+	public boolean equals(Object other) { 
 		if (!(other instanceof Student)) {
 			return false;
 		}
@@ -43,7 +43,8 @@ public class Solution {
 		            String line = stdin.nextLine();
 		            // split the line using space
 		            String[] tokens = line.split(" ");
-		            // based on the list operation invoke the corresponding method
+		            // based on the list operation
+		            // invoke the corresponding. 
 		            switch (tokens[0]) {
 		                case "add":
 			                listString.add(tokens[1]);
@@ -61,7 +62,6 @@ public class Solution {
 		                System.out.println(listString.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
 		                //for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
