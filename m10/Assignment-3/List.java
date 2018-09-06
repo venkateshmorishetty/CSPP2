@@ -44,11 +44,9 @@ public class List<E> {
         //You can modify the code in this method.
         if ( size == list.length) {
             list = resize();
-            list[size] = item;
         }
-        else {
-            list[size++] = item;
-        }
+        list[size++] = item;
+        
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
