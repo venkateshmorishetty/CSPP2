@@ -221,12 +221,17 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
+        if(list.length == 0) {
+            return "";
+        }
+        else {
         System.out.print("[");
         String s="";
         for(int i = 0;i<size-1;i++){
             s += list[i]+",";
         }s += list[size-1]+"]";
         return s;
+        }
        
     }
     
