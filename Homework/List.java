@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**.
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -26,12 +28,10 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -75,18 +75,17 @@ public class List {
         size = 0;
     }
     /*
-     * Overloaded constructor with list capacity as argument
-     * The default constructor sets the list capacity to 10
-     * So, adding an item when the list size is 10
-     * raises a Index Out of Bounds Exception
-     * There will be some clients of the ADT that will require
-     * the list to contain n elements which is known
-     * at the time of creating the list.
-     * 
-     * The overloaded constructor is a way to initialize a list with
-     * a list capacity of n items where n is given as an argument to
-     * constructor.
-     * 
+     * Overloaded constructor with list capacity as argument The default
+     * constructor sets the list capacity to 10 So, adding an item when the list
+     * size is 10 raises a Index Out of Bounds Exception There will be some
+     * clients of the ADT that will require the list to contain n elements which
+     * is known at the time of creating the list.
+     *
+     * The overloaded constructor is a way to initialize a list with a list
+     * capacity of n items where n is given as an argument to constructor.
+     */
+     /**.
+     * @param      capacity  The capacity
      */
     public List(int capacity) {
         size = 0;
@@ -94,15 +93,15 @@ public class List {
     }
     
     /*
-     * The add method does what the name suggests.
-     * Add an int item to the list.
-     * The assumption is to store the item at the end of the list
-     * What is the end of the list?
-     * Is it the same as the end of the array?
-     * Think about how you can use the size variable to add item
-     * to the list.
-     * 
+     * The add method does what the name suggests. Add an int item to the list.
+     * The assumption is to store the item at the end of the list What is the
+     * end of the list? Is it the same as the end of the array? Think about how
+     * you can use the size variable to add item to the list.
+     *
      * The method returns void (nothing)
+     */
+     /**.
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
@@ -152,6 +151,9 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
+    /**.
+    *@param size
+    */
     public int size() {
         return size;
     }
@@ -248,6 +250,9 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**.
+     *@param item.
+    */
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
@@ -256,6 +261,9 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**.
+     *@param item
+    */
     public int indexOf(int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
