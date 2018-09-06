@@ -50,7 +50,9 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    /** {int} */
+    /**.
+    *{int} 
+    */
     private int size;
     /*
      * The purpose of the constructor is to initialize the
@@ -65,7 +67,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[20];
+        final int s = 20;
+        list = new int[s];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -95,7 +98,7 @@ public class List {
      * What is the end of the list?
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
-     * to the list. 
+     * to the list.
      * The method returns void (nothing)
      */
     /**
@@ -197,7 +200,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -211,7 +214,7 @@ public class List {
      * List l = new List();
      * System.out.println(l);
      * This statement is a shortcut for
-     * System.out.println(l.toString()); 
+     * System.out.println(l.toString());
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -226,11 +229,12 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -251,7 +255,7 @@ public class List {
         return indexOf(item) == -1;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -261,25 +265,26 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
     /**
      * { item_description }.
+     * @param items
      */
     public void addAll(final int[] items) {
-        for(int i = 0;i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
         }
     }
-    /* 
-    Inserts the specified element at the specified index 
+    /*
+    Inserts the specified element at the specified index
     by moving all the elements to the right.
     The method returns void (nothing)
      */
@@ -288,12 +293,12 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(final int index, final int item) { 
+    public void add(final int index, final int item) {
     if(index < 0) {
         System.out.println("Negative Index Exception");
     } else {
     for (int j = size; j > index; j--) {
-            list[j] = list[j-1];
+            list[j] = list[j - 1];
         }
         list[index] = item;
         size += 1;
@@ -338,7 +343,7 @@ public class List {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
                     if (t.length > 1) {
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
@@ -349,9 +354,9 @@ public class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
+                int[] temp = new int[t1.length];
                 for (int i = 0; i < temp.length; i++) {
-                    temp[i]=Integer.parseInt(t1[i]);
+                    temp[i] = Integer.parseInt(t1[i]);
                 }
                 l.addAll(temp);
                 }
