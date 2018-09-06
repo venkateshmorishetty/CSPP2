@@ -311,9 +311,9 @@ public class List {
      */
     public void addAll(final int[] items) {
         
-        System.out.println("length"+list.length);
+        System.out.println(list.length);
         System.out.println(items.length);
-        System.out.println("total"+(int)items.length+(int)size);
+        System.out.println(items.length+size);
         if(items.length+size>list.length){
             list = resize();
         }
