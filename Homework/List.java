@@ -315,13 +315,11 @@ public class List {
         if(length>list.length){
             list = resize();
         }
-        else {
         for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp += 1;
         }
         size = length;
-    }
     }
 
 	public static void main(String[] args) {
