@@ -169,15 +169,15 @@ public class StringList implements StringListInterface{
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        // if(index < size){
-        //     System.out.println("Invalid Position Exception");
-        // } 
-        // else {
+        if(index > size){
+            System.out.println("Invalid Position Exception");
+        } 
+        else {
         for(int j = index;j<size;j++){
             list[j] = list[j+1];
         }
         size--;
-        // }
+        }
        
     }
 
