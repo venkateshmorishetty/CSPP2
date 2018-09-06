@@ -310,17 +310,20 @@ public class List {
      * @param      items  The arguments
      */
     public void addAll(final int[] items) {
-        int temp1 = items.length + size;
-        if (temp1 > list.length) {
-            list = resize();
+        // int temp1 = items.length + size;
+        // if (temp1 > list.length) {
+        //     list = resize();
+        // }
+        // int length = items.length + size;
+        // int temp = 0;
+        // for (int i = size; i < length; i++) {
+        //     list[i] = items[temp];
+        //     temp += 1;
+        // }
+        // size = length;
+        for(int i: items) {
+            add(i);
         }
-        int length = items.length + size;
-        int temp = 0;
-        for (int i = size; i < length; i++) {
-            list[i] = items[temp];
-            temp += 1;
-        }
-        size = length;
     }
 
     public static void main(String[] args) {
