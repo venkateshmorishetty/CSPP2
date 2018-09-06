@@ -314,7 +314,7 @@ public class List {
             list[i] = items[temp];
             temp += 1;
         }
-        size += items.length;
+        // size += items.length;
     }
 
 	public static void main(String[] args) {
