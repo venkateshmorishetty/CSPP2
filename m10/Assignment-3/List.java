@@ -35,15 +35,14 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
-    private E[] resize(){
+    private void resize(){
         list = Arrays.copyOf(list,size*2);
-        return list;
     }
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
         if ( size == list.length) {
-            list = resize();
+            resize();
         }
         list[size++] = item;
         
@@ -51,8 +50,8 @@ public class List<E> {
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
-        for (int i = 0; i < items.length; i++) {
-            add(items[i]);
+        for (E i:items) {
+            add(i);
         }
     }
     /*
@@ -88,12 +87,16 @@ public class List<E> {
     public void remove(int index) {
         //Write logic for remove method
         if (index >= 0 && index < size) {
-            for(int i = index; i < size; i++) {
+            for(int i = index; i < size-1; i++) {
                 list[i] = list[i+1];
             }
+            size--;
+        }else{
+            System.out.println("Invalid Position Exception");
         }
-        size--;
     }
+        
+
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
