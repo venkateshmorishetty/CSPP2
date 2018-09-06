@@ -332,12 +332,11 @@ public class List {
                case "add":
                 if((tokens.length)==2){
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
-                    if(t.length>1)
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                } else {
+                    if (t.length > 1)
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                 }
                 break;
