@@ -315,6 +315,7 @@ public class List {
         System.out.println(items.length);
         System.out.println(items.length+size);
         if(items.length+size>list.length){
+            System.out.println("iam in");
             list = resize();
         }
         int length = items.length + size;
