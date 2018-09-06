@@ -7,7 +7,7 @@ public final class Solution {
     /**.
      * {Solution}.
      */
-    private Solution(){
+    private Solution() {
         //pass
     }
     /**
