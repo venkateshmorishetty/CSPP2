@@ -1,10 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l = (StringListInterface)sl;
+        StringListInterface l = (StringListInterface) sl;
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
         while (stdin.hasNext()) {
@@ -47,6 +47,8 @@ public class Solution {
                 break;
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
+                break;
+                default:
                 break;
             }
         }
