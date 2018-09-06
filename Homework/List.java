@@ -311,6 +311,7 @@ public class List {
     public void addAll(final int[] items) {
         int length = items.length + size;
         int temp = 0;
+        System.out.println("length is"+length);
         for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp += 1;
