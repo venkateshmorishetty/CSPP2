@@ -311,12 +311,14 @@ public class List {
      */
     public void addAll(final int[] items) {
         
-        
+        System.out.println("length"+list.length);
+        System.out.println("total"+items.length+size);
         if(items.length+size>list.length){
             list = resize();
         }
         int length = items.length + size;
         int temp = 0;
+        System.out.println(list.length);
         for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp += 1;
