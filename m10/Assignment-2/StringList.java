@@ -221,8 +221,8 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
-        if(list.length == 0) {
-            return "";
+        if(size == 0) {
+            return "[]";
         }
         else {
         System.out.print("[");
