@@ -4,6 +4,12 @@ import java.util.Scanner;
  * Class for solution.
  */
 class Solution {
+    /**.
+     * {Solution}.
+     */
+    private Solution(){
+        //pass
+    }
     /**
      * { function_description }.
      * @param      args  The arguments
