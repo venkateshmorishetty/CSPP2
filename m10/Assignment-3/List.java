@@ -47,7 +47,7 @@ public class List<E> {
             list[size] = item;
         }
         else {
-            list[(size++)] = item;
+            list[size++] = item;
         }
     }
     /*Inserts all the elements of specified int 
