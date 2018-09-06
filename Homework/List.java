@@ -309,12 +309,13 @@ public class List {
      * @param      items  The arguments
      */
     public void addAll(final int[] items) {
+        int length = items.length + size;
         int temp = 0;
-        for (int i = size; i <items.length; i++) {
+        for (int i = size; i <length; i++) {
             list[i] = items[temp];
             temp += 1;
         }
-        size += items.length;
+        size = length;
     }
 
 	public static void main(String[] args) {
