@@ -12,7 +12,6 @@ public class List {
      * So, assume we are only going to have ints in the list
      * We need to create an array of ints to store the items
      * added to the list.
-     *
      * Create a variable of the type int[]
      * Use the private access specifier
      * Why private access specifier and why not public?
@@ -26,12 +25,10 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -103,7 +100,6 @@ public class List {
      */
     /**
      * { function_description }.
-     *
      * @param      item  The item
      */
     public void add(final int item) {
@@ -111,7 +107,6 @@ public class List {
         list[size++] = item;   
     }
     /*
-     *
      * Resize the list
      * Sometimes the clients of the ADT won't know the expected list capacity
      * To solve this the list has to grow dynamically
@@ -229,7 +224,6 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
-     *
      */
     /**.
      * Returns a string representation of the object.
