@@ -311,17 +311,12 @@ public class List {
      * @param      items  The arguments
      */
     public void addAll(final int[] items) {
-        
-        System.out.println(list.length);
-        System.out.println(items.length);
-        System.out.println(items.length+size);
         int temp1 = items.length+size;
         if(temp1 > list.length){
             list = resize();
         }
         int length = items.length + size;
         int temp = 0;
-        System.out.println(list.length);
         for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp += 1;
