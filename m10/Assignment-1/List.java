@@ -277,7 +277,7 @@ public class List {
     array to the end of list*/
     /**
      * { item_description }.
-     * @param items[]
+     * @param items.
      */
     public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
