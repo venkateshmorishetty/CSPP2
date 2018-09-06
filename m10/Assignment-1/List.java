@@ -95,7 +95,7 @@ public class List {
      /**.
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -116,7 +116,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
@@ -195,7 +195,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= size || index < 0){
@@ -284,7 +284,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -300,7 +300,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -312,7 +312,7 @@ public class List {
     /**
      * { item_description }.
      */
-    public void addAll(int items[]) {
+    public void addAll(final int items[]) {
         for(int i = 0;i < items.length; i++) {
             list[size] = items[i];
             size++;
@@ -331,7 +331,7 @@ public class List {
      * @param      index  The index
      * @param      item   The item
      */
-    public void add(int index,int item) {
+    public void add(final int index, final int item) {
          // write the logic 
     if(index < 0) {
         System.out.println("Negative Index Exception");
@@ -352,7 +352,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
             if (item == list[j]) {
@@ -381,14 +381,15 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 }
-                else{
-                    if(t.length>1)
+                else {
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
