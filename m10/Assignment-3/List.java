@@ -35,9 +35,17 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * { function_description }.
+     */
     private void resize(){
         list = Arrays.copyOf(list,size*2);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -49,6 +57,11 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(E[] items) {
         for (E i:items) {
             add(i);
@@ -60,6 +73,11 @@ public class List<E> {
      * to the objects outside the list
      * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
@@ -84,6 +102,11 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         //Write logic for remove method
         if (index >= 0 && index < size) {
@@ -95,8 +118,6 @@ public class List<E> {
             System.out.println("Invalid Position Exception");
         }
     }
-        
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -107,6 +128,13 @@ public class List<E> {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public E get(int index) {
          //Write logic for get method
@@ -135,6 +163,11 @@ public class List<E> {
      * toString should only return the items in the list and
      * not all the elements of the array.
      *
+     */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
      */
     public String toString() {
        if(size == 0){
