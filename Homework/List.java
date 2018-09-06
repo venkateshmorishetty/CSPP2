@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -51,19 +51,14 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
-
     public List() {
 
         // what are the two variables to be initialized here?
@@ -79,7 +74,6 @@ public class List {
         // That is the initial value to use for size.
         size = 0;
     }
-
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -120,7 +114,6 @@ public class List {
             list[size++] = item;
         }   
     }
-
     /*
      *
      * Resize the list
@@ -151,9 +144,7 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-
     // todo create resize method
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -161,11 +152,9 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
-    
     public int size() {
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -186,11 +175,10 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public int[] resize(){
-        list = Arrays.copyOf(list,size*2);
+    public int[] resize() {
+        list = Arrays.copyOf(list, size*2);
         return list;
     }
-
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -222,7 +210,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -264,7 +251,6 @@ public class List {
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
@@ -277,8 +263,13 @@ public class List {
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
-    array to the end of list*/
+   /**.
+    Inserts all the elements of specified int array to the end of list
+   
+    @param      item  The item
+   
+    @return     { description_of_the_return_value }
+   */
    public int count (final int item) {
         int count = 0;
         for (int j = 0; j < size; j++) {
@@ -295,7 +286,7 @@ public class List {
      * @param      item   The item
      */
     public void add (final int index, final int item) {
-    if(index<0){
+    if(index < 0) {
         System.out.println("Negative Index Exception");
     } else {
     for (int j = size; j > index; j--) {
@@ -311,8 +302,8 @@ public class List {
      * @param      items  The arguments
      */
     public void addAll(final int[] items) {
-        int temp1 = items.length+size;
-        if(temp1 > list.length){
+        int temp1 = items.length + size;
+        if (temp1 > list.length) {
             list = resize();
         }
         int length = items.length + size;
@@ -324,7 +315,7 @@ public class List {
         size = length;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -388,5 +379,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
