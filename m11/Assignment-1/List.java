@@ -1,5 +1,6 @@
-import java.io.BufferedInputStream; import java.util.Scanner;
-/** assignment-1 */
+import java.io.BufferedInputStream; 
+import java.util.Scanner;
+/**. assignment-1 */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -27,7 +28,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /** {int list} */
+    /**. {int list} */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -47,7 +48,7 @@ public class List {
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
      */
-    /** {size variable} */
+    /**. {size variable} */
     private int size;
     // declare a private int size
     // again, don't initialize it here
