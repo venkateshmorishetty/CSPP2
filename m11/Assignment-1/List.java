@@ -241,20 +241,20 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.   
     */
      /**
       * Removes all.
       *
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray) {  
+     public void removeAll(final int[] newArray) {
         boolean check;
-        for(int i = 0;i < newArray.length; i++) {
+        for (int i = 0; i < newArray.length; i++) {
             check = contains(newArray[i]);
             if (check) {
-                for (int j = 0;j < list.length; j++) {
+                for (int j = 0; j < list.length; j++) {
                     if (list[j] == newArray[i]) {
                         remove(j);
                         j--;
@@ -266,7 +266,7 @@ public class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -278,17 +278,16 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) 
-    {
+    public List subList(final int start, final int end) {
     // write the logic for subList
         if (start < 0 || end < 0 || start > end || end > size || start == end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         } else {
         List list1 = new List();
-        for(int i = start; i < end; i++) {
+        for (int i = start; i < end; i++) {
             list1.add(list[i]);
-        } 
+        }
         return list1;
     }
     }
@@ -296,7 +295,7 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(final List list)  {
+    public boolean equals(final List list) {
     // Replace the code below
         int s = list.size();
         if (s != size) {
@@ -321,8 +320,7 @@ public class List {
     /**
      * { function_description }.
      */
-    public void clear()
-    {
+    public void clear() {
     size = 0;
     }
     /**
@@ -395,7 +393,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++){
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
@@ -414,7 +412,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
