@@ -216,6 +216,7 @@ public class List<E> {
         if(s != size){
             return false;
         }
+        else{
         int f = 0;
         for(int t = 0;t<s;t++){
             if(list[t] != listdata.get(t)){
@@ -226,6 +227,7 @@ public class List<E> {
             return true;
         }
         return false;
+        }
     }
     /*Removes all the elements from list*/
     public void clear()
