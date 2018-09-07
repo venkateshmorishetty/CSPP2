@@ -207,7 +207,6 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {  
-        // int t;
         boolean check;
         for(int i = 0;i<newArray.length;i++){
             check = contains(newArray[i]);
