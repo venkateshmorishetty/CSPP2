@@ -207,21 +207,7 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {  
-        int t;
-        boolean check;
-        for(int i = 0;i<newArray.length;i++){
-            check = contains(newArray[i]);
-
-            if(check){
-                for(int j = 0;j<list.length;j++){
-                    if(list[j] == newArray[i]){
-                        // System.out.println(list[j]+" removing element");
-                        remove(j);
-                    }
-                }
-            }
-        }
-
+        
      }
     /*
     Returns a list object containing elements, including startIndex and
@@ -250,16 +236,16 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list1 ) 
+    public boolean equals(List list) 
     {
     // Replace the code below
-        int s = list1.size();
+        int s = list.size();
         if(s != size){
             return false;
         }
         int f = 0;
         for(int t = 0;t<s;t++){
-            if(list[t] != list1.get(t)){
+            if(this.list[t] != list.get(t)){
                 f = 1;
             }
         }
