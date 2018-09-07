@@ -303,7 +303,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list) {
+    public boolean equals(final List list) {
     // Replace the code below
         int s = list.size();
         if (s != size) {
