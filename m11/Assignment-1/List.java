@@ -1,4 +1,4 @@
-import java.io.BufferedInputStream; 
+import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**. assignment-1 */
 public class List {
@@ -303,7 +303,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(List list) {
     // Replace the code below
         int s = list.size();
         if (s != size) {
