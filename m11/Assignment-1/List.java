@@ -117,6 +117,7 @@ public class List {
         // variable.
         if(index<size){
             for(int i=index;i<size-1;i++){
+                // System.out.println(list[i]+" remove "+list[i+1]);
                 list[i]=list[i+1];
             }
             list[size-1]=0;
@@ -210,9 +211,11 @@ public class List {
         boolean check;
         for(int i = 0;i<newArray.length;i++){
             check = contains(newArray[i]);
+
             if(check){
                 for(int j = 0;j<list.length;j++){
                     if(list[j] == newArray[i]){
+                        // System.out.println(list[j]+" removing element");
                         remove(j);
                     }
                 }
