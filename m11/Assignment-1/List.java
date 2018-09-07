@@ -207,7 +207,22 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {  
-        
+        int t;
+        boolean check;
+        for(int i = 0;i<newArray.length;i++){
+            check = contains(newArray[i]);
+
+            if(check){
+                for(int j = 0;j<list.length;j++){
+                    if(list[j] == newArray[i]){
+                        // System.out.println(list[j]+" removing element");
+                        remove(j);
+                        j--;
+                    }
+                }
+            }
+        }
+
      }
     /*
     Returns a list object containing elements, including startIndex and
