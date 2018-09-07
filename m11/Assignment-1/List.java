@@ -1,5 +1,5 @@
 import java.io.BufferedInputStream; import java.util.Scanner;
-
+/** assignment-1 */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -27,6 +27,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /** {int list} */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -45,8 +46,8 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
+    /** {size variable} */
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -60,14 +61,14 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-        list = new int[20];
+        final int s = 20;
+        list = new int[s];
         size = 0;
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -179,12 +180,12 @@ public class List {
         if (size == 0) {
             return "[]";
         }
-        String str ="[";
-        for(int i = 0;i < size - 1; i++) {
+        String str = "[";
+        for (int i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         } str = str + list[size - 1] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -199,7 +200,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return true;
             }
@@ -227,22 +228,21 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all.
      *
      * @param      newArray  The new array
      */
-    public void addAll(final int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         for (int i : newArray) {
             add(i);
         }
     }
     /*
      Removes all of its elements that are contained in the specified int
-     array.   
+     array.
     */
      /**
       * Removes all.
@@ -295,6 +295,13 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
+    /**
+     * { function_description }.
+     *
+     * @param      list  The list
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(final List list) {
     // Replace the code below
         int s = list.size();
