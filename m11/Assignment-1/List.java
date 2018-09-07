@@ -303,15 +303,15 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(final List list1) {
     // Replace the code below
-        int s = list.size();
+        int s = list1.size();
         if (s != size) {
             return false;
         }
         int f = 0;
         for (int t = 0; t < s; t++) {
-            if (this.list[t] != list.get(t)) {
+            if (this.list[t] != list1.get(t)) {
                 f = 1;
             }
         }
