@@ -212,22 +212,7 @@ public class List<E> {
      */
     public boolean equals(List<E> listdata)
     {
-        int s = listdata.size();
-        if(s != size){
-            return false;
-        }
-        else{
-        int f = 0;
-        for(int t = 0;t<s;t++){
-            if(list[t] != listdata.get(t)){
-                f = 1;
-            }
-        }
-        if(f==0){
-            return true;
-        }
-        return false;
-        }
+        return toString().equals(listdata.toString());
     }
     /*Removes all the elements from list*/
     public void clear()
