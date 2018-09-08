@@ -103,9 +103,9 @@ class Set {
                         s[i][j] = str2+" ]";
                     }
                     if(i!=0){
-                        str2 = "[";
-                    }else{
                         str2 = "";
+                    }else{
+                        str2 = "[";
                     }
                 }
                 str = "";
