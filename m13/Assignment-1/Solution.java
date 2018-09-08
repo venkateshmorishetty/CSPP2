@@ -97,7 +97,11 @@ class Set {
                 str += set[i]+",";
                 for(int j = 0;j<limit1;j++){
                     str2 += str + set1.get(j);
-                    s[i][j] = str2+"]";
+                    if(j==limit1-1){
+                        s[i][j] = str2;
+                    }else{
+                        s[i][j] = str2+"]";
+                    }
                     str2 = "[";
                 }
                 str = "";
