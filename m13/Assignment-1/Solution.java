@@ -63,9 +63,6 @@ class Set {
         Set s1 = new Set();
         boolean check;
         int limit = items.size();
-        if(size == 0 || items.size()==0){
-            return null;
-        }else{
         for(int i=0;i<size;i++){
             for(int j=0;j<limit;j++){
                 if(set[i] == items.get(j)){
@@ -74,8 +71,6 @@ class Set {
             }
         }
     return s1;
-    } 
-
     }
     public Set retainAll(int[] items){
         
@@ -94,15 +89,15 @@ class Set {
         String str="",str2="";
         int limit1 = set1.size();
 
-        if(set1.size() == 0 && size == 0){
+        if(set1.size() == 0 || size == 0){
             return null;
         } else {
             String[][] s = new String[size][limit1];
             for(int i =0;i<size;i++){
-                str += "["+set[i]+",";
+                str += set[i]+",";
                 for(int j = 0;j<limit1;j++){
-                    str2 += str + set1.get(j)+"]";
-                    s[i][j] = str2;
+                    str2 += str + set1.get(j);
+                    s[i][j] = "["+str2+"]";
                     str2 = "";
                 }
                 str = "";
