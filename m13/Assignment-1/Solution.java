@@ -59,12 +59,13 @@ class Set {
         return -1;
     }
     public Set intersection(Set items){
-        if(size == 0 && items.size()==0){
-            return null;
-        }
+        
         Set s1 = new Set();
         boolean check;
         int limit = items.size();
+        if(size == 0 && items.size()==0){
+            return null;
+        }else{
         for(int i=0;i<size;i++){
             for(int j=0;j<limit;j++){
                 if(set[i] == items.get(j)){
@@ -72,7 +73,8 @@ class Set {
                 }
             }
         }
-    return s1; 
+    return s1;
+    } 
 
     }
     public Set retainAll(int[] items){
