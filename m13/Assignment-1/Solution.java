@@ -102,11 +102,7 @@ class Set {
                     }else{
                         s[i][j] = str2+"]";
                     }
-                    if(j==0){
-                        str2 = "";
-                    }else{
-                      str2 = "[";  
-                    } 
+                    str2 = "[";
                 }
                 str = "";
             }
