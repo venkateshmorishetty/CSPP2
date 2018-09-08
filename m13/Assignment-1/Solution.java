@@ -100,10 +100,11 @@ class Set {
                     if(j==limit1-1){
                         s[i][j] = str2;
                     }else{
-                        s[i][j] = str2+" ]";
+                        s[i][j] = str2+"]";
                     }
                     str2 = "[";
                 }
+                str = "";
             }
             return s;
         }
