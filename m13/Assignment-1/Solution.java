@@ -94,10 +94,10 @@ class Set {
         } else {
             String[][] s = new String[size][limit1];
             for(int i =0;i<size;i++){
-                str += set[i]+",";
+                str += "["+set[i]+",";
                 for(int j = 0;j<limit1;j++){
                     str2 += str + set1.get(j);
-                    s[i][j] = "["+str2+"]";
+                    s[i][j] = str2+"]";
                     str2 = "";
                 }
                 str = "";
