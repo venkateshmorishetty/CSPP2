@@ -59,6 +59,9 @@ class Set {
         return -1;
     }
     public Set intersection(Set items){
+        if(size == 0 && items.size==0){
+            return null;
+        }
         Set s1 = new Set();
         boolean check;
         int limit = items.size();
