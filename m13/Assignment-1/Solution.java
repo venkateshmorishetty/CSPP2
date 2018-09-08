@@ -103,7 +103,7 @@ class Set {
                         s[i][j] = str2+"]";
                     }
                     str2 = "[";
-                }str2 ="";
+                }
             }
             return s;
         }
