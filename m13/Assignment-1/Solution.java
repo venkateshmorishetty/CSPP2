@@ -86,7 +86,7 @@ class Set {
     return s1; 
     }
     public String[][] cartesianProduct(Set set1){
-        String str="",str2="";
+        String str="[",str2="";
         int limit1 = set1.size();
 
         if(set1.size() == 0 || size == 0){
