@@ -48,7 +48,7 @@ class Set {
         String s;
         s = "{";
         for(int i = 0;i<size-1;i++){
-            s += set[i]+",";
+            s += set[i]+", ";
         }s += set[size-1]+"}";
         return s;
     }
@@ -86,7 +86,7 @@ class Set {
     return s1; 
     }
     public String[][] cartesianProduct(Set set1){
-        String str="[",str2="";
+        String str="",str2="";
         int limit1 = set1.size();
 
         if(set1.size() == 0 && size == 0){
@@ -94,7 +94,7 @@ class Set {
         } else {
             String[][] s = new String[size][limit1];
             for(int i =0;i<size;i++){
-                str += set[i]+",";
+                str += "["+set[i]+",";
                 for(int j = 0;j<limit1;j++){
                     str2 += str + set1.get(j)+"]";
                     s[i][j] = str2;
