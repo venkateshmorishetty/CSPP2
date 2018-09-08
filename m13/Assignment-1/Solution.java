@@ -95,11 +95,11 @@ class Set {
             String[][] s = new String[size][limit1];
             for(int i =0;i<size;i++){
                 str += set[i]+",";
-                for(int j = 0;j<limit1;j++){
+                for(int j = 0;j<limit1-1;j++){
                     str2 += str + set1.get(j);
                     s[i][j] = str2;
-                    str2 = "";
-                }
+                    str2 = "[";
+                }s[i][limit1] = str2+str+","+set1.get(limit1-1);
                 str = "";
             }
             return s;
