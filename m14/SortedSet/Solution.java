@@ -276,12 +276,12 @@ class Solution{
                 try {
                 String[] token = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
-                if(res.length == 0){
-                    System.out.println("{}");
+                if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])){
+                    System.out.println("Invalid Arguments to Subset Exceptionq");
                     break;
                 }
-                else if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])){
-                    System.out.println("Invalid Arguments to Subset Exceptionq");
+                else if(res.length == 0){
+                    System.out.println("{}");
                     break;
                 }
                 else{
