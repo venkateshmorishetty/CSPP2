@@ -24,7 +24,7 @@ class Set {
     /**
      * Default constructor to create an array with the szie 10.
      */
-    public Set() {
+    Set() {
         set = new int[TEN];
         size = 0;
     }
@@ -188,8 +188,11 @@ class Set {
             }
         }
         return -1;
-    }   
+    }
 }
+/**
+ * Class for sorted set.
+ */
 class sortedSet extends Set {
     /**
      * add all elements of the array to this Set.
