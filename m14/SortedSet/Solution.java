@@ -197,7 +197,7 @@ class Sortedset extends Set {
     /**
      * Constructs the object.
      */
-    Sortedset() { 
+    Sortedset() {
     }
     /**
      * add all elements of the array to this Set.
