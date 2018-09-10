@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.io.BufferedInputStream;
-import java.util.Arrays;
+/**
+ * Class for set.
+ */
 class Set {
 
     /**
@@ -28,10 +30,9 @@ class Set {
     }
 
     /**
-     * add the item to this set at the last.
-     * If the set is full, resize the set to double
-     * the size of the current set.
-     * @param item to be inserted at the last.
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int max(){
         int max = 0;
@@ -42,7 +43,13 @@ class Set {
         }
         return max;
     }
-    public void add(int item) {
+
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
         int max;
         if (size == set.length) {
             resize();
@@ -78,7 +85,7 @@ class Set {
      * @param arr as an arr to be added in this set,
      *            if the element is not present in this set.
      */
-    public void addAll(int[] arr) {
+    public void addAll(final int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             add(arr[i]);
         }
@@ -90,7 +97,7 @@ class Set {
      * @return the result that contains the common
      * elements of the two sets.
      */
-    public Set intersection(Set other) {
+    public Set intersection( Set other) {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
@@ -196,13 +203,28 @@ class Set {
         }
         return -1;
     }
+
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String last(){
         if(size == 0){
             return "Set Empty Exception";
         }
         return set[size-1]+"";
     }
-    public int[] subSet(int fromele, int toele) {
+
+    /**
+     * { function_description }.
+     *
+     * @param      fromele  The fromele
+     * @param      toele    The toele
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] subSet(final int fromele, final int toele) {
         int count = 0, temp = 0;
         for(int i = 0; i < size; i++) {
             if(set[i] >= fromele && set[i] < toele){
@@ -219,7 +241,15 @@ class Set {
         }
         return arr;
     }
-    public int[] headSet(int ele){
+
+    /**
+     * { function_description }.
+     *
+     * @param      ele   The ele
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[] headSet(final int ele){
         int count = 0,temp = 0;
         for (int i = 0; i < size; i++) {
             if(set[i] < ele) {
@@ -236,11 +266,12 @@ class Set {
         return arr;
     }
 }
-// class sortedSet extends Set{
-//     public 
-// }
+
+/**
+ * Class for solution.
+ */
 class Solution{
-     public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Set s = new Set();
 
