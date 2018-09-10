@@ -217,6 +217,22 @@ class Sortedset extends Set {
         size = 0;  
     }
     /**
+     * String version of the object.
+     * @return string.
+     */
+    @Override
+    public String toString() {
+        if (this.size() == 0) {
+            return "{}";
+        }
+        StringBuilder sb = new StringBuilder("{");
+        for (int i = 0; i < size - 1; i++) {
+            sb.append(set[i] + ", ");
+        }
+        sb.append(set[size - 1] + "}");
+        return sb.toString();
+    }
+    /**
      * add all elements of the array to this Set.
      * @param arr as an arr to be added in this set,
      *            if the element is not present in this set.
