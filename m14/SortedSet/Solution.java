@@ -193,7 +193,7 @@ class Set {
 /**
  * Class for sorted set.
  */
-class sortedset extends Set {
+class Sortedset extends Set {
     /**
      * add all elements of the array to this Set.
      * @param arr as an arr to be added in this set,
@@ -288,7 +288,7 @@ final class Solution {
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        sortedset s = new sortedset();
+        Sortedset s = new Sortedset();
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
