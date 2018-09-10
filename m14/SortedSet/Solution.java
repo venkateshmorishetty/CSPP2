@@ -35,7 +35,7 @@ class Set {
      */
     public int max(){
         int max = 0;
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (set[i] > max) {
                 max = set[i];
             }
@@ -49,14 +49,13 @@ class Set {
         }
         if (!contains(item)) {
             max = max();
-            if(size == 0 || item > max){
+            if(size == 0 || item > max) {
                 set[size++] = item;
-            }
-            else{
-            for(int i = 0; i < size; i++){
-                    if(set[i]>item){
-                        for(int j = size;j>i;j--){
-                            set[j] = set[j-1];
+            } else {
+            for (int i = 0; i < size; i++) {
+                    if (set[i] > item) {
+                        for(int j = size; j > i; j--) {
+                            set[j] = set[j - 1];
                         }
                         set[i] = item; 
                         break;   
@@ -276,7 +275,7 @@ class Solution{
                 try {
                 String[] token = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
-                if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])){
+                if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])) {
                     System.out.println("Invalid Arguments to Subset Exception");
                     break;
                 }
