@@ -206,11 +206,12 @@ class sortedSet extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public String last() {
+    public int last() {
         if (size == 0) {
-            return "Set Empty Exception";
+            System.out.println("Set Empty Exception");
+            return -1;
         }
-        return set[size - 1] + "";
+        return set[size - 1];
     }
 
     /**
