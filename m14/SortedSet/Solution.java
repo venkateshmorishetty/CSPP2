@@ -34,7 +34,7 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int max(){
+    public int max() {
         int max = 0;
         for (int i = 0; i < size; i++) {
             if (set[i] > max) {
@@ -56,20 +56,20 @@ class Set {
         }
         if (!contains(item)) {
             max = max();
-            if(size == 0 || item > max) {
+            if (size == 0 || item > max) {
                 set[size++] = item;
             } else {
             for (int i = 0; i < size; i++) {
                     if (set[i] > item) {
-                        for(int j = size; j > i; j--) {
+                        for (int j = size; j > i; j--) {
                             set[j] = set[j - 1];
                         }
-                        set[i] = item; 
-                        break;   
+                        set[i] = item;
+                        break;
                     }
                 }
                 size++;
-            }       
+            }
         }
     }
 
@@ -97,7 +97,7 @@ class Set {
      * @return the result that contains the common
      * elements of the two sets.
      */
-    public Set intersection( Set other) {
+    public Set intersection(Set other) {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
@@ -127,7 +127,7 @@ class Set {
      * @return the cartesian product in the form of 2D array.
      */
     public int[][] cartesianProduct(final Set other) {
-        int [][] result = new int[this.size() * other.size()][2];
+        int[][] result = new int[this.size() * other.size()][2];
         int k = -1;
         if (this.size() == 0 || other.size() == 0) {
             return null;
@@ -209,11 +209,11 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public String last(){
+    public String last() {
         if(size == 0){
             return "Set Empty Exception";
         }
-        return set[size-1]+"";
+        return set[size - 1] + "";
     }
 
     /**
@@ -226,15 +226,15 @@ class Set {
      */
     public int[] subSet(final int fromele, final int toele) {
         int count = 0, temp = 0;
-        for(int i = 0; i < size; i++) {
-            if(set[i] >= fromele && set[i] < toele){
+        for (int i = 0; i < size; i++) {
+            if (set[i] >= fromele && set[i] < toele) {
                 count++;
             }
 
         }
         int[] arr = new int[count];
-        for(int j = 0; j < size; j++) {
-            if(set[j]>=fromele && set[j] < toele){
+        for (int j = 0; j < size; j++) {
+            if (set[j] >= fromele && set[j] < toele) {
                 arr[temp] = set[j];
                 temp++;
             }
@@ -249,15 +249,15 @@ class Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] headSet(final int ele){
-        int count = 0,temp = 0;
+    public int[] headSet(final int ele) {
+        int count = 0, temp = 0;
         for (int i = 0; i < size; i++) {
-            if(set[i] < ele) {
+            if (set[i] < ele) {
                 count++;
             }
         }
         int[] arr = new int[count];
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (set[i] < ele) {
                 arr[temp] = set[i];
                 temp++;
@@ -270,7 +270,16 @@ class Set {
 /**
  * Class for solution.
  */
-class Solution{
+class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        /**
+         * { item_description }.
+         */
+
+    }
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Set s = new Set();
@@ -294,7 +303,7 @@ class Solution{
                 case "addAll":
                 String[] arr = tokens[1].split(",");
                 int[] arr1 = new int[arr.length];
-                for(int i = 0; i < arr.length; i++) {
+                for (int i = 0; i < arr.length; i++) {
                     arr1[i] = Integer.parseInt(arr[i]);
                 }
                 s.addAll(arr1);
@@ -341,6 +350,7 @@ class Solution{
                 System.out.println(s1);
                 }
                 break;
+                default:
             }
         }
     }
