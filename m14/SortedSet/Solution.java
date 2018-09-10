@@ -233,6 +233,35 @@ class Sortedset extends Set {
         return sb.toString();
     }
     /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
+    @Override
+    public void add(final int item) {
+        int max;
+        if (size == set.length) {
+            resize();
+        }
+        if (!contains(item)) {
+            max = max();
+            if (size == 0 || item > max) {
+                set[size++] = item;
+            } else {
+            for (int i = 0; i < size; i++) {
+                    if (set[i] > item) {
+                        for (int j = size; j > i; j--) {
+                            set[j] = set[j - 1];
+                        }
+                        set[i] = item;
+                        break;
+                    }
+                }
+                size++;
+            }
+        }
+    }
+    /**
      * add all elements of the array to this Set.
      * @param arr as an arr to be added in this set,
      *            if the element is not present in this set.
