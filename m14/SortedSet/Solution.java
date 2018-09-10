@@ -203,8 +203,7 @@ class Set {
         }
         return set[size-1]+"";
     }
-    public int[] subSet(int fromele, int toele) throws Exception{
-        // System.out.println("im in");
+    public int[] subSet(int fromele, int toele) {
         int count = 0, temp = 0;
         for(int i = 0; i < size; i++) {
             if(set[i] >= fromele && set[i] < toele){
@@ -278,7 +277,10 @@ class Solution{
                 String[] token = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
                 if(res.length == 0){
-                    System.out.println("Invalid Arguments to Subset Exception");
+                    System.out.println("{}");
+                }
+                if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])){
+                    System.out.println("Invalid Arguments to Subset Exceptionq");
                 }
                 else{
                 String s1 = "{";
