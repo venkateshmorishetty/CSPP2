@@ -309,6 +309,16 @@ class Sortedset extends Set {
         }
         return arr;
     }
+    /**
+     * returns true if this set contains the item.
+     * @param  item as a parameter to be checked in the set.
+     * @return      true if the item present in the set,
+     *                   otherwise false.
+     */
+    @Override
+    public boolean contains(final int item) {
+        return indexOf(item) != -1;
+    }
 
     /**
      * { function_description }.
