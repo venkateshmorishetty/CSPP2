@@ -13,12 +13,12 @@ class Set {
     /**
      * holds the elemtns in this Set array.
      */
-    int[] set;
+    private int[] set;
 
     /**
      * indicates the number of elememnts of this set.
      */
-    public int size;
+    private int size;
 
     /**
      * Default constructor to create an array with the szie 10.
@@ -193,8 +193,28 @@ class Set {
  * Class for sorted set.
  */
 class Sortedset extends Set {
+    /**
+     * This constant is used to create an array
+     * with the initial capacity.
+     */
+    public static final int TEN = 10;
+
+    /**
+     * holds the elemtns in this Set array.
+     */
+    private int[] set;
+
+    /**
+     * indicates the number of elememnts of this set.
+     */
+    private int size;
+
+    /**
+     * Default constructor to create an array with the szie 10.
+     */
     Sortedset(){
-            
+        set = new int[TEN];
+        size = 0;  
     }
     /**
      * add all elements of the array to this Set.
