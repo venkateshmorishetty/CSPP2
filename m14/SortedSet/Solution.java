@@ -277,7 +277,7 @@ class Solution{
                 String[] token = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
                 if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])){
-                    System.out.println("Invalid Arguments to Subset Exceptionq");
+                    System.out.println("Invalid Arguments to Subset Exception");
                     break;
                 }
                 else if(res.length == 0){
