@@ -194,6 +194,9 @@ class Set {
  * Class for sorted set.
  */
 class Sortedset extends Set {
+    /**
+     * Constructs the object.
+     */
     Sortedset(){
         
     }
