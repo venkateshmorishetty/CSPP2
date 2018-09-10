@@ -197,8 +197,11 @@ class Set {
         }
         return -1;
     }
-    public int last(){
-        return set[size-1];
+    public String last(){
+        if(size == 0){
+            return "Set Empty Exception";
+        }
+        return set[size-1]+"";
     }
     public int[] subSet(int fromele, int toele) throws Exception{
         // System.out.println("im in");
