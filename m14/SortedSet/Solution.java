@@ -8,7 +8,6 @@ class Sortedset extends Set {
      * holds the elemtns in this Set array.
      */
     Sortedset() {
-        
     }
     /**
      * add all elements of the array to this Set.
