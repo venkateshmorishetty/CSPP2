@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
  * Class for set.
  */
 class Set {
+
     /**
      * This constant is used to create an array
      * with the initial capacity.
@@ -13,12 +14,12 @@ class Set {
     /**
      * holds the elemtns in this Set array.
      */
-    private int[] set;
+    public int[] set;
 
     /**
      * indicates the number of elememnts of this set.
      */
-    private int size;
+    public int size;
 
     /**
      * Default constructor to create an array with the szie 10.
@@ -193,88 +194,8 @@ class Set {
  * Class for sorted set.
  */
 class Sortedset extends Set {
-    /**
-     * This constant is used to create an array
-     * with the initial capacity.
-     */
-    public static final int TEN = 10;
-
-    /**
-     * holds the elemtns in this Set array.
-     */
-    private int[] set;
-
-    /**
-     * indicates the number of elememnts of this set.
-     */
-    private int size;
-
-    /**
-     * Default constructor to create an array with the szie 10.
-     */
     Sortedset(){
-        set = new int[TEN];
-        size = 0;  
-    }
-    /**
-     * String version of the object.
-     * @return string.
-     */
-    @Override
-    public String toString() {
-        if (this.size() == 0) {
-            return "{}";
-        }
-        StringBuilder sb = new StringBuilder("{");
-        for (int i = 0; i < size - 1; i++) {
-            sb.append(set[i] + ", ");
-        }
-        sb.append(set[size - 1] + "}");
-        return sb.toString();
-    }
-    /**
-     * { function_description }.
-     *
-     * @return     { description_of_the_return_value }
-     */
-    @Override
-    public int max() {
-        int max = 0;
-        for (int i = 0; i < size; i++) {
-            if (set[i] > max) {
-                max = set[i];
-            }
-        }
-        return max;
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      item  The item
-     */
-    @Override
-    public void add(final int item) {
-        int max;
-        if (size == set.length) {
-            resize();
-        }
-        if (!contains(item)) {
-            max = max();
-            if (size == 0 || item > max) {
-                set[size++] = item;
-            } else {
-            for (int i = 0; i < size; i++) {
-                    if (set[i] > item) {
-                        for (int j = size; j > i; j--) {
-                            set[j] = set[j - 1];
-                        }
-                        set[i] = item;
-                        break;
-                    }
-                }
-                size++;
-            }
-        }
+        
     }
     /**
      * add all elements of the array to this Set.
@@ -323,16 +244,6 @@ class Sortedset extends Set {
             }
         }
         return arr;
-    }
-    /**
-     * returns true if this set contains the item.
-     * @param  item as a parameter to be checked in the set.
-     * @return      true if the item present in the set,
-     *                   otherwise false.
-     */
-    @Override
-    public boolean contains(final int item) {
-        return indexOf(item) != -1;
     }
 
     /**
