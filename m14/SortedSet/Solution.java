@@ -223,6 +223,9 @@ class Set {
     }
     public int[] headSet(int ele){
         int to = indexOf(ele);
+        if(ele > max()){
+            return set;
+        }
         int[] arr = new int[to];
         for(int i = 0; i < to; i++) {
             arr[i] = set[i];
