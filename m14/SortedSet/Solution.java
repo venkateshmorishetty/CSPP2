@@ -235,6 +235,21 @@ class Sortedset extends Set {
     /**
      * { function_description }.
      *
+     * @return     { description_of_the_return_value }
+     */
+    @Override
+    public int max() {
+        int max = 0;
+        for (int i = 0; i < size; i++) {
+            if (set[i] > max) {
+                max = set[i];
+            }
+        }
+        return max;
+    }
+    /**
+     * { function_description }.
+     *
      * @param      item  The item
      */
     @Override
