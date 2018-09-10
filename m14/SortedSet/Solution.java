@@ -97,7 +97,7 @@ class Set {
      * @return the result that contains the common
      * elements of the two sets.
      */
-    public Set intersection(Set other) {
+    public Set intersection(final Set other) {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
@@ -210,7 +210,7 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public String last() {
-        if(size == 0){
+        if (size == 0) {
             return "Set Empty Exception";
         }
         return set[size - 1] + "";
@@ -270,7 +270,7 @@ class Set {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -314,16 +314,15 @@ class Solution {
                 case "subSet":
                 try {
                 String[] token = tokens[1].split(",");
-                int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
-                if(Integer.parseInt(token[0]) > Integer.parseInt(token[1])) {
+                int[] res = s.subSet(Integer.parseInt(token[0]),
+                    Integer.parseInt(token[1]));
+                if (Integer.parseInt(token[0]) > Integer.parseInt(token[1])) {
                     System.out.println("Invalid Arguments to Subset Exception");
                     break;
-                }
-                else if(res.length == 0){
+                } else if (res.length == 0) {
                     System.out.println("{}");
                     break;
-                }
-                else{
+                } else {
                 String s1 = "{";
                 for (int i = 0; i < res.length - 1; i++) {
                     s1 += res[i] + ", ";
@@ -331,17 +330,15 @@ class Solution {
                 s1 += res[res.length - 1] + "}";
                 System.out.println(s1);
                 }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 }
                 break;
                 case "headSet":
                 int[] res1 = s.headSet(Integer.parseInt(tokens[1]));
-                
-                if(res1.length == 0){
+                if (res1.length == 0) {
                     System.out.println("{}");
-                }
-                else{
+                } else {
                 String s1 = "{";
                 for (int i = 0; i < res1.length - 1; i++) {
                     s1 += res1[i] + ", ";
