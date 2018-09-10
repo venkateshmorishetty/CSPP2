@@ -261,17 +261,17 @@ class Solution{
                 try {
                 String[] token = tokens[1].split(",");
                 int[] res = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
-                // if(res.length == 0){
-                //     System.out.println("");
-                // }
-                // else{
+                if(res.length == 0){
+                    System.out.println("Invalid Arguments to Subset Exception");
+                }
+                else{
                 String s1 = "{";
                 for (int i = 0; i < res.length - 1; i++) {
                     s1 += res[i] + ", ";
                 }
                 s1 += res[res.length - 1] + "}";
                 System.out.println(s1);
-                // }
+                }
                 } catch(Exception e) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 }
