@@ -194,6 +194,9 @@ class Set {
  * Class for sorted set.
  */
 class Sortedset extends Set {
+    Sortedset(){
+        
+    }
     /**
      * add all elements of the array to this Set.
      * @param arr as an arr to be added in this set,
