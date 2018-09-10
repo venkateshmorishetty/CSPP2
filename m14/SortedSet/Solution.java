@@ -205,14 +205,19 @@ class Set {
     }
     public int[] subSet(int fromele, int toele) throws Exception{
         // System.out.println("im in");
-        int from  = indexOf(fromele);
-        int to = indexOf(toele);
-        int s = to - from;
-        int temp = 0;
-        int[] arr = new int[s];
-        for(int j = from; j < to; j++) {
-            arr[temp] = set[j];
-            temp++;
+        int count = 0, temp = 0;
+        for(int i = 0; i < size; i++) {
+            if(set[i]>=fromele && set[i] < toele){
+                count++;
+            }
+
+        }
+        int[] arr = new int[count];
+        for(int j = 0; j < size; j++) {
+            if(set[j]>=fromele && set[j] < toele){
+                arr[temp] = set[j];
+                temp++;
+            }
         }
         return arr;
     }
