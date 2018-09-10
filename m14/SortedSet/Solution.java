@@ -14,12 +14,12 @@ class Set {
     /**
      * holds the elemtns in this Set array.
      */
-    private int[] set;
+    public int[] set;
 
     /**
      * indicates the number of elememnts of this set.
      */
-    private int size;
+    public int size;
 
     /**
      * Default constructor to create an array with the szie 10.
@@ -43,7 +43,6 @@ class Set {
         }
         return max;
     }
-
     /**
      * { function_description }.
      *
@@ -72,25 +71,12 @@ class Set {
             }
         }
     }
-
     /**
      * resize the set by double, when it is full.
      */
-    private void resize() {
+    public void resize() {
         set = java.util.Arrays.copyOf(set, size * 2);
     }
-
-    /**
-     * add all elements of the array to this Set.
-     * @param arr as an arr to be added in this set,
-     *            if the element is not present in this set.
-     */
-    public void addAll(final int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            add(arr[i]);
-        }
-    }
-
     /**
      * Finds the intersection of the two sets.
      * @param  other as set 2.
@@ -202,8 +188,19 @@ class Set {
             }
         }
         return -1;
+    }   
+}
+class sortedSet extends Set {
+    /**
+     * add all elements of the array to this Set.
+     * @param arr as an arr to be added in this set,
+     *            if the element is not present in this set.
+     */
+    public void addAll(final int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            add(arr[i]);
+        }
     }
-
     /**
      * { function_description }.
      *
@@ -265,8 +262,8 @@ class Set {
         }
         return arr;
     }
-}
 
+}
 /**
  * Class for solution.
  */
@@ -287,7 +284,7 @@ final class Solution {
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
-        Set s = new Set();
+        sortedSet s = new sortedSet();
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
