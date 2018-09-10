@@ -4,7 +4,6 @@ import java.io.BufferedInputStream;
  * Class for set.
  */
 class Set {
-
     /**
      * This constant is used to create an array
      * with the initial capacity.
@@ -195,7 +194,7 @@ class Set {
  */
 class Sortedset extends Set {
     Sortedset(){
-        
+            
     }
     /**
      * add all elements of the array to this Set.
