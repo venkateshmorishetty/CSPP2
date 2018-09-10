@@ -197,7 +197,7 @@ class Sortedset extends Set {
     /**
      * Constructs the object.
      */
-    Sortedset(){
+    Sortedset() {
         
     }
     /**
