@@ -207,7 +207,7 @@ class Set {
         // System.out.println("im in");
         int count = 0, temp = 0;
         for(int i = 0; i < size; i++) {
-            if(set[i]>=fromele && set[i] < toele){
+            if(set[i] >= fromele && set[i] < toele){
                 count++;
             }
 
@@ -224,13 +224,13 @@ class Set {
     public int[] headSet(int ele){
         int count = 0,temp = 0;
         for (int i = 0; i < size; i++) {
-            if(set[i] <= ele) {
+            if(set[i] < ele) {
                 count++;
             }
         }
         int[] arr = new int[count];
         for(int i = 0; i < size; i++) {
-            if (set[i] <= ele) {
+            if (set[i] < ele) {
                 arr[temp] = set[i];
                 temp++;
             }
