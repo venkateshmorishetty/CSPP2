@@ -61,7 +61,6 @@ class List {
     public int size() {
         return size;
     }
-    
     /**
      * { function_description }.
      *
@@ -196,7 +195,6 @@ class List {
             }
         }
     }
-    
     /**
      * { function_description }.
      *
@@ -207,9 +205,11 @@ class List {
      *
      * @throws     IndexOutofBoundsException  { exception_description }
      */
-    public List subList(final int start, final int end) throws IndexOutofBoundsException {
+    public List subList(final int start, final int end)
+    throws IndexOutofBoundsException {
         if (end > size || end < 0 || start < 0 || start == end) {
-            throw new IndexOutofBoundsException("Index Out of Bounds Exception");
+            throw new IndexOutofBoundsException(
+                "Index Out of Bounds Exception");
         } else {
             List l1 = new List();
             for (int i = start; i < end; i++) {
