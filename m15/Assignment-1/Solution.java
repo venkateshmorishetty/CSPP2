@@ -1,5 +1,31 @@
 import java.util.Scanner;
 /**
+ * Exception for signaling invalid position errors.
+ */
+class InvalidPositionException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    InvalidPositionException(final String s) {
+        super(s);
+    }
+}
+/**
+ * Exception for signaling invalid position errors.
+ */
+class IndexOutofBoundsException extends Exception {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    IndexOutofBoundsException(final String s) {
+        super(s);
+    }
+}
+/**
  * List of .
  */
 class List {
@@ -41,13 +67,13 @@ class List {
      *
      * @throws     Exception  { exception_description }
      */
-    public void remove(final int index) throws Exception {
+    public void remove(final int index) throws InvalidPositionException {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             } list[size - 1] = 0;
         } else {
-            throw new Exception("Invalid Position Exception");
+            throw new InvalidPositionException("Invalid Position Exception");
         }
         size--;
     }
@@ -178,9 +204,9 @@ class List {
      *
      * @throws     Exception  { exception_description }
      */
-    public List subList(final int start, final int end) throws Exception {
+    public List subList(final int start, final int end) throws IndexOutofBoundsException {
         if (end > size || end < 0 || start < 0 || start == end) {
-            throw new Exception("Index Out of Bounds Exception");
+            throw new IndexOutofBoundsException("Index Out of Bounds Exception");
         } else {
             List l1 = new List();
             for (int i = start; i < end; i++) {
