@@ -397,6 +397,13 @@ final class Solution {
                 t.addAll(intArray);
                 System.out.println(s.intersection(t));
                 break;
+                case "retainAll":
+                s = new Sortedset();
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
                 default:
             }
         }
