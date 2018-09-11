@@ -178,12 +178,15 @@ class Solution{
 				}
 				break;
 				case "equals":
-				List equal = new List();
-				String[] arr2 = tokens[1].split(",");
-				for(int i = 0; i < arr2.length; i++) {
-					equal.add(Integer.parseInt(arr2[i]));
+				if(tokens.length==2){
+					List equal = new List();
+					String[] arr2 = tokens[1].split(",");
+					for(int i = 0; i < arr2.length; i++) {
+						equal.add(Integer.parseInt(arr2[i]));
+					System.out.println(l.equals(equal));
+					}
 				}
-				System.out.println(l.equals(equal));
+				
 				break;
 				case "clear":
 				l.clear();
