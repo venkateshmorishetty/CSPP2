@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.BufferedInputStream;
+import java.util.Arrays;
 class InvalidSubsetSelectionException extends Exception {
     InvalidSubsetSelectionException(String s) {
         super(s);
@@ -302,7 +303,18 @@ final class Solution {
         /**
          * { item_description }.
          */
-
+    }
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
     }
     /**
      * { function_description }.
@@ -310,10 +322,8 @@ final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
-        Sortedset s = new Sortedset();
-
         // code to read the test cases input file
+        Sortedset s = new Sortedset();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
         while (stdin.hasNext()) {
@@ -376,6 +386,16 @@ final class Solution {
                 } catch(Exception e) {
                     System.out.println(e.getMessage());
                 }
+                break;
+                case "intersection":
+                // int[] intArray = intArray(tokens[1]);
+                s = new Sortedset();
+                Sortedset t = new Sortedset();
+                int[] intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                t.addAll(intArray);
+                System.out.println(s.intersection(t));
                 break;
                 default:
             }
