@@ -274,7 +274,7 @@ class Sortedset extends Set {
             }
         }
         if (arr.length == 0) {
-            throw new Exception("Set​ ​Empty​ ​Exception");
+            throw new Exception("Set​ Empty​ ​Exception");
         }
         return arr;
     }
