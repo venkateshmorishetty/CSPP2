@@ -14,7 +14,7 @@ class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
         final int s = 20;
         list = new int[s];
         size = 0;
@@ -209,7 +209,7 @@ class List {
 /**
  * Class for solution.
  */
-class Solution{
+class Solution {
     /**
      * Constructs the object.
      */
@@ -217,7 +217,7 @@ class Solution{
         //pass
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -227,13 +227,13 @@ class Solution{
         while (sc.hasNext()) {
             String line = sc.nextLine();
             String[] tokens = line.split(" ");
-            switch(tokens[0]) {
+            switch (tokens[0]) {
                 case "add":
                 try {
                 l.add(Integer.parseInt(tokens[1]));
-                } catch(Exception e) {
+                } catch (Exception e) {
                     String[] val = tokens[1].split(",");
-                    l.add(Integer.parseInt(val[0]),Integer.parseInt(val[1]));
+                    l.add(Integer.parseInt(val[0]), Integer.parseInt(val[1]));
                 }
                 break;
                 case "size":
@@ -254,14 +254,14 @@ class Solution{
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
-                break;  
+                break;
                 case "indexOf":
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
                 String[] ele = tokens[1].split(",");
                 int[] ele1 = new int[ele.length];
-                for(int i = 0; i < ele.length; i++) {
+                for (int i = 0; i < ele.length; i++) {
                 ele1[i] = Integer.parseInt(ele[i]);
                 }
                 l.addAll(ele1);
@@ -277,15 +277,16 @@ class Solution{
                         arr1[i] = Integer.parseInt(arr[i]);
                     }
                     try {
-                        l.removeAll(arr1);  
-                    } catch(Exception e){ }
+                        l.removeAll(arr1);
+                    } catch (Exception e) { }
                 }
                 break;
                 case "subList":
                 String[] index = tokens[1].split(",");
-                try{
-                    System.out.println(l.subList(Integer.parseInt(index[0]), Integer.parseInt(index[1])));
-                } catch(Exception e) {
+                try {
+                    System.out.println(l.subList(Integer.parseInt(index[0]),
+                        Integer.parseInt(index[1])));
+                } catch (Exception e) {
                 System.out.println(e.getMessage());
                 }
                 break;
