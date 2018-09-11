@@ -61,11 +61,13 @@ class List {
     public int size() {
         return size;
     }
+    
     /**
      * { function_description }.
-     * @param      index      The index
      *
-     * @throws     Exception  { exception_description }
+     * @param      index                     The index
+     *
+     * @throws     InvalidPositionException  { exception_description }
      */
     public void remove(final int index) throws InvalidPositionException {
         if (index >= 0 && index < size) {
@@ -194,15 +196,16 @@ class List {
             }
         }
     }
+    
     /**
      * { function_description }.
      *
-     * @param      start      The start
-     * @param      end        The end
+     * @param      start                      The start
+     * @param      end                        The end
      *
      * @return     { description_of_the_return_value }
      *
-     * @throws     Exception  { exception_description }
+     * @throws     IndexOutofBoundsException  { exception_description }
      */
     public List subList(final int start, final int end) throws IndexOutofBoundsException {
         if (end > size || end < 0 || start < 0 || start == end) {
