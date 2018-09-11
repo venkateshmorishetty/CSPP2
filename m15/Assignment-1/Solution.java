@@ -183,8 +183,7 @@ class Solution{
 					String[] arr2 = tokens[1].split(",");
 					for(int i = 0; i < arr2.length; i++) {
 						equal.add(Integer.parseInt(arr2[i]));
-					System.out.println(l.equals(equal));
-					}
+					}System.out.println(l.equals(equal));
 				}
 				
 				break;
