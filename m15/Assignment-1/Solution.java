@@ -30,11 +30,11 @@ class IndexOutofBoundsException extends Exception {
  */
 class List {
     /**
-     * { var_description }.
+     * { list array }.
      */
     private int[] list;
     /**
-     * { var_description }.
+     * { size variable }.
      */
     private int size;
     /**
@@ -46,7 +46,7 @@ class List {
         size = 0;
     }
     /**
-     * { function_description }.
+     * { adds each element to array }.
      *
      * @param      item  The item
      */
@@ -54,19 +54,19 @@ class List {
         list[size++] = item;
     }
     /**
-     * { function_description }.
+     * { returns current size of array }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { size }
      */
     public int size() {
         return size;
     }
     /**
-     * { function_description }.
+     * { remove specified index value }.
      *
      * @param      index                     The index
      *
-     * @throws     InvalidPositionException  { exception_description }
+     * @throws     InvalidPositionException  { if not throws exception }
      */
     public void remove(final int index) throws InvalidPositionException {
         if (index >= 0 && index < size) {
@@ -79,9 +79,9 @@ class List {
         size--;
     }
     /**
-     * { function_description }.
+     * { returns value of index }.
      * @param      index  The index
-     * @return     { description_of_the_return_value }
+     * @return     { value of index }
      */
     public int get(final int index) {
         if (index >= 0 && index < size) {
@@ -106,11 +106,11 @@ class List {
         }
     }
     /**
-     * { function_description }.
+     * { return true if specified element in list else false}.
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { boolean }
      */
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
@@ -125,7 +125,7 @@ class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { return index of specifed element }
      */
     public int indexOf(final int item) {
         boolean check = contains(item);
@@ -139,7 +139,7 @@ class List {
         return -1;
     }
     /**
-     * { function_description }.
+     * { add specifed value at given index }.
      *
      * @param      index  The index
      * @param      item   The item
@@ -163,11 +163,11 @@ class List {
         }
     }
     /**
-     * { function_description }.
+     * { returns count of specified value }.
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { count }
      */
     public int count(final int item) {
         int count = 0;
@@ -183,7 +183,7 @@ class List {
      *
      * @param      items      The items
      *
-     * @throws     Exception  { exception_description }
+     * @throws     Exception  { throws exception if not index in range }
      */
     public void removeAll(final int[] items) throws Exception {
         boolean check;
@@ -196,12 +196,12 @@ class List {
         }
     }
     /**
-     * { function_description }.
+     * { return sublist }.
      *
      * @param      start                      The start
      * @param      end                        The end
      *
-     * @return     { description_of_the_return_value }
+     * @return     { List object }
      *
      * @throws     IndexOutofBoundsException  { exception_description }
      */
@@ -219,17 +219,17 @@ class List {
         }
     }
     /**
-     * { function_description }.
+     * {return true if given list and list are equal else false}.
      *
      * @param      l     { parameter_description }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { boolean value }
      */
     public boolean equals(final List l) {
         return toString().equals(l.toString());
     }
     /**
-     * { function_description }.
+     * { clears the entire list }.
      */
     public void clear() {
         size = 0;
@@ -246,7 +246,7 @@ final class Solution {
         //pass
     }
     /**
-     * { function_description }.
+     * { main_func }.
      *
      * @param      args  The arguments
      */
