@@ -68,7 +68,7 @@ class Sortedset extends Set {
      *
      * @return     { int[] array}
      *
-     * @throws     InvalidSubsetSelectionException  
+     * @throws     InvalidSubsetSelectionException
                 {if fromele,toele not in range throws exception}
      */
     public int[] subSet(final int fromele, final int toele)
