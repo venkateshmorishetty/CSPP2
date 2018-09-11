@@ -94,7 +94,7 @@ class List {
 	}
 	public List subList(int start, int end) throws Exception {
 		if (end > size || end < 0 || start < 0) {
-			throw new Exception("Index Out Of Bounds Exception");
+			throw new Exception("Index Out of Bounds Exception");
 		} else {
 			List l1 = new List();
 			for(int i = start;i<end;i++){
@@ -103,16 +103,8 @@ class List {
 			return l1;
 		} 
 	}
-	public boolean equlas(List l) {
-		if (l.size()!= size) {
-			return false;
-		}
-		for (int i = 0; i < l.size(); i++) {
-			if(list[i] != l.get(i)) {
-				return false;
-			}
-		}
-		return true;
+	public boolean equals(List l) {
+		return toString().equals(l.toString());
 	}
 	public void clear() {
 		size = 0;
@@ -186,12 +178,12 @@ class Solution{
 				}
 				break;
 				case "equals":
-				List l1 = new List();
+				List equal = new List();
 				String[] arr2 = tokens[1].split(",");
 				for(int i = 0; i < arr2.length; i++) {
-					l1.add(Integer.parseInt(arr2[i]));
+					equal.add(Integer.parseInt(arr2[i]));
 				}
-				System.out.println(l.equals(l1));
+				System.out.println(l.equals(equal));
 				break;
 				case "clear":
 				l.clear();
