@@ -39,9 +39,9 @@ class List {
      */
     public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
-            for (int i = index; i < size-1; i++) { 
-                list[i] = list[i+1]; 
-            }list[size-1] = 0;
+            for (int i = index; i < size - 1; i++) { 
+                list[i] = list[i + 1]; 
+            } list[size - 1] = 0;
         } else {
             throw new Exception("Invalid Position Exception");
         }
@@ -55,7 +55,7 @@ class List {
      * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
-        if(index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             return list[index];
         }
         return -1;
@@ -66,14 +66,13 @@ class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(size == 0) {
+        if (size == 0) {
             return "[]";
-        }
-        else {
+        } else {
             String s = "[";
-            for (int i = 0; i < size-1; i++) {
+            for (int i = 0; i < size - 1; i++) {
                 s += list[i] + ",";
-            }s += list[size - 1] + "]";
+            } s += list[size - 1] + "]";
             return s;
         }
     }
@@ -85,8 +84,8 @@ class List {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(list[i] == item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 return true;
             }
         }
@@ -101,9 +100,9 @@ class List {
      */
     public int indexOf(final int item) {
         boolean check = contains(item);
-        if(check) {
-            for(int i = 0; i < size; i++) {
-                if(item == list[i]) {
+        if (check) {
+            for (int i = 0; i < size; i++) {
+                if (item == list[i]) {
                     return i;
                 }
             }
@@ -117,10 +116,10 @@ class List {
      * @param      item   The item
      */
     public void add(final int index, final int item) {
-        if(index>=0 && index < size){
-            for(int i=size;i>index;i--){
-                list[i] = list[i-1];
-            }list[index] = item;
+        if (index >= 0 && index < size) {
+            for (int i = size; i > index; i--) {
+                list[i] = list[i - 1];
+            } list[index] = item;
             size++;
         }
     }
@@ -130,7 +129,7 @@ class List {
      * @param      items  The items
      */
     public void addAll(final int[] items) {
-        for(int i = 0; i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -143,8 +142,8 @@ class List {
      */
     public int count(final int item) {
         int count = 0;
-        for(int i = 0; i < size; i++) {
-            if(item == list[i]) {
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 count++;
             }
         }
@@ -182,7 +181,7 @@ class List {
             throw new Exception("Index Out of Bounds Exception");
         } else {
             List l1 = new List();
-            for(int i = start;i<end;i++){
+            for (int i = start; i < end; i++) {
                 l1.add(list[i]);
             }
             return l1;
