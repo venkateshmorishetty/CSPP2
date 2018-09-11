@@ -47,9 +47,9 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }.
+     * { return last value of set }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { last}
      *
      * @throws     SetEmptyException  { exception_description }
      */
@@ -61,14 +61,15 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }.
+     * { returns subset in given range }.
      *
      * @param      fromele                          The fromele
      * @param      toele                            The toele
      *
-     * @return     { description_of_the_return_value }
+     * @return     { int[] array}
      *
-     * @throws     InvalidSubsetSelectionException  { exception_description }
+     * @throws     InvalidSubsetSelectionException  
+                {if fromele,toele not in range throws exception}
      */
     public int[] subSet(final int fromele, final int toele)
         throws InvalidSubsetSelectionException {
@@ -94,13 +95,13 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }.
+     * {returns all before elements in specified ele}.
      *
      * @param      ele                The ele
      *
-     * @return     { description_of_the_return_value }
+     * @return     { int[] array }
      *
-     * @throws     SetEmptyException  { exception_description }
+     * @throws     SetEmptyException  {if result empty throws exception}
      */
     public int[] headSet(final int ele) throws SetEmptyException {
         int count = 0, temp = 0;
