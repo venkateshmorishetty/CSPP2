@@ -43,8 +43,8 @@ class List {
      */
     public void remove(final int index) throws Exception {
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) { 
-                list[i] = list[i + 1]; 
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
             } list[size - 1] = 0;
         } else {
             throw new Exception("Invalid Position Exception");
@@ -108,7 +108,7 @@ class List {
                     return i;
                 }
             }
-        } 
+        }
         return -1;
     }
     /**
@@ -187,7 +187,7 @@ class List {
                 l1.add(list[i]);
             }
             return l1;
-        } 
+        }
     }
     /**
      * { function_description }.
@@ -199,6 +199,9 @@ class List {
     public boolean equals(final List l) {
         return toString().equals(l.toString());
     }
+    /**
+     * { function_description }.
+     */
     public void clear() {
         size = 0;
     }
