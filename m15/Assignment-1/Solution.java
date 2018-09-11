@@ -27,12 +27,16 @@ class List {
     public void add(final int item) {
         list[size++] = item;
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
     /**
      * { function_description }.
-     *
      * @param      index      The index
      *
      * @throws     Exception  { exception_description }
@@ -49,9 +53,7 @@ class List {
     }
     /**
      * { function_description }.
-     *
      * @param      index  The index
-     *
      * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
