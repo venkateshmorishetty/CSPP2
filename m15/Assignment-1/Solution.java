@@ -1,18 +1,42 @@
 import java.util.Scanner;
+/**
+ * List of .
+ */
 class List {
+	/**
+	 * { var_description }.
+	 */
 	private int[] list;
+	/**
+	 * { var_description }.
+	 */
 	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	public List() {
 		list = new int[20];
 		size = 0;
 	}
+	/**
+	 * { function_description }.
+	 *
+	 * @param      item  The item
+	 */
 	public void add(int item) {
 		list[size++] = item;
 	}
 	public int size() {
 		return size;
 	}
-	public void remove(int index) throws Exception {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      index      The index
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public void remove(final int index) throws Exception {
 		if (index >= 0 && index < size) {
 			for(int i = index;i < size-1; i++) { 
 				list[i] = list[i+1]; 
@@ -21,14 +45,25 @@ class List {
 			throw new Exception("Invalid Position Exception");
 		}
 		size--;
-
 	}
-	public int get(int index) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      index  The index
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int get(final int index) {
 		if(index >= 0 && index < size) {
 			return list[index];
 		}
 		return -1;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		if(size == 0) {
 			return "[]";
@@ -41,7 +76,14 @@ class List {
 			return s;
 		}
 	}
-	public boolean contains(int item) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public boolean contains(final int item) {
 		for(int i = 0; i < size; i++) {
 			if(list[i] == item) {
 				return true;
@@ -49,7 +91,14 @@ class List {
 		}
 		return false;
 	}
-	public int indexOf(int item) {
+	/**
+	 * Searches for the first match.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int indexOf(final int item) {
 		boolean check = contains(item);
 		if(check) {
 			for(int i = 0; i < size; i++) {
@@ -60,7 +109,13 @@ class List {
 		} 
 		return -1;
 	}
-	public void add(int index,int item) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      index  The index
+	 * @param      item   The item
+	 */
+	public void add(final int index, final int item) {
 		if(index>=0 && index < size){
 			for(int i=size;i>index;i--){
 				list[i] = list[i-1];
@@ -68,12 +123,24 @@ class List {
 			size++;
 		}
 	}
-	public void addAll(int[] items) {
+	/**
+	 * Adds all.
+	 *
+	 * @param      items  The items
+	 */
+	public void addAll(final int[] items) {
 		for(int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
 	}
-	public int count(int item) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int count(final int item) {
 		int count = 0;
 		for(int i = 0; i < size; i++) {
 			if(item == list[i]) {
@@ -82,7 +149,14 @@ class List {
 		}
 		return count;
 	}
-	public void removeAll(int[] items) throws Exception {
+	/**
+	 * Removes all.
+	 *
+	 * @param      items      The items
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public void removeAll(final int[] items) throws Exception {
 		boolean check;
 		for (int i : items) {
 			check = contains(i);
@@ -92,7 +166,17 @@ class List {
 			}
 		}
 	}
-	public List subList(int start, int end) throws Exception {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      start      The start
+	 * @param      end        The end
+	 *
+	 * @return     { description_of_the_return_value }
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public List subList(final int start, final int end) throws Exception {
 		if (end > size || end < 0 || start < 0 || start == end) {
 			throw new Exception("Index Out of Bounds Exception");
 		} else {
@@ -103,15 +187,36 @@ class List {
 			return l1;
 		} 
 	}
-	public boolean equals(List l) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      l     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public boolean equals(final List l) {
 		return toString().equals(l.toString());
 	}
 	public void clear() {
 		size = 0;
 	}
 }
+/**
+ * Class for solution.
+ */
 class Solution{
-	public static void main(String[] args) {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//pass
+	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		List l = new List();
 		Scanner sc = new Scanner(System.in);
 		while(sc.hasNext()){
