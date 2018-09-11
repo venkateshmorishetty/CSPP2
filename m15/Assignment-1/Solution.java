@@ -160,14 +160,16 @@ class Solution{
 				System.out.println(l.count(Integer.parseInt(tokens[1])));
 				break;
 				case "removeAll":
-				String[] arr = tokens[1].split(",");
-				int[] arr1 = new int[arr.length];
-				for(int i = 0; i < arr.length; i++) {
-					arr1[i] = Integer.parseInt(arr[i]);
+				if(tokens.length == 2) {
+					String[] arr = tokens[1].split(",");
+					int[] arr1 = new int[arr.length];
+					for(int i = 0; i < arr.length; i++) {
+						arr1[i] = Integer.parseInt(arr[i]);
+					}
+					try {
+						l.removeAll(arr1);	
+					} catch(Exception e){ }
 				}
-				try {
-					l.removeAll(arr1);	
-				} catch(Exception e){ }
 				break;
 				case "subList":
 				String[] index = tokens[1].split(",");
