@@ -53,7 +53,7 @@ class Sortedset extends Set {
      *
      * @throws     SetEmptyException  { exception_description }
      */
-    public int last() throws SetEmptyException{
+    public int last() throws SetEmptyException {
         if (size == 0) {
             throw new SetEmptyException("Set Empty Exception");
         } else {
@@ -61,7 +61,7 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      fromele                          The fromele
      * @param      toele                            The toele
@@ -70,7 +70,8 @@ class Sortedset extends Set {
      *
      * @throws     InvalidSubsetSelectionException  { exception_description }
      */
-    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromele, final int toele)
+        throws InvalidSubsetSelectionException {
         if(fromele > toele) {
             throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
         } else {
