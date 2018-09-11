@@ -50,6 +50,8 @@ class Sortedset extends Set {
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
      */
     public int last() throws SetEmptyException{
         if (size == 0) {
@@ -58,14 +60,15 @@ class Sortedset extends Set {
             return set[size - 1];
         }
     }
-
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      fromele  The fromele
-     * @param      toele    The toele
+     * @param      fromele                          The fromele
+     * @param      toele                            The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
     public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
         if(fromele > toele) {
@@ -88,13 +91,14 @@ class Sortedset extends Set {
         return arr;
         }
     }
-
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      ele   The ele
+     * @param      ele                The ele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
      */
     public int[] headSet(final int ele) throws SetEmptyException {
         int count = 0, temp = 0;
