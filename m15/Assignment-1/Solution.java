@@ -93,7 +93,7 @@ class List {
 		}
 	}
 	public List subList(int start, int end) throws Exception {
-		if (end > size || end < 0 || start < 0) {
+		if (end > size || end < 0 || start < 0 || start == end) {
 			throw new Exception("Index Out of Bounds Exception");
 		} else {
 			List l1 = new List();
