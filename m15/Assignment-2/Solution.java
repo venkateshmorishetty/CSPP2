@@ -133,16 +133,14 @@ final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        /**
-         * { item_description }.
-         */
+        //pass
     }
     /**
-     * { function_description }.
+     * { convert given string s to int array }.
      *
-     * @param      s     { parameter_description }
+     * @param      s     { string  }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { int[] array }
      */
     public static int[] intArray(final String s) {
         String input = s;
