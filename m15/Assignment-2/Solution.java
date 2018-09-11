@@ -1,5 +1,15 @@
 import java.util.Scanner;
 import java.io.BufferedInputStream;
+class InvalidSubsetSelectionException extends Exception {
+    InvalidSubsetSelectionException(String s) {
+        super(s);
+    }
+}
+class SetEmptyException extends Exception {
+    SetEmptyException(String s) {
+        super(s);
+    }
+}
 /**
  * Class for set.
  */
@@ -214,9 +224,9 @@ class Sortedset extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int last() throws Exception{
+    public int last() throws SetEmptyException{
         if (size == 0) {
-            throw new Exception("Set Empty Exception");
+            throw new SetEmptyException("Set Empty Exception");
         } else {
             return set[size - 1];
         }
@@ -230,9 +240,9 @@ class Sortedset extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] subSet(final int fromele, final int toele) throws Exception {
+    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
         if(fromele > toele) {
-            throw new Exception("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
         } else {
         int count = 0, temp = 0;
         for (int i = 0; i < size; i++) {
@@ -259,7 +269,7 @@ class Sortedset extends Set {
      *
      * @return     { description_of_the_return_value }
      */
-    public int[] headSet(final int ele) throws Exception {
+    public int[] headSet(final int ele) throws SetEmptyException {
         int count = 0, temp = 0;
         for (int i = 0; i < size; i++) {
             if (set[i] < ele) {
@@ -274,7 +284,7 @@ class Sortedset extends Set {
             }
         }
         if (arr.length == 0) {
-            throw new Exception("Set​ Empty​ ​Exception");
+            throw new SetEmptyException("Set Empty Exception");
         }
         return arr;
     }
