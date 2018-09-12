@@ -31,11 +31,11 @@ class Bookyourshow {
 	public Show getAShow(String movie, String date) {
 		for(int i = 0;i<size;i++) {
 			if(movie.equals(obj_array[i].movie) && date.equals(obj_array[i].date)){
+				System.out.println(obj_array[i]);
 				return obj_array[i];
 			}
 		}
 		return null;
-
 	}
 	public void bookAShow(String movie, String date,Patron p ,String[] seats) {
 		patr[size1++] = p;
