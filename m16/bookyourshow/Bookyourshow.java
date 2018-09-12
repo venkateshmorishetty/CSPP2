@@ -85,7 +85,7 @@ class Bookyourshow {
 			String s="";
 			int temp;
 			for(int i = 0; i< size; i++){
-				s += Arrays.toString(obj_array[i].seats).replace(", ", "");
+				s += Arrays.toString(obj_array[i].seats).replace(", ", ",");
 				System.out.println(obj_array[i].movie+","+obj_array[i].date+","+s);
 				s="";
 				temp = 0;
