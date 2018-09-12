@@ -13,19 +13,26 @@ class Show{
 class Patron{
 	String name;
 	String mobileno;
-	public Patron(String n,String m) {
+	public Patron(String n, String m) {
 		name = n;
 		mobileno = m;
 
 	}
 }
 class Bookyourshow {
-	Show[] obj_array = new Show[10];
-	int size = 0;
-	Patron[] patr = new Patron[10];
-	int size1 = 0;
-	public void addAShow(Show t) {
 
+	Show[] obj_array;
+	int size;
+	Patron[] patr;
+	int size1;
+
+	Bookyourshow() {
+		obj_array = new Show[10];
+		size = 0;
+		patr = new Patron[10];
+		size1 = 0;
+	}
+	public void addAShow(Show t) {
 		obj_array[size++] = t;
 	}
 	public Show getAShow(String movie, String date) {

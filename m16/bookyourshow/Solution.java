@@ -46,7 +46,7 @@ public final class Solution {
                 case "get":
                     Show show = bys.getAShow(check[1], tokens[1]);
                     if (show != null) {
-                       System.out.println(show.movie+","+show.date);
+                       System.out.println(show.movie + "," + show.date);
                     } else {
                         System.out.println("No show");
                     }
