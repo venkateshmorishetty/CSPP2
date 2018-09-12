@@ -39,8 +39,12 @@ class Bookyourshow {
 	public void bookAShow(String movie, String date,Patron p ,String[] seats) {
 		patr[size1++] = p;
 		Show show = getAShow(movie, date);
-		if (size == 0 || show == null){
+		if (show == null) {
 			System.out.println("No show");
+			return;
+		}
+		if (size == 0){
+			System.out.println("Invalid");
 			return;
 		}
 		for(int i = 0; i< size;i++){
@@ -58,8 +62,13 @@ class Bookyourshow {
 	public void printTicket(String movie, String date,String phno) {
 		int count = 0;
 		Show show = getAShow(movie, date);
-		if( size==0 || show == null) {
+		if (show == null) {
+			System.out.println("No show");
+			return;
+		}
+		if( size==0) {
 			System.out.println("Invalid");
+			return;
 		}
 		else {
 			for(int i = 0;i<size1;i++){
