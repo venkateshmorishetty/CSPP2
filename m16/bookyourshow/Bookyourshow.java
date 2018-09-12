@@ -78,9 +78,6 @@ class Bookyourshow {
 				}
 			}
 		}
-		if(count == 0) {
-			System.out.println("Invalid");
-		}
 	}
 	public void showAll(){
 			String s="";
