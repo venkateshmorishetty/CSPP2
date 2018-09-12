@@ -63,7 +63,7 @@ class Bookyourshow {
 		int count = 0;
 		Show show = getAShow(movie, date);
 		if (show == null) {
-			System.out.println("No show");
+			System.out.println("Invalid");
 			return;
 		}
 		if( size==0) {
