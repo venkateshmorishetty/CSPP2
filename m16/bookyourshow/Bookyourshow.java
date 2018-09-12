@@ -74,9 +74,11 @@ class Bookyourshow {
 			for(int i = 0;i<size1;i++){
 				if(phno.equals(patr[i].mobileno)) {
 					System.out.println(phno+" "+movie+" "+date);
-					count++;
+					return;
 				}
 			}
+			System.out.println("Invalid");
+			return;
 		}
 	}
 	public void showAll(){
