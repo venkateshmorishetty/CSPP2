@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public final class Solution extends Bookyourshow {
+public final class Solution {
     /**
      * Constructs the object.
      */
