@@ -171,7 +171,7 @@ public class Solution{
 				sc.show();
 			}
 			if(line[0].equals("totalAmount")) {
-				System.out.println(sc.totalAmount());
+				System.out.println("totalAmount"+sc.totalAmount());
 			}
 			if(line[0].equals("coupon")) {
 				sc.applyCoupon(line[1]);
