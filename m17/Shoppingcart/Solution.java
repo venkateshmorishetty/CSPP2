@@ -36,7 +36,6 @@ class Shopingcart {
 	Item[] list = new Item[10];
 	int size1 = 0;
 	double totalprice, disc;
-	String[] coupons = new String[] {"IND10", "IND20", "IND30", "IND50"};
 	public void addTocatalog(Item item) {
 		items_array[size++] = item;
 	}
