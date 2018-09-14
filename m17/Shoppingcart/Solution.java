@@ -34,7 +34,7 @@ class Shopingcart{
 	int size = 0;
 	Item[] list = new Item[10];
 	int size1 = 0;
-	static double totalprice,disc;
+	double totalprice,disc;
 	String[] coupons = new String[] {"IND10","IND20","IND30","IND50"};
 	public void addTocatalog(Item item) {
 		items_array[size++] = item;
@@ -131,6 +131,7 @@ class Shopingcart{
 		}
 	}
 	public double payableAmount(){
+		totalprice = totalAmount();
 		totalprice -= disc;
 		double tax = totalprice*0.15;
 		totalprice = totalprice + tax;
