@@ -125,13 +125,14 @@ class Shopingcart{
 		for(int i = 0;i<coupons.length;i++){
 			if(coupons[i].equals(coupon)) {
 				val = Integer.parseInt(coupon.charAt(3)+"");
-				disc = (totalprice-(val*0.1));
+				disc = (totalprice*(val*0.1));
 				break;
 			}	
 		}
 	}
 	public double payableAmount(){
 		totalprice = totalAmount();
+		System.out.println(totalprice+" "+disc);
 		totalprice -= disc;
 		double tax = totalprice*0.15;
 		totalprice = totalprice + tax;
