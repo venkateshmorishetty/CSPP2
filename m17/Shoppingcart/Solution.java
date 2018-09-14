@@ -180,7 +180,7 @@ public class Solution{
 				sc.applyCoupon(line[1]);
 			}
 			if(line[0].equals("payableAmount")){
-				System.out.println("payableAmount: "+sc.payableAmount());
+				System.out.println("Payable amount: "+sc.payableAmount());
 			}
 			if(line[0].equals("print")){
 				sc.print();
