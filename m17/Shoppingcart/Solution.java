@@ -117,7 +117,7 @@ class Shopingcart {
 			for (int i = 0; i < coupons.length; i++) {
 				if (coupons[i].equals(coupon)) {
 					val = Integer.parseInt(coupon.charAt(3) + "");
-					disc = (totalprice * (val * 0.1));
+					disc = totalprice * (val * 0.1);
 					flag = true;
 					break;
 				}
