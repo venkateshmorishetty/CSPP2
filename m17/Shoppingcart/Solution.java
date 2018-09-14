@@ -150,7 +150,7 @@ public class Solution{
 		Shopingcart sc = new Shopingcart();
 		Scanner s = new Scanner(System.in);
 		int no_of_lines = s.nextInt();
-		for(int i = 0; i < no_of_lines; i++){
+		for(int i = 0; i <= no_of_lines; i++){
 			String[] line = s.nextLine().split(" ");
 			if(line[0].equals("Item")){
 				String[] product = line[1].split(",");
