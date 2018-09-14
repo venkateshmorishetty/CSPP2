@@ -103,7 +103,6 @@ class Shopingcart {
                 }
             }
         }
-        // totalprice = cost;
         return cost;
     }
     boolean flag = false;
