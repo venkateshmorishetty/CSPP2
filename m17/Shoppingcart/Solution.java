@@ -2,8 +2,21 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
-    public static void main(String[] args) {
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    public Solution(){
+        /**
+         * { constructor }.
+         */
+    }
+    /**
+     * { main }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Shopingcart sc = new Shopingcart();
         Scanner s = new Scanner(System.in);
         int no_of_lines = s.nextInt();
