@@ -6,7 +6,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
         /**
          * { constructor }.
          */
@@ -24,7 +24,8 @@ final class Solution {
             String[] line = s.nextLine().split(" ");
             if (line[0].equals("Item")) {
                 String[] product = line[1].split(",");
-                sc.addTocatalog(new Item(product[0], Integer.parseInt(product[1]),
+                sc.addTocatalog(new Item(product[0],
+                    Integer.parseInt(product[1]),
                     Float.parseFloat(product[2])));
             }
             if (line[0].equals("catalog")) {
