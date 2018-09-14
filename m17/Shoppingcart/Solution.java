@@ -141,8 +141,8 @@ class Shopingcart{
 			System.out.println(list[i].getitem()+" "+list[i].getquantity()+" "+list[i].quantity*getprice(list[i].item));
 		}
 		System.out.println("Total: "+totalAmount());
-		System.out.println("Tax:"+totalAmount()*0.15);
 		System.out.println("Disc%:"+disc);
+		System.out.println("Tax:"+totalAmount()*0.15);
 		System.out.println("payableAmount: "+totalprice);
 	}
 }
