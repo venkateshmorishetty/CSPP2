@@ -116,14 +116,20 @@ class Shopingcart {
 			totalprice = totalAmount();
 			for (int i = 0; i < coupons.length; i++) {
 				if (coupons[i].equals(coupon)) {
-					val = Integer.parseInt(coupon.charAt(3) + "");
-					disc = totalprice * (val * 0.1);
-					flag = true;
-					break;
+					// val = Integer.parseInt(coupon.charAt(3) + "");
+					// disc = Math.round(totalprice * (val * 0.1),1);
+					if(coupon.equals("IND10")){
+						disc = totalprice*0.1;
+					} else if(coupon.equals("IND20")){
+						disc = totalprice*0.2;
+					} else if(coupon.equals("IND30")){
+						disc = totalprice*0.3;
+					} else if(coupon.equals("IND50")){
+						disc = totalprice*0.5;
+					}else{
+						System.out.println("Invalid coupon");
+					}
 				}
-			}
-			if(flag == false){
-				System.out.println("Invalid coupon");
 			}
 			k++;
 		}
