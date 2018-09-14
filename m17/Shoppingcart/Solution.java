@@ -136,7 +136,7 @@ class Shopingcart{
 		return 0;
 	}
 	public void print(){
-		System.out.println("Name"+" "+"quantity"+" "+"Price");
+		System.out.println("Name"+"  "+"quantity"+"  "+"Price");
 		for(int i = 0;i<size1;i++){
 			System.out.println(list[i].getitem()+" "+list[i].getquantity()+" "+getprice(list[i].item));
 		}
