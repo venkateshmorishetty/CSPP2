@@ -114,7 +114,7 @@ class Shopingcart{
 	public void applyCoupon(String coupon) {
 		double val=0;
 		totalprice = totalAmount();
-		for(int i = 0;i<size;i++){
+		for(int i = 0;i<coupons.length;i++){
 			if(coupons[i].equals(coupon)) {
 				val = Integer.parseInt(coupon.charAt(3)+"");
 				totalprice = (totalprice-(val*0.1)*totalprice);
