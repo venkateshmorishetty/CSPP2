@@ -1,34 +1,78 @@
 import java.util.Scanner;
+/**
+ * Class for item.
+ */
 class Item {
 	String item;
 	int quantity;
 	float price;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      item      The item
+	 * @param      quantity  The quantity
+	 * @param      price     The price
+	 */
 	Item(String item, int quantity, float price) {
 		this.item = item;
 		this.quantity = quantity;
 		this.price = price;
 
 	}
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      item      The item
+	 * @param      quantity  The quantity
+	 */
 	Item(String item, int quantity) {
 		this.item = item;
 		this.quantity = quantity;
 	}
+	/**
+	 * { returns item }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public String getitem() {
 		return this.item;
 	}
+	/**
+	 * { returns quantity }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int getquantity() {
 		return this.quantity;
 	}
+	/**
+	 * { returns price }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public double getprice() {
 		return this.price;
 	}
+	/**
+	 * { returns string format }
+	 *
+	 * @return     { description_of_the_return_value }.
+	 */
 	public String display() {
 		return (this.item + " " + this.quantity + " " + this.price);
 	}
+	/**
+	 * { returns string format }.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public String tostring() {
 		return (this.item + " " + this.quantity);
 	}
 }
+/**
+ * Class for shopingcart.
+ */
 class Shopingcart {
 	Item[] items_array = new Item[10];
 	int size = 0;
@@ -36,14 +80,27 @@ class Shopingcart {
 	Item[] list = new Item[10];
 	int size1 = 0;
 	double totalprice, disc;
+	/**
+	 * Adds a tocatalog.
+	 *
+	 * @param      item  The item
+	 */
 	public void addTocatalog(Item item) {
 		items_array[size++] = item;
 	}
+	/**
+	 * { displays catalog }.
+	 */
 	public void catalog() {
 		for (int i = 0; i < size; i++) {
 			System.out.println(items_array[i].display());
 		}
 	}
+	/**
+	 * Adds to cartesian.
+	 *
+	 * @param      item  The item
+	 */
 	public void addToCart(Item item) {
 		int flag = 0;
 		if (size != 0) {
@@ -71,6 +128,11 @@ class Shopingcart {
 			}
 		}
 	}
+	/**
+	 * Removes a from cartesian.
+	 *
+	 * @param      item  The item
+	 */
 	public void removeFromCart(Item item) {
 		for (int i = 0; i < size1; i++) {
 			if (item.item.equals(list[i].getitem())) {
@@ -90,11 +152,19 @@ class Shopingcart {
 			}
 		}
 	}
+	/**
+	 * { shows cart }.
+	 */
 	public void show() {
 		for (int i = 0; i < size1; i++) {
 			System.out.println(list[i].tostring());
 		}
 	}
+	/**
+	 * { returns total cost }.
+	 *
+	 * @return     { totalamount }.
+	 */
 	public double totalAmount() {
 		double cost = 0;;
 		for (int i = 0; i < size1; i++) {
@@ -109,6 +179,11 @@ class Shopingcart {
 		return cost;
 	}
 	boolean flag = false;
+	/**
+	 * { aplly coupons }.
+	 *
+	 * @param      coupon  The coupon
+	 */
 	public void applyCoupon(String coupon) {
 		if (k == 1) {
 			double val = 0;
@@ -127,6 +202,11 @@ class Shopingcart {
 			k++;
 		}
 	}
+	/**
+	 * {  payable amount }.
+	 *
+	 * @return     { payable amount }.
+	 */
 	public double payableAmount() {
 		totalprice = totalAmount();
 		totalprice -= disc;
@@ -134,6 +214,13 @@ class Shopingcart {
 		totalprice = totalprice + tax;
 		return totalprice;
 	}
+	/**
+	 * { bring price of each product }.
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { price }
+	 */
 	public double getprice(String item) {
 		for (int i = 0; i < size; i++) {
 			if (item.equals(items_array[i].getitem())) {
@@ -142,6 +229,9 @@ class Shopingcart {
 		}
 		return 0;
 	}
+	/**
+	 * { print voice }.
+	 */
 	public void print() {
 		System.out.println("Name" + "   " + "quantity" + "   " + "Price");
 		for (int i = 0; i < size1; i++) {
@@ -153,8 +243,9 @@ class Shopingcart {
 		System.out.println("Payable amount: " + payableAmount());
 	}
 }
-
-
+/**
+ * Class for solution.
+ */
 public class Solution {
 	public static void main(String[] args) {
 		Shopingcart sc = new Shopingcart();
