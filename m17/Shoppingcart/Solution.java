@@ -132,7 +132,6 @@ class Shopingcart{
 	}
 	public double payableAmount(){
 		totalprice = totalAmount();
-		System.out.println(totalprice+" "+disc);
 		totalprice -= disc;
 		double tax = totalprice*0.15;
 		totalprice = totalprice + tax;
