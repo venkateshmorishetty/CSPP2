@@ -152,7 +152,7 @@ public class Solution{
 		int no_of_lines = s.nextInt();
 		for(int i = 0; i < no_of_lines; i++){
 			String[] line = s.nextLine().split(" ");
-			if(line[0].equals("item")){
+			if(line[0].equals("Item")){
 				String[] product = line[1].split(",");
 				sc.addTocatalog(new Item(product[0],Integer.parseInt(product[1]),Float.parseFloat(product[2])));
 			}
