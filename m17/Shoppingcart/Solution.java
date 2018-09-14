@@ -34,7 +34,7 @@ class Shopingcart{
 	int size = 0;
 	Item[] list = new Item[10];
 	int size1 = 0;
-	static double totalprice;
+	static double totalprice,disc;
 	String[] coupons = new String[] {"IND10","IND20","IND30","IND50"};
 	public void addTocatalog(Item item) {
 		items_array[size++] = item;
@@ -118,6 +118,7 @@ class Shopingcart{
 			if(coupons[i].equals(coupon)) {
 				val = Integer.parseInt(coupon.charAt(3)+"");
 				totalprice = (totalprice-(val*0.1)*totalprice);
+				disc = (val*0.1)*totalprice;
 			}	
 		}
 	}
@@ -139,8 +140,9 @@ class Shopingcart{
 		for(int i = 0;i<size1;i++){
 			System.out.println(list[i].getitem()+" "+list[i].getquantity()+" "+list[i].quantity*getprice(list[i].item));
 		}
-		System.out.println("totalAmount: "+totalAmount());
+		System.out.println("Total: "+totalAmount());
 		System.out.println("Tax:"+totalAmount()*0.15);
+		System.out.println("Disc%:"+disc);
 		System.out.println("payableAmount: "+totalprice);
 	}
 }
