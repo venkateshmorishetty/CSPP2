@@ -109,7 +109,7 @@ class Shopingcart {
 		totalprice = cost;
 		return cost;
 	}
-
+	boolean flag = false;
 	public void applyCoupon(String coupon) {
 		if (k == 1) {
 			double val = 0;
@@ -118,8 +118,12 @@ class Shopingcart {
 				if (coupons[i].equals(coupon)) {
 					val = Integer.parseInt(coupon.charAt(3) + "");
 					disc = (totalprice * (val * 0.1));
+					flag = true;
 					break;
 				}
+			}
+			if(flag == false){
+				System.out.println("Invalid coupon");
 			}
 			k++;
 		}
