@@ -84,9 +84,17 @@ class Shopingcart{
 		for(int i = 0; i < size1; i++) {
 			if(item.item.equals(list[i].getitem())){
 				list[i].quantity -= item.quantity;
-				for(int j = 0; j < size; j++) {
-					if(item.item.equals(items_array[j].getitem())){
-						items_array[j].quantity += item.quantity;
+				if (list[i].quantity == 0){
+					for(int k = i; k < size1; k++) {
+						list[i] = list[i+1];
+					}
+					size1--;
+				}
+				else{
+					for(int j = 0; j < size; j++) {
+						if(item.item.equals(items_array[j].getitem())){
+							items_array[j].quantity += item.quantity;
+						}
 					}
 				}
 			}
