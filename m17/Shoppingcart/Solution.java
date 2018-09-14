@@ -6,7 +6,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    public Solution(){
+    private Solution(){
         /**
          * { constructor }.
          */
@@ -19,8 +19,8 @@ final class Solution {
     public static void main(final String[] args) {
         Shopingcart sc = new Shopingcart();
         Scanner s = new Scanner(System.in);
-        int no_of_lines = s.nextInt();
-        for (int i = 0; i <= no_of_lines; i++) {
+        int lines = s.nextInt();
+        for (int i = 0; i <= lines; i++) {
             String[] line = s.nextLine().split(" ");
             if (line[0].equals("Item")) {
                 String[] product = line[1].split(",");
