@@ -131,6 +131,7 @@ class Shopingcart{
 		}
 	}
 	public double payableAmount(){
+		totalprice -= disc;
 		double tax = totalprice*0.15;
 		totalprice = totalprice + tax;
 		return totalprice;
