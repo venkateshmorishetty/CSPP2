@@ -32,7 +32,7 @@ class Item {
 class Shopingcart {
 	Item[] items_array = new Item[10];
 	int size = 0;
-	int k =1;
+	int k = 1;
 	Item[] list = new Item[10];
 	int size1 = 0;
 	double totalprice, disc;
@@ -51,7 +51,7 @@ class Shopingcart {
 			for (int j = 0; j < size1; j++) {
 				if (item.getitem().equals(list[j].getitem())) {
 					for (int i = 0; i < size; i++) {
-						if (item.getitem().equals(items_array[i].getitem())&&item.quantity<=items_array[i].getquantity()) {
+						if (item.getitem().equals(items_array[i].getitem()) && item.quantity <= items_array[i].getquantity()) {
 							flag = 1;
 							list[j].quantity += item.quantity;
 							items_array[i].quantity -= item.getquantity();
@@ -114,22 +114,16 @@ class Shopingcart {
 		if (k == 1) {
 			double val = 0;
 			totalprice = totalAmount();
-			for (int i = 0; i < coupons.length; i++) {
-				if (coupons[i].equals(coupon)) {
-					// val = Integer.parseInt(coupon.charAt(3) + "");
-					// disc = Math.round(totalprice * (val * 0.1),1);
-					if(coupon.equals("IND10")){
-						disc = totalprice*0.1;
-					} else if(coupon.equals("IND20")){
-						disc = totalprice*0.2;
-					} else if(coupon.equals("IND30")){
-						disc = totalprice*0.3;
-					} else if(coupon.equals("IND50")){
-						disc = totalprice*0.5;
-					}else{
-						System.out.println("Invalid coupon");
-					}
-				}
+			if (coupon.equals("IND10")) {
+				disc = totalprice * 0.1;
+			} else if (coupon.equals("IND20")) {
+				disc = totalprice * 0.2;
+			} else if (coupon.equals("IND30")) {
+				disc = totalprice * 0.3;
+			} else if (coupon.equals("IND50")) {
+				disc = totalprice * 0.5;
+			} else {
+				System.out.println("Invalid coupon");
 			}
 			k++;
 		}
@@ -156,7 +150,7 @@ class Shopingcart {
 		}
 		System.out.println("Total:" + totalAmount());
 		System.out.println("Disc%:" + disc);
-		System.out.println("Tax:" + (totalAmount()-disc) * 0.15);
+		System.out.println("Tax:" + (totalAmount() - disc) * 0.15);
 		System.out.println("Payable amount: " + payableAmount());
 	}
 }
