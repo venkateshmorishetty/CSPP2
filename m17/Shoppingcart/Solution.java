@@ -49,7 +49,7 @@ class Shopingcart {
 		int flag = 0;
 		if (size != 0) {
 			for (int j = 0; j < size1; j++) {
-				if (item.getitem().equals(list[j].getitem()) && item.getquantity() >= list[j].getquantity()) {
+				if (item.getitem().equals(list[j].getitem())) {
 					flag = 1;
 					list[j].quantity += item.quantity;
 					for (int i = 0; i < size; i++) {
