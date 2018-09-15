@@ -97,10 +97,11 @@ public final class Solution {
         for(int i = 0; i < answerCount; i++) {
             String[] ans = new String[2];
             System.out.println(quiz.q[i].question+""+"("+(i+1)+")");
-            for(int j = 0; j < 4; j++) {
-                dis += quiz.q[i].choices[j]+"   ";
-            }
+            for(int j = 0; j < 3; j++) {
+                dis += quiz.q[i].choices[j]+"        ";
+            }dis += quiz.q[i].choices[3];
             System.out.println(dis);
+            System.out.println("");
             ans = s.nextLine().split(" ");
             answers[i] = ans[1];
             dis = "";
