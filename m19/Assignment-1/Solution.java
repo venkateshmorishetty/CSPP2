@@ -65,7 +65,7 @@ public final class Solution {
         if(questionCount != 0){
         for(int i = 0; i < questionCount; i++) {
             String[] arr = s.nextLine().split(":");
-            if(arr[0]==null){
+            if(arr.length<5){
                 System.out.println("Error! Malformed question");
                 return;
             }
