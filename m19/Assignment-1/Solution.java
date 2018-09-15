@@ -70,8 +70,8 @@ public final class Solution {
                 Question q =new  Question(arr[0], choices, arr[2], Integer.parseInt(arr[3]), Integer.parseInt(arr[4])); 
                 quiz.q_array(q);
             } else {
-                System.out.println("Error!Malformed question");
-                break;
+                System.out.println("Error! Malformed question");
+                return;
             }
         }
         System.out.println(questionCount+" are added to the quiz");
@@ -93,18 +93,19 @@ public final class Solution {
         // store the user respones in the quiz object
         String[] answers = new String[20];
         String dis="";
-        if(answerCount!=0) {
+        if(quiz.size!=0) {
         for(int i = 0; i < answerCount; i++) {
             String[] ans = new String[2];
             System.out.println(quiz.q[i].question+""+"("+(i+1)+")");
             for(int j = 0; j < 3; j++) {
-                dis += quiz.q[i].choices[j]+"        ";
+                dis += quiz.q[i].choices[j]+"\t";
             }dis += quiz.q[i].choices[3];
             System.out.println(dis);
-            System.out.println("");
             ans = s.nextLine().split(" ");
             answers[i] = ans[1];
             dis = "";
+            System.out.println("");
+            
         }
         quiz.answers(answers);
         }
@@ -117,6 +118,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        if(quiz.size!=0){
         int s = 0;
         for(int i = 0; i < quiz.size; i++){
             System.out.println(quiz.q[i].question);
@@ -130,6 +132,7 @@ public final class Solution {
             }
         }
         System.out.println("Total Score: "+s);
+        }
 ;
     }
 }

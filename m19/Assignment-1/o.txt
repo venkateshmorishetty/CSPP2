@@ -1,0 +1,708 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Correct Answer! - Marks Awarded: 2
+question text 3
+ Correct Answer! - Marks Awarded: 3
+question text 4
+ Correct Answer! - Marks Awarded: 4
+Total Score: 10
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1        choice 2        choice 3        choice 4
+
+question text 2(2)
+choice 1        choice 2        choice 3        choice 4
+
+question text 3(3)
+choice 1        choice 2        choice 3        choice 4
+
+question text 4(4)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Correct Answer! - Marks Awarded: 2
+question text 3
+ Correct Answer! - Marks Awarded: 3
+question text 4
+ Correct Answer! - Marks Awarded: 4
+Total Score: 10
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -10
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1        choice 2        choice 3        choice 4
+
+question text 2(2)
+choice 1        choice 2        choice 3        choice 4
+
+question text 3(3)
+choice 1        choice 2        choice 3        choice 4
+
+question text 4(4)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -10
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+question text 2(2)
+choice 1	choice 2	choice 3	choice 4
+
+question text 3(3)
+choice 1	choice 2	choice 3	choice 4
+
+question text 4(4)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -5
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+4 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1        choice 2        choice 3        choice 4
+
+question text 2(2)
+choice 1        choice 2        choice 3        choice 4
+
+question text 3(3)
+choice 1        choice 2        choice 3        choice 4
+
+question text 4(4)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Correct Answer! - Marks Awarded: 1
+question text 2
+ Wrong Answer! - Penalty: -3
+question text 3
+ Wrong Answer! - Penalty: -2
+question text 4
+ Wrong Answer! - Penalty: -1
+Total Score: -5
+
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+10 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question a(1)
+choice a	choice b	choice c	choice d
+
+question b(2)
+choice a	choice b	choice c	choice d
+
+question c(3)
+choice a	choice b	choice c	choice d
+
+question d(4)
+choice a	choice b	choice c	choice d
+
+question e(1)
+choice a	choice b	choice c	choice d
+
+question f(2)
+choice a	choice b	choice c	choice d
+
+question g(3)
+choice a	choice b	choice c	choice d
+
+question h(4)
+choice a	choice b	choice c	choice d
+
+question i(1)
+choice a	choice b	choice c	choice d
+
+question j(2)
+choice a	choice b	choice c	choice d
+
+|--------------|
+| Score Report |
+|--------------|
+question a
+ Wrong Answer! - Penalty: 0
+question b
+ Wrong Answer! - Penalty: 0
+question c
+ Correct Answer! - Marks Awarded: 3
+question d
+ Wrong Answer! - Penalty: 0
+question e
+ Wrong Answer! - Penalty: 0
+question f
+ Wrong Answer! - Penalty: 0
+question g
+ Wrong Answer! - Penalty: 0
+question h
+ Wrong Answer! - Penalty: 0
+question i
+ Wrong Answer! - Penalty: 0
+question j
+ Wrong Answer! - Penalty: 0
+Total Score: 3
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+10 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question a(1)
+choice a        choice b        choice c        choice d
+
+question b(2)
+choice a        choice b        choice c        choice d
+
+question c(3)
+choice a        choice b        choice c        choice d
+
+question d(4)
+choice a        choice b        choice c        choice d
+
+question e(5)
+choice a        choice b        choice c        choice d
+
+question f(6)
+choice a        choice b        choice c        choice d
+
+question g(7)
+choice a        choice b        choice c        choice d
+
+question h(8)
+choice a        choice b        choice c        choice d
+
+question i(9)
+choice a        choice b        choice c        choice d
+
+question j(10)
+choice a        choice b        choice c        choice d
+
+|--------------|
+| Score Report |
+|--------------|
+question a
+ Wrong Answer! - Penalty: 0
+question b
+ Wrong Answer! - Penalty: 0
+question c
+ Wrong Answer! - Penalty: 0
+question d
+ Wrong Answer! - Penalty: 0
+question e
+ Wrong Answer! - Penalty: 0
+question f
+ Wrong Answer! - Penalty: 0
+question g
+ Wrong Answer! - Penalty: 0
+question h
+ Wrong Answer! - Penalty: 0
+question i
+ Wrong Answer! - Penalty: 0
+question j
+ Wrong Answer! - Penalty: 0
+Total Score: 0
+
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1	choice 2	choice 3	choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+Total Score: -4
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -4
+Total Score: -4
+
+----------------------------------------
+########## Testcase 5: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Quiz does not have questions
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Quiz does not have questions
+|------------|
+| Start Quiz |
+|------------|
+Exception in thread "main" java.lang.NullPointerException
+	at Solution.startQuiz(Solution.java:99)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 6: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error!Malformed question
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+Exception in thread "main" java.lang.NullPointerException
+	at Solution.startQuiz(Solution.java:99)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 7: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question text 1(1)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+question text 1
+ Wrong Answer! - Penalty: -1
+Total Score: -1
+
+----------------------------------------
+########## Testcase 8: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+trick question (1)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at Solution.startQuiz(Solution.java:101)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 9: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+choice 4	choice 2
+
+|--------------|
+| Score Report |
+|--------------|
+question about sony
+ Correct Answer! - Marks Awarded: 1
+Total Score: 1
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.startQuiz(Solution.java:101)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 10: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid max marks for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.startQuiz(Solution.java:101)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 11: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid penalty for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.startQuiz(Solution.java:101)
+	at Solution.main(Solution.java:41)
+
+----------------------------------------
+########## Testcase 12: Failed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+(1)
+choice 1        choice 2        choice 3        choice 4
+
+|--------------|
+| Score Report |
+|--------------|
+
+ Wrong Answer! - Penalty: -1
+Total Score: -1
+
+----------------------------------------
+Result: 0/13 testcases passed.
+Starting audit...
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:61: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:65:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:65:31: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:66:12: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:68:15: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:68:26: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:68:28: '5' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:68:28: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:68:30: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:70: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:70: Line is longer than 80 characters (found 120). [LineLength]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:70:29: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:70:89: '3' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:70:115: '4' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:77:41: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:77:42: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:90: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:94:39: '20' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:95:19: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:95:20: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:96:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:96:23: '!=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:96:25: '!=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:97:12: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:50: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:51: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:53: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:54: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:57: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:58: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:60: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:61: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:63: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:99:64: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:100:16: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:100:32: '3' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:101:44: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:101:45: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:102:14: '}' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:102:39: '3' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:113: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:121:12: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:121:43: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:123:15: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:124: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:124:72: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:124:73: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:126:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:128: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:128:64: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:128:65: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:132:43: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:132:44: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:133:1: Empty statement. [EmptyStatement]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:136: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:136:15: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:137:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:137:12: Variable 'question' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:138:11: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:138:14: Variable 'choices' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:139:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:139:12: Variable 'answer' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:140:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:140:9: Variable 'score' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:141:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:141:9: Variable 'reduction' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:21: Parameter q should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:30: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:30: Parameter ch should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:43: Parameter a should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:53: Parameter s should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:142:60: Parameter re should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:150: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:150:11: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:151:13: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:151:16: Variable 'q' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:151:33: '20' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:152:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:152:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:153:11: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:153:14: Variable 'ans' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:153:31: '20' is a magic number. [MagicNumber]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:154:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:154:9: Variable 'size1' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:155:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:155:17: Name 'q_array' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:155:25: Parameter qu should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:155:37: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:158:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:158:25: Parameter ans should be final. [FinalParameters]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:158:34: 'ans' hides a field. [HiddenField]
+[ERROR] D:\msit\CSPP2\CSPP2\m19\Assignment-1\Solution.java:158:38: '{' is not preceded with whitespace. [WhitespaceAround]
+Audit done.
+Checkstyle ends with 95 errors.
+
+
+[master d678c96] "check_style_score -> 0 of 13 passed. style score: 0/1 "
+ 4 files changed, 4 insertions(+), 3 deletions(-)
+ rewrite m19/Assignment-1/Solution.class (84%)
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
