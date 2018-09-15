@@ -65,6 +65,10 @@ public final class Solution {
         if(questionCount != 0){
         for(int i = 0; i < questionCount; i++) {
             String[] arr = s.nextLine().split(":");
+            if(arr[0]==""){
+                System.out.println("Error! Malformed question");
+                return;
+            }
             if(arr.length==5){
                 String[] choices = arr[1].split(",");
                 Question q =new  Question(arr[0], choices, arr[2], Integer.parseInt(arr[3]), Integer.parseInt(arr[4])); 
