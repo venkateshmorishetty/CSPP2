@@ -62,13 +62,22 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if(questionCount != 0){
         for(int i = 0; i < questionCount; i++) {
             String[] arr = s.nextLine().split(":");
-            String[] choices = arr[1].split(",");
-            Question q =new  Question(arr[0], choices, Integer.parseInt(arr[2]), Integer.parseInt(arr[3]), Integer.parseInt(arr[4])); 
-            quiz.q_array(q);
+            if(arr.length==5){
+                String[] choices = arr[1].split(",");
+                Question q =new  Question(arr[0], choices, arr[2], Integer.parseInt(arr[3]), Integer.parseInt(arr[4])); 
+                quiz.q_array(q);
+            } else {
+                System.out.println("Error!Malformed question");
+                break;
+            }
         }
-        System.out.println("4 are added to the quiz");
+        System.out.println(questionCount+" are added to the quiz");
+        } else {
+            System.out.println("Quiz does not have questions");
+        }
     }
 
     /**
@@ -82,20 +91,22 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        int[] answers = new int[20];
+        String[] answers = new String[20];
         String dis="";
+        if(answerCount!=0) {
         for(int i = 0; i < answerCount; i++) {
             String[] ans = new String[2];
             System.out.println(quiz.q[i].question+""+"("+(i+1)+")");
             for(int j = 0; j < 4; j++) {
-                dis += quiz.q[j].choices[j]+"        ";
+                dis += quiz.q[i].choices[j]+"   ";
             }
             System.out.println(dis);
             ans = s.nextLine().split(" ");
-            answers[i] = Integer.parseInt(ans[1]);
+            answers[i] = ans[1];
             dis = "";
         }
         quiz.answers(answers);
+        }
     }
 
     /**
@@ -108,7 +119,7 @@ public final class Solution {
         int s = 0;
         for(int i = 0; i < quiz.size; i++){
             System.out.println(quiz.q[i].question);
-            if(quiz.ans[i] == quiz.q[i].answer) {
+            if(quiz.ans[i].equals(quiz.q[i].answer)) {
                 System.out.println(" Correct Answer! - Marks Awarded: "+quiz.q[i].score);
                 s = s + quiz.q[i].score;
             }
@@ -124,10 +135,10 @@ public final class Solution {
 class Question{
     String question;
     String[] choices;
-    int answer;
+    String answer;
     int score;
     int reduction;
-    public Question(String q,String[] ch, int a, int s, int re) {
+    public Question(String q,String[] ch, String a, int s, int re) {
         question = q;
         choices = ch;
         answer = a;
@@ -138,12 +149,12 @@ class Question{
 class Quiz{
     Question[] q = new Question[20];
     int size = 0;
-    int[] ans = new int[20];
+    String[] ans = new String[20];
     int size1 = ans.length;
     public void q_array(Question qu){
         q[size++] = qu;
     }
-    public void answers(int[] ans){
+    public void answers(String[] ans){
         this.ans = ans;
     }
 }
