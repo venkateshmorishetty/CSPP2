@@ -71,10 +71,10 @@ public final class Solution {
                     System.out.println("Invalid max marks for "+arr[0]);
                     return;
                 }
-                if(choices.length <4){
-                    System.out.println("Invalid penalty for "+arr[0]);
-                    return;
-                }
+                // if(choices.length <4){
+                //     System.out.println("Invalid penalty for "+arr[0]);
+                //     return;
+                // }
                 Question q =new  Question(arr[0], choices, arr[2], Integer.parseInt(arr[3]), Integer.parseInt(arr[4])); 
                 quiz.q_array(q);
             } else {
