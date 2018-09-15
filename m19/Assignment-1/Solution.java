@@ -65,7 +65,7 @@ public final class Solution {
         if(questionCount != 0){
         for(int i = 0; i < questionCount; i++) {
             String[] arr = s.nextLine().split(":");
-            if(arr.length==5){
+            if(arr[0].length()==0){
                 String[] choices = arr[1].split(",");
                 if(Integer.parseInt(arr[3])<1){
                     System.out.println("Invalid max marks for "+arr[0]);
