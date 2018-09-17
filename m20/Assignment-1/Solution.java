@@ -200,7 +200,7 @@ class Quiz {
             return "Total Score: "+score;
         }
         else {
-            return null;
+            return s;
         }
     }
 
