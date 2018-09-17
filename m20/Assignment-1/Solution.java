@@ -298,7 +298,7 @@ public final class Solution {
         String ans;
         for(int i = 0; i < q; i++) {
             Question q_no = quiz.getQuestion(i);
-            System.out.println(q_no.getQuestionText()+"("+(i+1)+")");
+            System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
             System.out.println(q_no.toString());
             System.out.println("");
             ans = scan.nextLine();
