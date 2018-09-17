@@ -59,21 +59,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        String[] user = choice.split(" ");
-        int temp;
-        if(user[1].equals("a")){
-            temp = 1;
-        } else if(user[1].equals("b")){
-            temp = 2;
-        }else if(user[1].equals("c")){
-            temp = 3;
-        }else if(user[1].equals("d")){
-            temp = 4;
-        }
-        else {
-            temp = Integer.parseInt(user[1]);
-        }
-        if(correctAnswer==temp){
+        if(choice.equals(choices[correctAnswer-1])){
             return true;
         }
         return false;
@@ -276,7 +262,8 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if(q == 0){
-            System.out.println("Quiz does not have questions");     
+            System.out.println("Quiz does not have questions");
+            return;     
         }else {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
