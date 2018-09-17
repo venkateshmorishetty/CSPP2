@@ -276,6 +276,9 @@ public final class Solution {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
+            if(line.length!=5) {
+                throw new Exception("Error! Malformed question");
+            }
             if(choices.length<2){
                 throw new Exception(line[0]+" does not have enough answer choices");
             }
