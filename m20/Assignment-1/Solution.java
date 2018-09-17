@@ -58,8 +58,8 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        if(choice.equals(choices[correctAnswer-1])){
-            return true; 
+        if (choice.equals(choices[correctAnswer - 1])) {
+            return true;
         }
         return false;
     }
@@ -182,7 +182,7 @@ class Quiz {
     public String showReport() {
         String s = "";
         int score = 0;
-        if (size != 0 ) {
+        if (size != 0) {
         for (int i = 0; i < size; i++) {
             System.out.println(questions[i].getQuestionText());
             if (questions[i].evaluateResponse(questions[i].getResponse())) {
@@ -191,7 +191,7 @@ class Quiz {
                 score = score + questions[i].getMaxMarks();
             } else {
                 System.out.println(" Wrong Answer! - Penalty: "
-                    +questions[i].getPenalty());
+                    + questions[i].getPenalty());
                 score = score + questions[i].getPenalty();
             }
         }
@@ -234,7 +234,7 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 try {
-                  loadQuestions(s, q, Integer.parseInt(tokens[1]));  
+                  loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
@@ -256,13 +256,15 @@ public final class Solution {
             }
         }
     }
+    
     /**
      * Loads questions.
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) throws Exception {
@@ -281,8 +283,8 @@ public final class Solution {
             if (line.length != five  || line[0].length() == 0) {
                 throw new Exception("Error! Malformed question");
             } else if (choices.length < two) {
-                throw new Exception(line[0] +
-                    " does not have enough answer choices");
+                throw new Exception(line[0]
+                    + " does not have enough answer choices");
             } else if (Integer.parseInt(line[2]) > choices.length) {
                 throw new Exception(
                     "Error! Correct answer choice number is out of range for "
