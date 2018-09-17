@@ -318,13 +318,13 @@ public final class Solution {
         try {
         String ans;
         for (int i = 0; i < q; i++) {
-            Question q_no = quiz.getQuestion(i);
-            System.out.println(q_no.getQuestionText() 
-                + "(" + q_no.getMaxMarks() + ")");
-            System.out.println(q_no.toString());
+            Question qno = quiz.getQuestion(i);
+            System.out.println(qno.getQuestionText()
+                + "(" + qno.getMaxMarks() + ")");
+            System.out.println(qno.toString());
             System.out.println("");
             ans = scan.nextLine();
-            q_no.setResponse(ans);
+            qno.setResponse(ans);
         }
         } catch (Exception e) {
             return;
