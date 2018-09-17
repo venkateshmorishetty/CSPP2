@@ -277,9 +277,9 @@ public final class Solution {
             if(!(Integer.parseInt(line[2])>=1 && Integer.parseInt(line[2]) <= choices.length - 1)){
                 throw new Exception("Error! Correct answer choice number is out of range for"+line[0]);
             }
-            if(Integer.parseInt(line[3])>0 && Integer.parseInt(line[4])<=0){
-                throw new Exception("Invalid penalty for"+line[0]);
-            }
+            // if(Integer.parseInt(line[3]) > 0 && Integer.parseInt(line[4])<=0){
+            //     throw new Exception("Invalid penalty for "+line[0]);
+            // }
             Question que = new Question(line[0],choices,Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4]));
             quiz.addQuestion(que);
         }
