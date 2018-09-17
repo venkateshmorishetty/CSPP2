@@ -291,7 +291,7 @@ public final class Solution {
                     + line[0]);
             } else if (!(Integer.parseInt(line[three]) > 0)) {
                 throw new Exception("Invalid max marks for " + line[0]);
-            } else if(!(Integer.parseInt(line[four]) <= 0)) {
+            } else if (!(Integer.parseInt(line[four]) <= 0)) {
                 throw new Exception("Invalid penalty for " + line[0]);
             } else {
                 Question que = new Question(line[0], choices,
@@ -319,7 +319,8 @@ public final class Solution {
         String ans;
         for (int i = 0; i < q; i++) {
             Question q_no = quiz.getQuestion(i);
-            System.out.println(q_no.getQuestionText() + "(" + q_no.getMaxMarks() + ")");
+            System.out.println(q_no.getQuestionText() 
+                + "(" + q_no.getMaxMarks() + ")");
             System.out.println(q_no.toString());
             System.out.println("");
             ans = scan.nextLine();
