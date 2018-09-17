@@ -270,31 +270,33 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if(q == 0){
+        if (q == 0) {
             throw new Exception("Quiz does not have questions");     
         } else {
-        for(int i = 0; i < q; i++){
+        for (int i = 0; i < q; i++) {
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
-            if(line.length!=5  || line[0].length()==0) {
+            if (line.length != 5  || line[0].length() == 0) {
                 throw new Exception("Error! Malformed question");
+            } else if (choices.length < 2) {
+                throw new Exception(line[0] +
+                    " does not have enough answer choices");
+            } else if (Integer.parseInt(line[2]) > choices.length) {
+                throw new Exception(
+                    "Error! Correct answer choice number is out of range for "
+                    + line[0]);
+            } else if (!(Integer.parseInt(line[3]) > 0)) {
+                throw new Exception("Invalid max marks for " + line[0]);
+            } else if(!(Integer.parseInt(line[4]) <= 0)) {
+                throw new Exception("Invalid penalty for " + line[0]);
+            } else {
+                Question que = new Question(line[0], choices,
+                Integer.parseInt(line[2]), Integer.parseInt(line[3]),
+                Integer.parseInt(line[4]));
+                quiz.addQuestion(que);
             }
-            if(choices.length<2){
-                throw new Exception(line[0]+" does not have enough answer choices");
-            }
-            if(Integer.parseInt(line[2]) > choices.length){
-                throw new Exception("Error! Correct answer choice number is out of range for "+line[0]);
-            }
-            if(!(Integer.parseInt(line[3]) > 0)){
-                throw new Exception("Invalid max marks for "+line[0]);
-            }
-            if(!(Integer.parseInt(line[4])<=0)){
-                throw new Exception("Invalid penalty for "+line[0]);
-            }
-            Question que = new Question(line[0],choices,Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4]));
-            quiz.addQuestion(que);
         }
-        System.out.println(q+" are added to the quiz");
+        System.out.println(q + " are added to the quiz");
         }
     }
     /**
@@ -309,17 +311,17 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        try{
+        try {
         String ans;
-        for(int i = 0; i < q; i++) {
+        for (int i = 0; i < q; i++) {
             Question q_no = quiz.getQuestion(i);
-            System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
+            System.out.println(q_no.getQuestionText() + "(" + q_no.getMaxMarks() + ")");
             System.out.println(q_no.toString());
             System.out.println("");
             ans = scan.nextLine();
             q_no.setResponse(ans);
         }
-        }catch(Exception e) {
+        } catch (Exception e) {
             return;
         }
     }
