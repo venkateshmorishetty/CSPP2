@@ -183,21 +183,18 @@ class Quiz {
     public String showReport() {
         String s = "";
         int score = 0;
-        int c = 0;
+        if(size != 0 ) {
         for(int i = 0; i < size; i++) {
             System.out.println(questions[i].getQuestionText());
             if(questions[i].evaluateResponse(questions[i].getResponse())){
                 System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
                 score = score + questions[i].getMaxMarks(); 
-                c++;
             } else {
                 System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
-                score = score + questions[i].getPenalty();
-                c++; 
+                score = score + questions[i].getPenalty(); 
             }
         }
-        if(c>0) {
-            return "Total Score: "+score;
+        return "Total Score: "+score;
         }
         else {
             return s;
