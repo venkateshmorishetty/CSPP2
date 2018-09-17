@@ -60,7 +60,7 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         if(choice.equals(choices[correctAnswer-1])){
-            return true;
+            return true; 
         }
         return false;
     }
@@ -229,7 +229,11 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                try{
+                  loadQuestions(s, q, Integer.parseInt(tokens[1]));  
+                }catch(Exception e){
+                    System.out.println(e.getMessage());
+                }
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -257,17 +261,25 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, final int q) {
+        final Quiz quiz, final int q) throws Exception{
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if(q == 0){
-            System.out.println("Quiz does not have questions");
-            return;     
-        }else {
+            throw new Exception("Quiz does not have questions");     
+        } else {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
+            if(choices.length<2){
+                throw new Exception(line[0]+" does not have enough answer choices");
+            }
+            if(!(Integer.parseInt(line[2])>=1 && Integer.parseInt(line[2]) <= choices.length - 1)){
+                throw new Exception("Error! Correct answer choice number is out of range for"+line[0]);
+            }
+            if(Integer.parseInt(line[3])>0 && Integer.parseInt(line[4])<=0){
+                throw new Exception("Invalid penalty for"+line[0]);
+            }
             Question que = new Question(line[0],choices,Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4]));
             quiz.addQuestion(que);
         }
@@ -286,16 +298,18 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        if(q!=0){
-            String ans;
-            for(int i = 0; i < q; i++) {
-                Question q_no = quiz.getQuestion(i);
-                System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
-                System.out.println(q_no.toString());
-                System.out.println("");
-                ans = scan.nextLine();
-                q_no.setResponse(ans);
-            }
+        try{
+        String ans;
+        for(int i = 0; i < q; i++) {
+            Question q_no = quiz.getQuestion(i);
+            System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
+            System.out.println(q_no.toString());
+            System.out.println("");
+            ans = scan.nextLine();
+            q_no.setResponse(ans);
+        }
+        }catch(Exception e) {
+            return;
         }
     }
     /**
