@@ -14,7 +14,7 @@ class Question {
     /**
      * { var_description }.
      */
-    private String correctAnswer;
+    private int correctAnswer;
     /**
      * { var_description }.
      */
@@ -43,7 +43,7 @@ class Question {
      * @param      penalty1        The penalty 1
      */
     Question(final String question1, final String[] choices1,
-        final String correctAnswer1, final int maxMarks1, final int penalty1) {
+        final int correctAnswer1, final int maxMarks1, final int penalty1) {
         this.questiontext = question1;
         this.choices = choices1;
         this.correctAnswer = correctAnswer1;
@@ -60,7 +60,8 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         String[] user = choice.split(" ");
-        if(correctAnswer.equals(user[1])){
+        int temp = Integer.parseInt(user[1]);
+        if(correctAnswer==temp){
             return true;
         }
         return false;
@@ -70,7 +71,7 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
+    public int getCorrectAnswer() {
         return this.correctAnswer;
     }
     /**
@@ -265,7 +266,7 @@ public final class Solution {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
-            Question que = new Question(line[0],choices,line[2],Integer.parseInt(line[3]),Integer.parseInt(line[4]));
+            Question que = new Question(line[0],choices,Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4]));
             quiz.addQuestion(que);
         }
         System.out.println(q+" are added to the quiz");
