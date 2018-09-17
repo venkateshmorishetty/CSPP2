@@ -256,7 +256,6 @@ public final class Solution {
             }
         }
     }
-    
     /**
      * Loads questions.
      *
@@ -272,8 +271,9 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         final int five = 5;
-        // final int four = 4;
+        final int four = 4;
         final int two = 2;
+        final int three = 3;
         if (q == 0) {
             throw new Exception("Quiz does not have questions");
         } else {
@@ -285,18 +285,18 @@ public final class Solution {
             } else if (choices.length < two) {
                 throw new Exception(line[0]
                     + " does not have enough answer choices");
-            } else if (Integer.parseInt(line[2]) > choices.length) {
+            } else if (Integer.parseInt(line[two]) > choices.length) {
                 throw new Exception(
                     "Error! Correct answer choice number is out of range for "
                     + line[0]);
-            } else if (!(Integer.parseInt(line[3]) > 0)) {
+            } else if (!(Integer.parseInt(line[three]) > 0)) {
                 throw new Exception("Invalid max marks for " + line[0]);
-            } else if(!(Integer.parseInt(line[4]) <= 0)) {
+            } else if(!(Integer.parseInt(line[four]) <= 0)) {
                 throw new Exception("Invalid penalty for " + line[0]);
             } else {
                 Question que = new Question(line[0], choices,
-                Integer.parseInt(line[2]), Integer.parseInt(line[3]),
-                Integer.parseInt(line[4]));
+                Integer.parseInt(line[two]), Integer.parseInt(line[three]),
+                Integer.parseInt(line[four]));
                 quiz.addQuestion(que);
             }
         }
