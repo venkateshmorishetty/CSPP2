@@ -275,6 +275,9 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if(q == 0){
+            System.out.println("Quiz does not have questions");     
+        }else {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
@@ -282,6 +285,7 @@ public final class Solution {
             quiz.addQuestion(que);
         }
         System.out.println(q+" are added to the quiz");
+        }
     }
     /**
      * Starts a quiz.
@@ -295,14 +299,16 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        String ans;
-        for(int i = 0; i < q; i++) {
-            Question q_no = quiz.getQuestion(i);
-            System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
-            System.out.println(q_no.toString());
-            System.out.println("");
-            ans = scan.nextLine();
-            q_no.setResponse(ans);
+        if(q!=0){
+            String ans;
+            for(int i = 0; i < q; i++) {
+                Question q_no = quiz.getQuestion(i);
+                System.out.println(q_no.getQuestionText()+"("+q_no.getMaxMarks()+")");
+                System.out.println(q_no.toString());
+                System.out.println("");
+                ans = scan.nextLine();
+                q_no.setResponse(ans);
+            }
         }
     }
     /**
