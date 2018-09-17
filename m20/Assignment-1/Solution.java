@@ -276,7 +276,7 @@ public final class Solution {
         for(int i = 0; i < q; i++){
             String[] line = scan.nextLine().split(":");
             String[] choices = line[1].split(",");
-            if(line.length!=5 && choices[0].length()>1) {
+            if(line.length!=5 && line[0].length()>1) {
                 throw new Exception("Error! Malformed question");
             }
             if(choices.length<2){
