@@ -60,7 +60,19 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         String[] user = choice.split(" ");
-        int temp = Integer.parseInt(user[1]);
+        int temp;
+        if(user[1].equals("a")){
+            temp = 1;
+        } else if(user[1].equals("b")){
+            temp = 2;
+        }else if(user[1].equals("c")){
+            temp = 3;
+        }else if(user[1].equals("d")){
+            temp = 4;
+        }
+        else {
+            temp = Integer.parseInt(user[1]);
+        }
         if(correctAnswer==temp){
             return true;
         }
