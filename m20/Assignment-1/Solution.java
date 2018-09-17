@@ -274,8 +274,8 @@ public final class Solution {
             if(choices.length<2){
                 throw new Exception(line[0]+" does not have enough answer choices");
             }
-            if(!(Integer.parseInt(line[2])>=1 && Integer.parseInt(line[2]) <= choices.length - 1)){
-                throw new Exception("Error! Correct answer choice number is out of range for"+line[0]);
+            if(Integer.parseInt(line[2]) >= choices.length){
+                throw new Exception("Error! Correct answer choice number is out of range for "+line[0]);
             }
             // if(Integer.parseInt(line[3]) > 0 && Integer.parseInt(line[4])<=0){
             //     throw new Exception("Invalid penalty for "+line[0]);
