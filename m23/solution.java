@@ -89,7 +89,7 @@ class solution {
 		for(int i = 0; i < filearray.length;i++) {
 			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
 			for(int j = 0; j < filearray.length; j++) {
-				System.out.print(result[i][j]+"\t");
+				System.out.print(result[i][j]+"\t\t");
 			}
 			System.out.println();
 		}
