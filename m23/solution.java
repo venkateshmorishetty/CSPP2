@@ -81,7 +81,7 @@ class solution {
 				result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
 			}
 		}
-		System.out.print("\t");
+		System.out.print("\t\t");
 		for(int i = 0; i< filearray.length;i++) {
 			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
 		}
