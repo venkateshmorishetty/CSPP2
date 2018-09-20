@@ -55,10 +55,6 @@ class solution {
 		
 		Scanner sc = new Scanner(System.in);
 		String foldername = sc.nextLine();
-		if(foldername.length() == 0) {
-			System.out.println("empty directory");
-			return;
-		}
 		File dir = new File(foldername);
 		File[] filearray = dir.listFiles();
 		HashMap[] hashmaparray = new HashMap[filearray.length];
