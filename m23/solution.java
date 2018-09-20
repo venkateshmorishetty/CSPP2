@@ -54,8 +54,14 @@ class solution {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		String foldername = sc.nextLine();
-		File dir = new File(foldername);
+		String foldername;
+		try{
+			foldername = sc.nextLine();
+		}catch(Exception e){
+			System.out.println("empty directory");
+			return;
+		}
+		File dir = new File(foldername);;
 		File[] filearray = dir.listFiles();
 		HashMap[] hashmaparray = new HashMap[filearray.length];
 		plagorisim p = new plagorisim();
