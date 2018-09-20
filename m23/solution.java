@@ -55,34 +55,35 @@ class solution {
 		
 		Scanner sc = new Scanner(System.in);
 		String foldername = sc.nextLine();
+		if(foldername.length() == 0) {
+			System.out.println("empty directory");
+			return;
+		}
 		File dir = new File(foldername);
 		File[] filearray = dir.listFiles();
 		HashMap[] hashmaparray = new HashMap[filearray.length];
 		plagorisim p = new plagorisim();
 		int temp = 0;
 		long[][] result = new long[filearray.length][filearray.length];
-		if(filearray.length==0) {
-			System.out.println("empty irectory");
-		} else {
-			for(File print:filearray) {
-				hashmaparray[temp] = p.map(print);
-				temp++;
+		
+		for(File print:filearray) {
+			hashmaparray[temp] = p.map(print);
+			temp++;
+		}
+		for(int i = 0;i<filearray.length;i++){
+			for(int j = 0; j< filearray.length;j++){
+				result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
 			}
-			for(int i = 0;i<filearray.length;i++){
-				for(int j = 0; j< filearray.length;j++){
-					result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
-				}
-			}
+		}
 		// for(int i = 0; i< filearray.length;i++) {
 		// 	System.out.print(loc[loc.length-1]+"\t");
 		// }
 		// System.out.println();
-			for(int i = 0; i < filearray.length;i++) {
-				for(int j = 0; j < filearray.length; j++) {
-					System.out.print(result[i][j]+"\t");
-				}
-				System.out.println();
+		for(int i = 0; i < filearray.length;i++) {
+			for(int j = 0; j < filearray.length; j++) {
+				System.out.print(result[i][j]+"\t");
 			}
-		} 
-	}
+			System.out.println();
+		}
+	} 
 }
