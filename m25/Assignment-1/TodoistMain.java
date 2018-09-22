@@ -208,11 +208,7 @@ class Todoist {
                 break;
             }
         }
-        if(temp != c){
-            for(int i = temp; i< c;i++){
-                tarray[i] = null;
-            }
-        }
+        // System.out.println(tarray[2]);
         return tarray;
     }
 
