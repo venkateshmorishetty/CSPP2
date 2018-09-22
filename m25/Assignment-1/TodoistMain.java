@@ -197,16 +197,21 @@ class Todoist {
         Task[] tarray = new Task[c];        
         int temp  = 0;
         for(int i = 0;i < size; i++) {
-            // if(temp!=c){
+            if(temp!=c){
                 if(tasks[i].assigned.equals(name)) {
                     tarray[temp] = tasks[i];
                     temp++;
                 } else {
                     continue;
                 }   
-            // } else {
-                // break;
-            // }
+            } else {
+                break;
+            }
+        }
+        if(temp != c){
+            for(int i = temp; i< c;i++){
+                tarray[i] = null;
+            }
         }
         return tarray;
     }
