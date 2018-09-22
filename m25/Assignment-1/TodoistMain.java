@@ -101,21 +101,22 @@ public class TodoistMain {
         startTest();
     }
 }
-class Task{
+class Task {
     String title;
     String assigned;
     int timelimit;
     String importance;
     String urgent;
     String status;
-    public Task(String t, String assign, int limit, boolean important, boolean ur, String s) throws Exception{
+    public Task(String t, String assign, int limit, boolean important, boolean ur, String s)
+    throws Exception {
         status = s;
         title = t;
         assigned = assign;
         timelimit = limit;
-        if(important == true){
+        if (important == true) {
             importance = "Important";
-        } else{
+        } else {
             importance = "Not Important";
         }
         if(ur == true){
@@ -222,12 +223,15 @@ class Todoist {
         int k = 0;
         for(int i = 0; i < size; i++) {
             if(tasks[i].assigned.equals(name) && tasks[i].status.equals("todo")){
-                if(tasks[i].importance.equals("Important")&&tasks[i].urgent.equals("Not Urgent")) {
-                    temp =  tasks[i];
-                    break;
-                } else {
-                    temp =  tasks[i];
-                    break;
+                if(tasks[i].importance.equals("Important")){
+                    if(tasks[i].urgent.equals("Not Urgent")){
+                        temp =  tasks[i];
+                        return temp;
+                    } else {
+                        if(tasks[i].equals("Important")){
+                            temp =  tasks[i];
+                        }
+                    }    
                 }
             }
         }
