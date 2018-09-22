@@ -194,19 +194,19 @@ class Todoist {
      * @return     The next.
      */
     public Task[] getNextTask(String name, int c) {
-        Task[] tarray = new Task[c];
-        int temp = 0;
+        Task[] tarray = new Task[c];        
+        int temp  = 0;
         for(int i = 0;i < size; i++) {
-            if(temp!=c){
+            // if(temp!=c){
                 if(tasks[i].assigned.equals(name)) {
                     tarray[temp] = tasks[i];
                     temp++;
                 } else {
                     continue;
                 }   
-            } else {
-                break;
-            }
+            // } else {
+                // break;
+            // }
         }
         return tarray;
     }
