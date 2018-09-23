@@ -21,26 +21,26 @@ class Plagiarism {
          * { var_description }.
          */
         HashMap<String, Integer> hm = new HashMap();
+        String data = "";
         try {
             BufferedReader b = new BufferedReader(new FileReader(filename)); 
-            Pattern buffer = Pattern.compile("[^a-z A-Z 0-9]");
             String str = b.readLine();
             while (str != null) {
-                Matcher m = buffer.matcher(str);
-                String temp = m.replaceAll("");
-                String[] line = temp.split(" ");
-                // String word = "";
-                for (int i = 0; i < line.length; i++) {
-                    line[i] = line[i].replace("."," ").toLowerCase();
-                    if (line[i].length() > 0) {
-                        if (hm.containsKey(line[i])) {
-                            hm.put(line[i], hm.get(line[i]) + 1);
-                        } else {
-                            hm.put(line[i], 1);
-                        }
+                data += str;
+                str = b.readLine();
+            }   
+            Pattern buffer = Pattern.compile("[^a-z A-Z 0-9]");
+            Matcher m = buffer.matcher(data);
+            String temp = m.replaceAll("").replace("."," ").toLowerCase();
+            String[] line = temp.split(" ");
+            for (int i = 0; i < line.length; i++) {
+                if (line[i].length() > 0) {
+                    if (hm.containsKey(line[i])) {
+                        hm.put(line[i], hm.get(line[i]) + 1);
+                    } else {
+                        hm.put(line[i], 1);
                     }
                 }
-                str = b.readLine();
             }
         } catch (Exception e) {
             System.out.println(e);
