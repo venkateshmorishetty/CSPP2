@@ -3,6 +3,8 @@ import java.util.HashMap;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /**
  * Class for plagiarism.
  */
@@ -21,19 +23,21 @@ class Plagiarism {
         HashMap<String, Integer> hm = new HashMap();
         try {
             BufferedReader b = new BufferedReader(new FileReader(filename));
+            String patt = "[^a-zA-Z0-9_]"; 
+            Pattern buffer = Pattern.compile(patt);
             String str = b.readLine();
             while (str != null) {
-                String[] line = str.split(" ");
-                String word = "";
+                Matcher m = buffer.matcher(str);
+                String temp = m.replaceAll("");
+                String[] line = temp.split(" ");
+                // String word = "";
                 for (int i = 0; i < line.length; i++) {
-                    line[i] = line[i].replace("."," ");
-                    word = line[i].
-                    replaceAll("[!@#$%^&*(),?;{}|]", "").toLowerCase();
-                    if (word.length() > 0) {
-                        if (hm.containsKey(word)) {
-                            hm.put(word, hm.get(word) + 1);
+                    line[i] = line[i].replace("."," ").toLowerCase();
+                    if (line[i].length() > 0) {
+                        if (hm.containsKey(line[i])) {
+                            hm.put(line[i], hm.get(line[i]) + 1);
                         } else {
-                            hm.put(word, 1);
+                            hm.put(line[i], 1);
                         }
                     }
                 }
