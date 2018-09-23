@@ -18,7 +18,7 @@ class plagiarism {
 		/**
 		 * { var_description }.
 		 */
-		HashMap<String,Integer> hm = new <String,Integer>HashMap();
+		HashMap<String , Integer> hm = new <String , Integer>HashMap();
 		try {
 			BufferedReader b = new BufferedReader(new FileReader(filename));
 			String str = b.readLine();
