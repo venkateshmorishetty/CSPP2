@@ -23,7 +23,7 @@ class Plagiarism {
         HashMap<String, Integer> hm = new HashMap();
         String data = "";
         try {
-            BufferedReader b = new BufferedReader(new FileReader(filename)); 
+            BufferedReader b = new BufferedReader(new FileReader(filename));
             String str = b.readLine();
             while (str != null) {
                 data += str;
