@@ -66,6 +66,17 @@ class Stringmatch {
  * Class for solution.
  */
 final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//pass
+	}
+	/**
+	 * { sol }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		try {
 		Scanner sc = new Scanner(System.in);
@@ -76,17 +87,19 @@ final class Solution {
 		String f1 = "";
 		String f2 = "";
         System.out.print("             ");
-		for (int i = 0; i < fileslist.length -1; i++) {
-			System.out.print(fileslist[i].getName()+"    ");
+		for (int i = 0; i < fileslist.length - 1; i++) {
+			System.out.print(fileslist[i].getName() + "    ");
 		}
-		System.out.print(fileslist[fileslist.length - 1].getName()+" ");
+		System.out.print(fileslist[fileslist.length - 1].getName() + " ");
 		System.out.println();
 		for (int i = 0; i < fileslist.length; i++) {
 			System.out.print(fileslist[i].getName());
 			for (int j = 0; j < fileslist.length; j++) {
-				Stringmatch sm = new Stringmatch(fileslist[i], fileslist[j]);
+				Stringmatch sm = new Stringmatch(fileslist[i],
+					fileslist[j]);
 				double res = sm.getResult();
-				if (res > maximum && !(fileslist[i].getName().equals(fileslist[j].getName()))) {
+				if (res > maximum && !(fileslist[i].getName()
+					.equals(fileslist[j].getName()))) {
 					maximum = res;
 					f1 = fileslist[i].getName();
 					f2 = fileslist[j].getName();
@@ -96,8 +109,9 @@ final class Solution {
 			System.out.print(" ");
 			System.out.println();
 		}
-		System.out.println("Maximum similarity is between " +f1+" and "+f2);
-		} catch(Exception e) {
+		System.out.println("Maximum similarity is between "
+			+ f1 + " and " + f2);
+		} catch (Exception e) {
 			System.out.println("Empty Directory");
 		}
 
