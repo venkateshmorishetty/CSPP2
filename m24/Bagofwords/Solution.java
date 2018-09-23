@@ -33,7 +33,7 @@ class Plagiarism {
             Matcher m = r.matcher(data);
             String temp = m.replaceAll("").replace(".", " ").toLowerCase();
             String[] line = temp.split(" ");
-            if(temp.length()>0) {
+            if (temp.length() > 0) {
             for (int i = 0; i < line.length; i++) {
                 if (hm.containsKey(line[i])) {
                     hm.put(line[i], hm.get(line[i]) + 1);
