@@ -26,7 +26,7 @@ class plagiarism {
 				String[] line = str.split(" ");
 				String word = "";
 				for (int i = 0; i < line.length; i++) {
-					word = line[i].replaceAll("[^a-zA-Z0-9_]","").toLowerCase();
+					word = line[i].replaceAll("[^a-z A-Z 0-9_]","").toLowerCase();
 					if (word.length() > 0) {
 						if (hm.containsKey(word)) {
 							hm.put(word, hm.get(word) + 1);
@@ -54,25 +54,20 @@ class plagiarism {
 		double frequencyvector1 = 0, frequencyvector2 = 0;
 		double similarity;
 		int dotproduct = 0;		
-		for(int i:hm1.values()) {
-			frequencyvector1 = frequencyvector1 + Math.pow(i,2);
+		for (int i : hm1.values()) {
+			frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
 		}
 		frequencyvector1 = Math.sqrt(frequencyvector1);
-		
-
-		for(int i:hm2.values()) {
-			frequencyvector2 = frequencyvector2 + Math.pow(i,2);
+		for (int i : hm2.values()) {
+			frequencyvector2 = frequencyvector2 + Math.pow(i, 2);
 		}
 		frequencyvector2 = Math.sqrt(frequencyvector2);
-		
-
-
-		for(String i: hm1.keySet()) {
+		for (String i : hm1.keySet()) {
 			if(hm2.containsKey(i)) {
 				dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
 			}
 		}
-		similarity = dotproduct/(frequencyvector2*frequencyvector1);
+		similarity = dotproduct / (frequencyvector2 * frequencyvector1);
 		return similarity;
 	}	
 }
@@ -89,9 +84,9 @@ class Solution {
 		Scanner sc = new Scanner(System.in);
 		String foldername;
 		long maximum = 0;
-		try{
+		try {
 			foldername = sc.nextLine();
-		}catch(Exception e){
+		} catch (Exception e) {
 			System.out.println("empty directory");
 			return;
 		}
@@ -102,14 +97,14 @@ class Solution {
 		int temp = 0;
 		File file1 = null, file2 = null;
 		long[][] result = new long[filearray.length][filearray.length];
-		for(File print:filearray) {
+		for (File print : filearray) {
 			hashmaparray[temp] = p.map(print);
 			temp++;
 		}
-		for(int i = 0;i<filearray.length;i++){
-			for(int j = 0; j< filearray.length;j++){
-				result[i][j] = Math.round(p.similarity(hashmaparray[i],hashmaparray[j])*100);
-				if(maximum < result[i][j] && result[i][j] != 100) {
+		for (int i = 0;i < filearray.length; i++) {
+			for (int j = 0; j < filearray.length; j++){
+				result[i][j] = Math.round(p.similarity(hashmaparray[i], hashmaparray[j]) * 100);
+				if (maximum < result[i][j] && result[i][j] != 100) {
 					maximum = result[i][j];
 					file1 = filearray[i];
 					file2 = filearray[j];
@@ -117,13 +112,13 @@ class Solution {
 			}
 		}
 		System.out.print("\t\t");
-		for(int i = 0; i< filearray.length;i++) {
+		for (int i = 0; i < filearray.length; i++) {
 			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
 		}
 		System.out.println();
-		for(int i = 0; i < filearray.length;i++) {
+		for (int i = 0; i < filearray.length; i++) {
 			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
-			for(int j = 0; j < filearray.length; j++) {
+			for (int j = 0; j < filearray.length; j++) {
 				System.out.print(result[i][j]+"\t\t");
 			}
 			System.out.println();
