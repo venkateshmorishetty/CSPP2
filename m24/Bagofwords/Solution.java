@@ -31,7 +31,7 @@ class Plagiarism {
             }
             Pattern r = Pattern.compile("[^a-z A-Z 0-9]");
             Matcher m = r.matcher(data);
-            String temp = m.replaceAll("").replace("."," ").toLowerCase();
+            String temp = m.replaceAll("").replace(".", " ").toLowerCase();
             String[] line = temp.split(" ");
             if(temp.length()>0) {
             for (int i = 0; i < line.length; i++) {
