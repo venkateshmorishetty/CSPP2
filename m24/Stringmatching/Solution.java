@@ -40,7 +40,8 @@ class Stringmatch {
 			for (int i = 0; i < str2.length(); i++) {
 				for (int j = i + 1; j <= str2.length(); j++) {
 					if (str1.contains(str2.substring(i, j))) {
-						if (str2.substring(i, j).length() > str.length()) {
+						if (str2.substring(i, j).length()
+							> str.length()) {
 							str = str2.substring(i, j);
 						}
 					}
