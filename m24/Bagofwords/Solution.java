@@ -102,14 +102,14 @@ class Solution {
 		HashMap[] hashmaparray = new HashMap[filearray.length];
 		plagiarism p = new plagiarism();
 		int temp = 0;
-		int except = 100;
+		final int except = 100;
 		File file1 = null, file2 = null;
 		long[][] result = new long[filearray.length][filearray.length];
 		for (File print : filearray) {
 			hashmaparray[temp] = p.map(print);
 			temp++;
 		}
-		for (int i = 0 ;i < filearray.length; i++) {
+		for (int i = 0; i < filearray.length; i++) {
 			for (int j = 0; j < filearray.length; j++) {
 				result[i][j] = Math.round(p.similarity(hashmaparray[i],
 					hashmaparray[j]) * except);
