@@ -3,8 +3,6 @@ import java.util.HashMap;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
 /**
  * Class for plagiarism.
@@ -29,9 +27,7 @@ class plagiarism {
 				String[] line = str.split(" ");
 				String word = "";
 				for (int i = 0; i < line.length; i++) {
-					Pattern pat = Pattern.compile("[^a-zA-Z0-9_]");
-					Matcher m = pat.matcher(line[i]);
-					word = m.replaceAll("").replaceAll(".","").toLowerCase();
+					word = line[i].replaceAll("[^a-zA-Z0-9_]","").toLowerCase();
 					if (word.length() > 0) {
 						if (hm.containsKey(word)) {
 							hm.put(word, hm.get(word) + 1);
@@ -58,7 +54,7 @@ class plagiarism {
 	public double similarity(final HashMap<String,Integer> hm1, final HashMap<String,Integer> hm2) {
 		double frequencyvector1 = 0, frequencyvector2 = 0;
 		double similarity;
-		int dotproduct = 0;
+		int dotproduct = 0;		
 		for(int i:hm1.values()) {
 			frequencyvector1 = frequencyvector1 + Math.pow(i,2);
 		}
