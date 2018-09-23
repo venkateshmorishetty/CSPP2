@@ -31,14 +31,14 @@ class Plagiarism {
             }
             Pattern r = Pattern.compile("[^a-z A-Z 0-9]");
             Matcher m = r.matcher(data);
-            String temp = m.replaceAll("").replace("."," ").toLowerCase();
+            String temp = m.replaceAll("").replace("."," ").replace(" ","").toLowerCase();
             String[] line = temp.split(" ");
             for (int i = 0; i < line.length; i++) {
-                    if (hm.containsKey(line[i])) {
-                        hm.put(line[i], hm.get(line[i]) + 1);
-                    } else {
-                        hm.put(line[i], 1);
-                    }
+                if (hm.containsKey(line[i])) {
+                    hm.put(line[i], hm.get(line[i]) + 1);
+                } else {
+                    hm.put(line[i], 1);
+                }
             }
         } catch (Exception e) {
             System.out.println(e);
