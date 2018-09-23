@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 /**
  * Class for plagiarism.
  */
-class plagiarism {
+class Plagiarism {
     /**
      * { function_description }.
      *
@@ -102,7 +102,7 @@ final class Solution {
         File dir = new File(foldername);
         File[] filearray = dir.listFiles();
         HashMap[] hashmaparray = new HashMap[filearray.length];
-        plagiarism p = new plagiarism();
+        Plagiarism p = new Plagiarism();
         int temp = 0;
         final int except = 100;
         File file1 = null, file2 = null;
