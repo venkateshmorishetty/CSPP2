@@ -28,7 +28,7 @@ class Plagiarism {
                 for (int i = 0; i < line.length; i++) {
                     line[i] = line[i].replace("."," ");
                     word = line[i].
-                    replaceAll("[^a-z A-Z 0-9_]", "").toLowerCase();
+                    replaceAll("[!@#$%^&*(),?;{}|]", "").toLowerCase();
                     if (word.length() > 0) {
                         if (hm.containsKey(word)) {
                             hm.put(word, hm.get(word) + 1);
