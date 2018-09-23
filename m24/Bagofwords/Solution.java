@@ -76,6 +76,12 @@ class plagiarism {
  */
 class Solution {
 	/**
+	 * Constructs the object.
+	 */
+	public Solution() {
+		//pass
+	}
+	/**
 	 * { function_description }.
 	 *
 	 * @param      args  The arguments
@@ -102,10 +108,12 @@ class Solution {
 			hashmaparray[temp] = p.map(print);
 			temp++;
 		}
-		for (int i = 0;i < filearray.length; i++) {
-			for (int j = 0; j < filearray.length; j++){
-				result[i][j] = Math.round(p.similarity(hashmaparray[i], hashmaparray[j]) * except);
-				if (maximum < result[i][j] && result[i][j] != except) {
+		for (int i = 0 ;i < filearray.length; i++) {
+			for (int j = 0; j < filearray.length; j++) {
+				result[i][j] = Math.round(p.similarity(hashmaparray[i],
+					hashmaparray[j]) * except);
+				if (maximum < result[i][j]
+					&& result[i][j] != except) {
 					maximum = result[i][j];
 					file1 = filearray[i];
 					file2 = filearray[j];
@@ -114,7 +122,8 @@ class Solution {
 		}
 		System.out.print("\t\t");
 		for (int i = 0; i < filearray.length; i++) {
-			System.out.print(filearray[i].toString().split("\\\\")[1] + "\t");
+			System.out.print(filearray[i].toString()
+				.split("\\\\")[1] + "\t");
 		}
 		System.out.println();
 		for (int i = 0; i < filearray.length; i++) {
@@ -128,5 +137,5 @@ class Solution {
 		System.out.println("Maximum similarity is between "
 			+ file1.toString().split("\\\\")[1] + " and "
 			+ file2.toString().split("\\\\")[1]);
-	} 
+	}
 }
