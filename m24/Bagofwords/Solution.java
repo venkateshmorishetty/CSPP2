@@ -27,8 +27,7 @@ class plagiarism {
 				String[] line = str.split(" ");
 				String word = "";
 				for (int i = 0; i < line.length; i++) {
-					word = line[i].replaceAll("[^a-z A-Z 0-9_]","")
-					.toLowerCase();
+					word = line[i].replaceAll("[^a-z A-Z 0-9_]","").toLowerCase();
 					if (word.length() > 0) {
 						if (hm.containsKey(word)) {
 							hm.put(word, hm.get(word) + 1);
