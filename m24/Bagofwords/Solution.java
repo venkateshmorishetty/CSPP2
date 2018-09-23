@@ -124,7 +124,7 @@ final class Solution {
                 }
             }
         }
-        System.out.println("\t\t");
+        System.out.println("\t");
         for (int i = 0; i < filearray.length; i++) {
             System.out.print(filearray[i].toString()
                 .split("\\\\")[1] + "\t");
