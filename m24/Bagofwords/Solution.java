@@ -29,7 +29,7 @@ class Plagiarism {
                 data += str;
                 str = b.readLine();
             }   
-            Pattern r = Pattern.compile("[^a-z A-Z 0-9_]");
+            Pattern r = Pattern.compile("^a-z A-Z 0-9_");
             Matcher m = r.matcher(data);
             String temp = m.replaceAll("").replace("."," ").toLowerCase();
             String[] line = temp.split(" ");
