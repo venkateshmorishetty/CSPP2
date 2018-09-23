@@ -22,22 +22,13 @@ class plagiarism {
 		try {
 			BufferedReader b = new BufferedReader(new FileReader(filename));
 			String str = b.readLine();
+			String word = "";
 			while (str != null) {
-				String[] line = str.split(" ");
-				String word = "";
-				for (int i = 0; i < line.length; i++) {
-					word = line[i].replaceAll("[^a-zA-Z0-9_]","").toLowerCase();
-					word = word.replace(".", " ");
-					if (word.length() > 0) {
-						if (hm.containsKey(word)) {
-							hm.put(word, hm.get(word) + 1);
-						} else {
-							hm.put(word, 1);
-						}
-					}
-				}
+				word += str;
 				str = b.readLine();
 			}
+			word = word.replaceAll("[^a-zA-Z0-9_]","");
+			word = word.replace("."," ");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
