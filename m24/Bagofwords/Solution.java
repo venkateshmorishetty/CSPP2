@@ -33,14 +33,14 @@ class Plagiarism {
             Matcher m = r.matcher(data);
             String temp = m.replaceAll("").replace("."," ").toLowerCase();
             String[] line = temp.split(" ");
+            if(line.length>0) {
             for (int i = 0; i < line.length; i++) {
-                if(line[i].length()>=0){
                 if (hm.containsKey(line[i])) {
                     hm.put(line[i], hm.get(line[i]) + 1);
                 } else {
                     hm.put(line[i], 1);
                 }
-                }
+            }
             }
         } catch (Exception e) {
             System.out.println(e);
