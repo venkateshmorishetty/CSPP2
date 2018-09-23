@@ -27,6 +27,7 @@ class Stringmatch {
 	 * @param      file2  The file 2
 	 */
 	public Stringmatch(final File file1, final File file2) {
+		final int temp = 100;
 		try {
 			Scanner sc = new Scanner(file1);
 			while (sc.hasNext()) {
@@ -46,21 +47,26 @@ class Stringmatch {
 				}
 			}
 			if (file1.getName().equals(file2.getName())) {
-				res = 100;
+				res = temp;
 				System.out.format("%13.1f", res);
 			} else {
-				double n = str.length() * 2 * 100;
+				double n = str.length() * 2 * temp;
 				double d = str1.length() + str2.length();
 				res = Math.round(n / d);
 				System.out.format("%13.1f", res);
 			}
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println("FILE NOT FOUND");
-		}	
+		}
 	}
+	/**
+	 * Gets the result.
+	 *
+	 * @return     The result.
+	 */
 	public double getResult() {
 		return res;
-	}		
+	}
 }
 /**
  * Class for solution.
@@ -90,7 +96,8 @@ final class Solution {
 		for (int i = 0; i < fileslist.length - 1; i++) {
 			System.out.print(fileslist[i].getName() + "    ");
 		}
-		System.out.print(fileslist[fileslist.length - 1].getName() + " ");
+		System.out.print(fileslist[fileslist.length - 1]
+			.getName() + " ");
 		System.out.println();
 		for (int i = 0; i < fileslist.length; i++) {
 			System.out.print(fileslist[i].getName());
