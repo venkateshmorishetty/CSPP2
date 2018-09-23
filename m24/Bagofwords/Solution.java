@@ -52,7 +52,8 @@ class plagiarism {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public double similarity(final HashMap<String,Integer> hm1, final HashMap<String,Integer> hm2) {
+	public double similarity(final HashMap<String,Integer> hm1,
+		final HashMap<String,Integer> hm2) {
 		double frequencyvector1 = 0, frequencyvector2 = 0;
 		double similarity;
 		int dotproduct = 0;		
