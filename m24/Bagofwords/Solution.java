@@ -29,7 +29,7 @@ class Plagiarism {
                 data += str;
                 str = b.readLine();
             }
-            Pattern r = Pattern.compile("^a-zA-Z0-9");
+            Pattern r = Pattern.compile("^a-zA-Z0-9_");
             Matcher m = r.matcher(data);
             String temp = m.replaceAll("").replace("."," ").toLowerCase();
             String[] line = temp.split(" ");
@@ -55,10 +55,10 @@ class Plagiarism {
      *
      * @return     { description_of_the_return_value }
      */
-    public long similarity(final HashMap<String, Integer> hm1,
+    public double similarity(final HashMap<String, Integer> hm1,
         final HashMap<String, Integer> hm2) {
         double frequencyvector1 = 0, frequencyvector2 = 0;
-        long similarity;
+        double similarity;
         int dotproduct = 0;
         for (int i : hm1.values()) {
             frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
@@ -73,7 +73,7 @@ class Plagiarism {
                 dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
             }
         }
-        similarity = Math.round(dotproduct / (frequencyvector2 * frequencyvector1*100));
+        similarity = dotproduct / (frequencyvector2 * frequencyvector1);
         return similarity;
     }
 }
@@ -116,8 +116,8 @@ final class Solution {
         }
         for (int i = 0; i < filearray.length; i++) {
             for (int j = 0; j < filearray.length; j++) {
-                result[i][j] = p.similarity(hashmaparray[i],
-                    hashmaparray[j]);
+                result[i][j] = Math.round(p.similarity(hashmaparray[i],
+                    hashmaparray[j]) * except);
                 if (maximum < result[i][j]
                     && result[i][j] != except) {
                     maximum = result[i][j];
