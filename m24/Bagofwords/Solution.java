@@ -15,7 +15,7 @@ class plagiarism {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public HashMap map(File filename){
+	public HashMap map(final File filename){
 		/**
 		 * { var_description }.
 		 */
@@ -51,7 +51,7 @@ class plagiarism {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public double similarity(HashMap<String,Integer> hm1,HashMap<String,Integer> hm2) {
+	public double similarity(final HashMap<String,Integer> hm1,final HashMap<String,Integer> hm2) {
 		double frequencyvector1 = 0,frequencyvector2 = 0;
 		double similarity;
 		int dotproduct = 0;
@@ -87,7 +87,7 @@ class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String foldername;
 		long maximum = 0;
