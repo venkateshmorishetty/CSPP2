@@ -124,6 +124,7 @@ class Solution {
 			System.out.println();
 		}
 		System.out.println("Maximum similarity is between "
-			+ file1.toString().split("\\\\")[1] + " and " + file2.toString().split("\\\\")[1]);
+			+ file1.toString().split("\\\\")[1] + " and "
+			+ file2.toString().split("\\\\")[1]);
 	} 
 }
