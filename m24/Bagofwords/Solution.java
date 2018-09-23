@@ -111,8 +111,8 @@ class Solution {
 		}
 		for (int i = 0 ;i < filearray.length; i++) {
 			for (int j = 0; j < filearray.length; j++) {
-				result[i][j] = Math.round(p.similarity(hashmaparray[i]
-					, hashmaparray[j]) * except);
+				result[i][j] = Math.round(p.similarity(hashmaparray[i],
+					hashmaparray[j]) * except);
 				if (maximum < result[i][j]
 					&& result[i][j] != except) {
 					maximum = result[i][j];
