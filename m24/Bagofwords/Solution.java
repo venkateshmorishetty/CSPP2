@@ -22,9 +22,8 @@ class Plagiarism {
          */
         HashMap<String, Integer> hm = new HashMap();
         try {
-            BufferedReader b = new BufferedReader(new FileReader(filename));
-            String patt = "[^a-zA-Z0-9_]"; 
-            Pattern buffer = Pattern.compile(patt);
+            BufferedReader b = new BufferedReader(new FileReader(filename)); 
+            Pattern buffer = Pattern.compile("[^a-z A-Z 0-9]");
             String str = b.readLine();
             while (str != null) {
                 Matcher m = buffer.matcher(str);
