@@ -52,11 +52,11 @@ class plagiarism {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public double similarity(final HashMap<String,Integer> hm1,
-		final HashMap<String,Integer> hm2) {
+	public double similarity(final HashMap<String, Integer> hm1,
+		final HashMap<String, Integer> hm2) {
 		double frequencyvector1 = 0, frequencyvector2 = 0;
 		double similarity;
-		int dotproduct = 0;		
+		int dotproduct = 0;
 		for (int i : hm1.values()) {
 			frequencyvector1 = frequencyvector1 + Math.pow(i, 2);
 		}
@@ -66,7 +66,7 @@ class plagiarism {
 		}
 		frequencyvector2 = Math.sqrt(frequencyvector2);
 		for (String i : hm1.keySet()) {
-			if(hm2.containsKey(i)) {
+			if (hm2.containsKey(i)) {
 				dotproduct = dotproduct + hm1.get(i) * hm2.get(i);
 			}
 		}
