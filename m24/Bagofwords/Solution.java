@@ -29,10 +29,9 @@ class Plagiarism {
                 data += str;
                 str = b.readLine();
             }
-            data = data.replace(".", " ");
-            Pattern r = Pattern.compile("^a-zA-Z0-9_*");
+            Pattern r = Pattern.compile("^a-zA-Z0-9_.");
             Matcher m = r.matcher(data);
-            String temp = m.replaceAll("").toLowerCase();
+            String temp = m.replaceAll("").replace("."," ").toLowerCase();
             String[] line = temp.split(" ");
             for (int i = 0; i < line.length; i++) {
                 if (line[i].length() > 0) {
