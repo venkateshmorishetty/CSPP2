@@ -26,7 +26,7 @@ class Stringmatch {
      * @param      file1  The file 1
      * @param      file2  The file 2
      */
-    public Stringmatch(final File file1, final File file2) {
+    Stringmatch(final File file1, final File file2) {
         final int temp = 100;
         try {
             Scanner sc = new Scanner(file1);
