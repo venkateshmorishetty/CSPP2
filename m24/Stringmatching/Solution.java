@@ -4,10 +4,22 @@ import java.util.Scanner;
  * Class for stringmatch.
  */
 class Stringmatch {
-	String str1 = "";
-	String str2 = "";
-	String str = "";
-	double res;
+	/**
+	 * { str1 }.
+	 */
+	private String str1 = "";
+	/**
+	 * { str2 }.
+	 */
+	private String str2 = "";
+	/**
+	 * { str }.
+	 */
+	private String str = "";
+	/**
+	 * { res }.
+	 */
+	private double res;
 	/**
 	 * Constructs the object.
 	 *
