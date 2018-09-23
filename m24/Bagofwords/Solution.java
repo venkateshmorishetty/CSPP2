@@ -3,7 +3,6 @@ import java.util.HashMap;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
-
 /**
  * Class for plagiarism.
  */
@@ -19,7 +18,7 @@ class plagiarism {
 		/**
 		 * { var_description }.
 		 */
-		HashMap<String,Integer> hm = new <String,Integer>HashMap();
+		HashMap<String,Integer> hm = new <String, Integer>HashMap();
 		try {
 			BufferedReader b = new BufferedReader(new FileReader(filename));
 			String str = b.readLine();
@@ -27,7 +26,8 @@ class plagiarism {
 				String[] line = str.split(" ");
 				String word = "";
 				for (int i = 0; i < line.length; i++) {
-					word = line[i].replaceAll("[^a-zA-Z0-9_]","").replace("."," ").toLowerCase();
+					word = line[i].replaceAll("[^a-zA-Z0-9_]","").toLowerCase();
+					word = word.replace(".", " ");
 					if (word.length() > 0) {
 						if (hm.containsKey(word)) {
 							hm.put(word, hm.get(word) + 1);
