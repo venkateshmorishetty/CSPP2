@@ -18,7 +18,7 @@ class plagiarism {
 		/**
 		 * { var_description }.
 		 */
-		HashMap<String , Integer> hm = new <String , Integer>HashMap();
+		HashMap<String,Integer> hm = new <String,Integer>HashMap();
 		try {
 			BufferedReader b = new BufferedReader(new FileReader(filename));
 			String str = b.readLine();
@@ -95,6 +95,7 @@ class Solution {
 		HashMap[] hashmaparray = new HashMap[filearray.length];
 		plagiarism p = new plagiarism();
 		int temp = 0;
+		int except = 100;
 		File file1 = null, file2 = null;
 		long[][] result = new long[filearray.length][filearray.length];
 		for (File print : filearray) {
@@ -104,7 +105,7 @@ class Solution {
 		for (int i = 0;i < filearray.length; i++) {
 			for (int j = 0; j < filearray.length; j++){
 				result[i][j] = Math.round(p.similarity(hashmaparray[i], hashmaparray[j]) * 100);
-				if (maximum < result[i][j] && result[i][j] != 100) {
+				if (maximum < result[i][j] && result[i][j] != except) {
 					maximum = result[i][j];
 					file1 = filearray[i];
 					file2 = filearray[j];
@@ -113,13 +114,14 @@ class Solution {
 		}
 		System.out.print("\t\t");
 		for (int i = 0; i < filearray.length; i++) {
-			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
+			System.out.print(filearray[i].toString().split("\\\\")[1] + "\t");
 		}
 		System.out.println();
 		for (int i = 0; i < filearray.length; i++) {
-			System.out.print(filearray[i].toString().split("\\\\")[1]+"\t");
+			System.out.print(filearray[i].toString()
+				.split("\\\\")[1] + "\t");
 			for (int j = 0; j < filearray.length; j++) {
-				System.out.print(result[i][j]+"\t\t");
+				System.out.print(result[i][j] + "\t\t");
 			}
 			System.out.println();
 		}
