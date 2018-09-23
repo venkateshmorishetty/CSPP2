@@ -20,8 +20,7 @@ class Plagiarism {
          */
         HashMap<String, Integer> hm = new <String, Integer>HashMap();
         try {
-            BufferedReader b = new BufferedReader
-            (new FileReader(filename));
+            BufferedReader b = new BufferedReader(new FileReader(filename));
             String str = b.readLine();
             while (str != null) {
                 String[] line = str.split(" ");
