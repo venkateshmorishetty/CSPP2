@@ -81,7 +81,7 @@ class Solution {
 
 				}
 			}
-			System.out.print("  ");
+			System.out.print(" ");
 			System.out.println();
 		}
 		System.out.println("Maximum similarity is between " +f1+" and "+f2);
